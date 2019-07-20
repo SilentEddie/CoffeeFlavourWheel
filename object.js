@@ -410,10 +410,84 @@ const flavours = {
                 descriptors: {
                     grain: {
                         name: "Grain",
-                        color: ""
-                    }
-                }
+                        color: "Tuscany",
+                    },
+                },
             },
-        }
-    }
-}
+        },
+    },
+    spices: {
+        name: "Spices",
+        color: "Candy Cane Red",
+        subFlavours: {
+            brownSpice: {
+                name: "Brown Spice",
+                color: "Travers Red",
+                descriptors: {
+                    clove: {
+                        name: "Clove",
+                        color: "Toasted Pecan",
+                    },
+                    cinnamon: {
+                        name: "Cinnamon",
+                        color: "Orange Burst",
+                    },
+                    nutmeg: {
+                        name: "Nutmeg",
+                        color: "Caliente",
+                    },
+                    anise: {
+                        name: "Anise",
+                        color: "Dash of Curry",
+                    },
+                    },
+                    },
+            pepper: {
+                name: "Pepper",
+                color: "Tricycle Red",  
+            },
+            pungent: {
+                name: "Pungent",
+                color: "Carter Plum",
+            },
+            },
+            },
+    nuttyCocoa: {
+        name: "Nutty/Cocoa",
+        color: "Amaretto",
+        subFlavours: {
+            cocoa: {
+                name: "Cocoa",
+                color: "Masada",
+                descriptors: {
+                    darkChocolate: {
+                        name: "Dark Chocolate",
+                        color: "Wenge",
+                    },
+                    chocolate: {
+                        name: "Chocolate",
+                        color: "Cottage Red",
+                    },
+                },
+            },
+            nutty: {
+                name: "Nutty",
+                color: "Mexican Tile",
+                descriptors: {
+                    almond: {
+                        name: "Almond",
+                        color: "Grazing Fawn",
+                    },
+                    hazelnut: {
+                        name: "Hazelnut",
+                        color: "Tea",
+                    },
+                    peanuts: {
+                        name: "Peanuts",
+                        color: "Eve Green",
+                    },
+                },
+            },
+        },
+    },
+            },
