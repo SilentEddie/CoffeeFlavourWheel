@@ -1,0 +1,25 @@
+section.thirdCircle {
+    
+}
+
+
+div.descriptors {
+    width: 1000px;
+    height: 1000px;
+    border-style: solid;
+    border-radius: 500px;
+    margin: 10px, 50%, 50%;
+}
+
+section.secondCircle {
+    
+    
+}
+
+div.subFlavours {
+    width: 500px;
+    height: 500px;
+    border-style: solid;
+    border-radius: 250px;
+    
+}
