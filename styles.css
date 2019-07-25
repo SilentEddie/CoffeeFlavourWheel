@@ -43,8 +43,8 @@ section {
 
 .inner-2-sweet {
     background-color: #d84126;
-    top: -70px;
-    left: 300px;
+    top: 0%;
+    left: 0%;
     /* of the container */
     width: 50%;
     /* of the inner-1 */
@@ -52,8 +52,8 @@ section {
     /* of the inner-1 */
     position: absolute;
     box-shadow: 0 0 0 3px white;
-    border-top-right-radius: 50px;
-    clip: rect(40px, 13px, 150px, px);
+    clip-path: polygon(0% 0%, 0% 10%, 100% 0%, 100% 100%);
+    border-radius: 100% 0% 0% 0%;
 }
 .inner-2-fruity {
     background-color: #ff0000;
@@ -66,12 +66,24 @@ section {
     /* of the inner-1 */
     position: absolute;
     box-shadow: 0 0 0 3px white;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    transform: rotate(90deg);
+    border-radius: 0% 100% 0% 0%;
 }
+
+.inner-2-floral {
+    background-color: #DC5B8D;
+    top: 0%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 100% 0% 0%;
+    clip-path: polygon(0% 10%, 0% 0%, 40% 0%, 0% 100%);
+}
+
 .inner-2-nuttyCocoa {
     background-color: #B98773;
     top: 0%;
@@ -83,28 +95,26 @@ section {
     /* of the inner-1 */
     position: absolute;
     box-shadow: 0 0 0 3px white;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    clip-path: polygon(20% 0%, 0% 0%, 0% 40%, 100% 100%);
+    border-radius: 100% 0% 0% 0%;
 
 }
 .inner-2-spices {
     background-color: #942D40;
-    top: 36%;
-    left: 96%;
+      top: 0%;
+    left: 0%;
     /* of the container */
-    width: 35%;
+    width: 50%;
     /* of the inner-1 */
-    height: 55%;
+    height: 50%;
     /* of the inner-1 */
     position: absolute;
     box-shadow: 0 0 0 3px white;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    clip-path: polygon(0% 100%, 0% 0%, 0% 40%, 100% 100%);
+    border-radius: 100% 0% 0% 0%;
+
 }
+
 .inner-2-greenVegetavive {
     background-color: #468043;
     top: 50%;
@@ -115,13 +125,26 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
+    border-radius: 0% 0% 100% 0%;
     box-shadow: 0 0 0 3px white;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    transform: rotate(180deg);
+    clip-path: polygon(100% 100%, 0% 0%, 0% 0%, 0% 100%);
 }
+
+.inner-2-sourFermented {
+    background-color: #F6C655;
+    top: 50%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0% 0% 100% 0%;
+    box-shadow: 0 0 0 3px white;
+    clip-path: polygon(100% 0%, 0% 0%, 0% 0%, 90% 90%);
+}
+
 .inner-2-other {
     background-color: #2BABBF;
     top: 50%;
@@ -133,13 +156,24 @@ section {
     /* of the inner-1 */
     position: absolute;
     box-shadow: 0 0 0 3px white;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    transform: rotate(-90deg);
+    border-radius: 0% 0% 0% 100%;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 150%, 200% 50%);
 }
 
+.inner-2-roasted {
+    background-color: #D55B52;
+    top: 50%;
+    left: 0;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 100%;
+    clip-path: polygon(0% 150%, 0% 0%, 70% 0%, 20% 100%);
+}
 
 .inner-3 {
     background-color: white;
