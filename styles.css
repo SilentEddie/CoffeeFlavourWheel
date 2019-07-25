@@ -31,9 +31,9 @@ section {
 
 .inner-2 {
     top: 35%;
-    left: 35%;
+    left: 32%;
     /* of the container */
-    width: 30%;
+    width: 35%;
     /* of the inner-1 */
     height: 30%;
     /* of the inner-1 */
@@ -43,20 +43,21 @@ section {
 
 .inner-2-sweet {
     background-color: #d84126;
-    top: 0;
-    left: 0;
+    top: -70px;
+    left: 300px;
     /* of the container */
     width: 50%;
     /* of the inner-1 */
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    border-radius: 100% 0% 0% 0%;
     box-shadow: 0 0 0 3px white;
+    border-top-right-radius: 50px;
+    clip: rect(40px, 13px, 150px, px);
 }
 .inner-2-fruity {
     background-color: #ff0000;
-    top: 0;
+    top: 0%;
     left: 50%;
     /* of the container */
     width: 50%;
@@ -64,21 +65,45 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    border-radius: 0 100% 0 0;
     box-shadow: 0 0 0 3px white;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: rotate(90deg);
 }
-inner-2-nuttyCocoa {
+.inner-2-nuttyCocoa {
     background-color: #B98773;
-    top: 0;
-    left: 50%;
+    top: 0%;
+    left: 0%;
     /* of the container */
     width: 50%;
     /* of the inner-1 */
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    border-radius: 0 100% 0 0;
     box-shadow: 0 0 0 3px white;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+.inner-2-spices {
+    background-color: #942D40;
+    top: 36%;
+    left: 96%;
+    /* of the container */
+    width: 35%;
+    /* of the inner-1 */
+    height: 55%;
+    /* of the inner-1 */
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 .inner-2-greenVegetavive {
     background-color: #468043;
@@ -90,8 +115,12 @@ inner-2-nuttyCocoa {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    border-radius: 0 0 100% 0;
     box-shadow: 0 0 0 3px white;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: rotate(180deg);
 }
 .inner-2-other {
     background-color: #2BABBF;
@@ -103,17 +132,21 @@ inner-2-nuttyCocoa {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    border-radius: 0 0 0 100%;
     box-shadow: 0 0 0 3px white;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: rotate(-90deg);
 }
 
 
 .inner-3 {
     background-color: white;
     top: 42%;
-    left: 42%;
+    left: 41%;
     /* of the container */
-    width: 16%;
+    width: 18%;
     /* of the inner-1 */
     height: 16%;
     /* of the inner-1 */
@@ -121,3 +154,4 @@ inner-2-nuttyCocoa {
     border-radius: 50%;
     box-shadow: 0 0 0 3px white;
 }
+

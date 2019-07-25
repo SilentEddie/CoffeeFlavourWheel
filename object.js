@@ -154,14 +154,13 @@ const flavours = {
                     },
                 },
             },
-        },
-        citricFruits:{
-            name: "Citric Fruits",
+            citrusFruit: {
+            name: "Citrus Fruit",
             color: "Citrus Blast",
             descriptors: {
                 grapefruit: {
                     name: "Grapefruit",
-                    color: "Tabgerine Dream",
+                    color: "Tangerine Dream",
                 },
                 orange: {
                     name: "Orange",
@@ -178,8 +177,10 @@ const flavours = {
             },
         },
     },
+        
+    },
     sourFermented: {
-        name: "Sour Fermented",
+        name: "Sour/Fermented",
         color: "Yolk",
         subFlavours: {
             sour: {
@@ -213,7 +214,7 @@ const flavours = {
                 },
             },
             alcoholFermented: {
-                name: "Alcohol Fermented",
+                name: "Alcohol/Fermented",
                 color: "Lichen Green",
                 descriptors: {
                     winey: {
@@ -490,4 +491,4 @@ const flavours = {
             },
         },
     },
-            },
+}
