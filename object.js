@@ -6,7 +6,7 @@ const flavours = {
             brownSugar: {
                 name: "Brown sugar",
                 color: "Raspberry Blush",
-                decriptors: {
+                descriptors: {
                     molasses: {
                         name: "Molasses",
                         color: "Wenge",
@@ -54,7 +54,7 @@ const flavours = {
             floral: {
                 name: "Floral",
                 color: "Deep Carnation",
-                discriptors: {
+                descriptors: {
                     chamomile: {
                         name: "chamomile",
                         color: "Desert Sunset",
@@ -79,7 +79,7 @@ const flavours = {
             berry: {
                 name: "Berry",
                 color: "Spring Tulips",
-                decriptors: {
+                descriptors: {
                     blackberry: {
                         name: "Blackberry",
                         color: "Bucktrout Brown",

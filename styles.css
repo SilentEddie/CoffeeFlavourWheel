@@ -1,25 +1,123 @@
-section.thirdCircle {
-    
+section {
+    margin-top: 50px;
+    width: 70%;
 }
 
 
-div.descriptors {
-    width: 1000px;
-    height: 1000px;
-    border-style: solid;
-    border-radius: 500px;
-    margin: 10px, 50%, 50%;
+.outer-1 {
+    left: 10%;
+    width: 120%;
+    /* You can define it by % also */
+    height: 900px;
+    /* You can define it by % also*/
+    position: relative;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 1% 1% 0% 1%;
 }
 
-section.secondCircle {
-    
-    
+.inner-1 {
+    top: 20%;
+    left: 20%;
+    /* of the container */
+    width: 60%;
+    /* of the outer-1 */
+    height: 60%;
+    /* of the outer-1 */
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 50%;
 }
 
-div.subFlavours {
-    width: 500px;
-    height: 500px;
-    border-style: solid;
-    border-radius: 250px;
-    
+.inner-2 {
+    top: 35%;
+    left: 35%;
+    /* of the container */
+    width: 30%;
+    /* of the inner-1 */
+    height: 30%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 50%;
+}
+
+.inner-2-sweet {
+    background-color: #d84126;
+    top: 0;
+    left: 0;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 100% 0% 0% 0%;
+    box-shadow: 0 0 0 3px white;
+}
+.inner-2-fruity {
+    background-color: #ff0000;
+    top: 0;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0 100% 0 0;
+    box-shadow: 0 0 0 3px white;
+}
+inner-2-nuttyCocoa {
+    background-color: #B98773;
+    top: 0;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0 100% 0 0;
+    box-shadow: 0 0 0 3px white;
+}
+.inner-2-greenVegetavive {
+    background-color: #468043;
+    top: 50%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0 0 100% 0;
+    box-shadow: 0 0 0 3px white;
+}
+.inner-2-other {
+    background-color: #2BABBF;
+    top: 50%;
+    left: 0;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0 0 0 100%;
+    box-shadow: 0 0 0 3px white;
+}
+
+
+.inner-3 {
+    background-color: white;
+    top: 42%;
+    left: 42%;
+    /* of the container */
+    width: 16%;
+    /* of the inner-1 */
+    height: 16%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px white;
 }
