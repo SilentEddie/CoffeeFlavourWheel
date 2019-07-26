@@ -25,9 +25,39 @@ section {
     height: 60%;
     /* of the outer-1 */
     position: absolute;
-    border: 1px solid black;
     border-radius: 50%;
 }
+
+.inner-1-blackTea {
+    background-color: #844C5C;
+    top: 0%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 100% 0% 0%;
+    clip-path: polygon(10% 0%, 0% 0%, 0% 0%, 0% 80%);
+}
+
+.inner-1-floral {
+    background-color: #ed82af;
+    top: 0%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 100% 0% 0%;
+    clip-path: polygon(10% 0%, 3% 50%, 19% 53%, 47% 1%);
+}
+
 
 .inner-2 {
     top: 35%;
@@ -55,6 +85,7 @@ section {
     clip-path: polygon(0% 0%, 0% 10%, 100% 0%, 100% 100%);
     border-radius: 100% 0% 0% 0%;
 }
+
 .inner-2-fruity {
     background-color: #ff0000;
     top: 0%;
@@ -65,8 +96,68 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
+    box-shadow: 0 0 0 4px white;
+    border-radius: 0% 100% 0% 0%;
+}
+
+.inner-1-berry {
+    background-color: #EE4F59;
+    top: 0%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
+    clip-path: polygon(0% 100%, 100% 11%, 45% 0%, -48% 190%);
+}
+
+.inner-1-driedFruit {
+    background-color: #BD493F;
+    top: 0%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 100% 0% 0%;
+    clip-path: polygon(100% 35%, 110% 0%, 1% 100%, 0% 95%);
+}
+
+.inner-1-otherFruit {
+    background-color: #F79381;
+    top: 0%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 100% 0% 0%;
+    clip-path: polygon(40% 0%, 460% 260%, 0% 90%, 200% -18%);
+}
+
+.inner-1-citrusFruit {
+    background-color: #FEB048;
+    top: 0%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 100% 0% 0%;
+    clip-path: polygon(0% 180%, 167% 65%, 0% 90%, 0% 10%);
 }
 
 .inner-2-floral {
@@ -130,6 +221,66 @@ section {
     clip-path: polygon(100% 100%, 0% 0%, 0% 0%, 0% 100%);
 }
 
+.inner-1-oliveOil {
+    background-color: #B1BD3D;
+    top: 50%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0% 0% 100% 0%;
+    box-shadow: 0 0 0 3px white;
+    clip-path: polygon(120% 100%, 10% 12%, -25% -28%, 79% 75%);
+}
+
+.inner-1-raw {
+    background-color: #678238;
+    top: 50%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0% 0% 100% 0%;
+    box-shadow: 0 0 0 3px white;
+    clip-path: polygon(95% 90%, 7% 20%, -35% -28%, 79% 75%);
+}
+
+.inner-1-greenVegetative {
+    background-color: #4ABF5E;
+    top: 50%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0% 0% 100% 0%;
+    box-shadow: 0 0 0 4px white;
+    clip-path: polygon(41% 185%, 0% 4%, -70% -37%, 76% 75%);
+}
+
+.inner-1-beany {
+    background-color: #68B28E;
+    top: 50%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0% 0% 100% 0%;
+    box-shadow: 0 0 0 4px white;
+    clip-path: polygon(55% 255%, 8% 41%, -200% 360%, 160% 10%);
+}
+
 .inner-2-sourFermented {
     background-color: #F6C655;
     top: 50%;
@@ -142,7 +293,52 @@ section {
     position: absolute;
     border-radius: 0% 0% 100% 0%;
     box-shadow: 0 0 0 3px white;
-    clip-path: polygon(100% 0%, 0% 0%, 0% 0%, 100% 90%);
+    clip-path: polygon(400% 0%, 0% 0%, 0% 0%, 10% 90%);
+}
+
+.inner-1-sourFermented {
+    background-color: #F6C655;
+    top: 50%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0% 0% 100% 0%;
+    box-shadow: 0 0 0 4px white;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 100% 90%);
+}
+
+.inner-1-sour {
+    background-color: #F1D246;
+    top: 50%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0% 0% 100% 0%;
+    box-shadow: 0 0 0px 4px white;
+    clip-path: polygon(0% 10%, 510% 240%, 100% 0%, 0% 0%);
+}
+
+.inner-1-alcoholFermented {
+    background-color: #CFD458;
+    top: 50%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /* of the inner-1 */
+    height: 50%;
+    /* of the inner-1 */
+    position: absolute;
+    border-radius: 0% 0% 100% 0%;
+    box-shadow: 0 0 0 3px white;
+    clip-path: polygon(41900% 33600%, 0% -22%, 0% 0%, 0% 0%);
 }
 
 .inner-2-other {
