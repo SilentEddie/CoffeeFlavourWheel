@@ -45,6 +45,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(10% 0%, 0% 0%, 0% 0%, 0% 80%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-blackTea:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-floral {
@@ -60,6 +65,10 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(11% 0%, 4% 50%, 19% 53%, 47% 1%);
+    transition: all .2s ease-in-out;
+}
+.outer-1 .inner-1-floral:hover {
+    transform: scale(1.1);
 }
 
 /*##################  INNER 2 WHEEL  ###########*/
@@ -90,6 +99,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(25% 0%, 100% 0%, 102% 44%, 98% 100%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.inner-2-sweet:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-brownSugar {
@@ -105,6 +119,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(25% 0%, 0% 0%, 56% 1%, 100% 101%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-brownSugar:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-vanilla {
@@ -120,6 +139,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(65% 0%, 0% 0%, 57% 1%, 99% 101%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-vanilla:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-vanillin {
@@ -135,6 +159,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(74% 0%, 0% 0%, 65% 1%, 99% 101%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-vanillin:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-overallSweet {
@@ -150,6 +179,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(84% 0%, 0% 0%, 76% 1%, 99% 101%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-overallSweet:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-sweetAromatics {
@@ -165,6 +199,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(97% 0%, 0% 0%, 86% 1%, 99% 101%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-sweetAromatics:hover {
+    transform: scale(1.1);
 }
 
 .inner-2-fruity {
@@ -180,6 +219,11 @@ section {
     box-shadow: 0 0 0 4px white;
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(-19% 130%, 200% 75%, 100% 69%, 120% -150%);
+    transition: all .2s ease-in-out;
+}
+
+.inner-2-fruity:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-berry {
@@ -195,7 +239,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(90% 10%, 35% 0%, 48% 1%, 3% 90%);
-    /*    clip-path: polygon(0% 100%, 100% 11%, 45% 0%, -48% 190%);*/
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-berry:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-driedFruit {
@@ -211,6 +259,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(100% 35%, 99% -1%, 1% 100%, 20% 80%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-driedFruit:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-otherFruit {
@@ -226,6 +279,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(30% 0%, 102% 34%, 9% 88%, 1000% 8%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-otherFruit:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-citrusFruit {
@@ -241,6 +299,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(0% 90%, 0% 130%, 100% 100%, 100% 81%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-citrusFruit:hover {
+    transform: scale(1.1);
 }
 
 .inner-2-floral {
@@ -256,7 +319,13 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(0% 10%, 0% 0%, 40% 0%, 0% 100%);
+    transition: all .2s ease-in-out;
 }
+
+.inner-2-floral:hover {
+    transform: scale(1.1);
+}
+
 
 .inner-2-nuttyCocoa {
     background-color: #B98773;
@@ -271,6 +340,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(20% 0%, 0% 0%, 0% 40%, 100% 100%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.inner-2-nuttyCocoa:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-nutty {
@@ -286,6 +360,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(11% 20%, 10% 0%, 12% 44%, 98% 100%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-nutty:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-cocoa {
@@ -301,6 +380,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(0% 1%, 0% 0%, 25% 0%, 100% 107%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-cocoa:hover {
+    transform: scale(1.1);
 }
 
 .inner-2-spices {
@@ -316,6 +400,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(0% 100%, 0% 0%, 0% 42%, 100% 100%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.inner-2-spices:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-pungent {
@@ -331,6 +420,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(-110% 80%, 0% 0%, -90% 98%, 70% 99%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-pungent:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-pepper {
@@ -346,6 +440,11 @@ section {
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(0% 0%, 0% 90%, 79% 100%, 0% 83%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-pepper:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-brownSpice {
@@ -361,6 +460,11 @@ section {
     box-shadow: 0 0 0 4px white;
     clip-path: polygon(4% 0%, -300% -170%, 100% 105%, 0% 82%);
     border-radius: 100% 0% 0% 0%;
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-brownSpice:hover {
+    transform: scale(1.1);
 }
 
 .inner-2-greenVegetavive {
@@ -376,6 +480,11 @@ section {
     border-radius: 0% 0% 100% 0%;
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(100% 100%, 0% 0%, 0% 0%, 0% 100%);
+    transition: all .2s ease-in-out;
+}
+
+.inner-2-greenVegetavive:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-oliveOil {
@@ -391,6 +500,11 @@ section {
     border-radius: 0% 0% 100% 0%;
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(96% 95%, 17% 25%, -45% -20%, 75% 63%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-oliveOil:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-raw {
@@ -406,6 +520,11 @@ section {
     border-radius: 0% 0% 100% 0%;
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(96% 112%, 13% 25%, -45% -30%, 65% 69%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-raw:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-greenVegetative {
@@ -421,6 +540,11 @@ section {
     border-radius: 0% 0% 100% 0%;
     box-shadow: 0 0 0 4px white;
     clip-path: polygon(16% 185%, 0% 4%, -100% -97%, 66% 82%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-greenVegetative:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-beany {
@@ -436,6 +560,11 @@ section {
     border-radius: 0% 0% 100% 0%;
     box-shadow: 0 0 0 4px white;
     clip-path: polygon(25% 255%, 2% 41%, -200% 310%, 170% 10%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-beany:hover {
+    transform: scale(1.1);
 }
 
 .inner-2-sourFermented {
@@ -451,6 +580,11 @@ section {
     border-radius: 0% 0% 100% 0%;
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(260% 10%, 0% 0%, 0% 0%, 100% 95%);
+    transition: all .2s ease-in-out;
+}
+
+.inner-2-sourFermented:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-sour {
@@ -466,6 +600,11 @@ section {
     border-radius: 0% 0% 100% 0%;
     box-shadow: 0 0 0px 4px white;
     clip-path: polygon(0% 1%, 115% 50%, 190% 10%, 130% 1%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-sour:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-alcoholFermented {
@@ -481,6 +620,11 @@ section {
     border-radius: 0% 0% 100% 0;
     box-shadow: 0 0 0 3px white;
     clip-path: polygon(5% 8%, -3% 1%, 102% 84%, 136% 57%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-alcoholFermented:hover {
+    transform: scale(1.1);
 }
 
 .inner-2-other {
@@ -496,6 +640,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(85% -10%, 500% 120%, -40% 750%, 18% 95%);
+    transition: all .2s ease-in-out;
+}
+
+.inner-2-other:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-paperMusty {
@@ -511,6 +660,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(0% 0%, 90% 0%, 30% 180%, 900000% 100%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-paperMusty:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-chemical {
@@ -526,6 +680,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(77% 37%, 58% 91%, 30% 80%, 69% 33%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-chemical:hover {
+    transform: scale(1.1);
 }
 
 .inner-2-roasted {
@@ -541,6 +700,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(-30% 0%, -700% 10%, 75% 0%, 15% 100%);
+    transition: all .2s ease-in-out;
+}
+
+.inner-2-roasted:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-pipeTobacco {
@@ -556,6 +720,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(90% 0%, 58% 42%, 29% 79%, 74% -11%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-pipeTobacco:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-tobacco {
@@ -571,6 +740,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(35% 58%, 24% 101%, 26% 60%, 83% -18%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-tobacco:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-burnt {
@@ -586,6 +760,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(90% 0%, 0% 18%, 13% 72%, 60% 16%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-burnt:hover {
+    transform: scale(1.1);
 }
 
 .outer-1 .inner-1-cereal {
@@ -601,6 +780,11 @@ section {
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(50% 0%, -650% 0%, -12% 19%, 64% 6%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .inner-1-cereal:hover {
+    transform: scale(1.1);
 }
 
 /*########## INNER WHITE CIRCLE ############*/

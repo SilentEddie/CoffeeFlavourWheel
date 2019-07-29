@@ -1,3 +1,8 @@
+(function () {
+   "use strict";
+}());
+
+
 const flavours = {
     sweet: {
         name: "Sweet",
