@@ -36,7 +36,7 @@ section {
     position: absolute;
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
-    -webkit-clip-path: polygon(10% 11%, 20% 12%, 13% 33%, 8% 31%);
+    -webkit-clip-path: polygon(10% 9%, 20% 10%, 13% 33%, 8% 31%);
     transition: all .2s ease-in-out;
 }
 
@@ -54,7 +54,7 @@ section {
     position: absolute;
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
-    -webkit-clip-path: polygon(21% 12%, 30% 14%, 21% 35%, 13% 33%);
+    -webkit-clip-path: polygon(20% 12%, 30% 14%, 21% 33%, 13% 34%);
     transition: all .2s ease-in-out;
 }
 
@@ -381,22 +381,467 @@ section {
     transition: all .2s ease-in-out;
 }
 
-/* .outer-1 .outer-1-honey {
+.outer-1 .outer-1-honey {
     background-color: rgb(206, 71, 24);
     opacity: 0.5;
     top: 0%;
-    left: 50%; */
-/* of the container */
-/* width: 50%; */
-/* of the inner-1 */
-/* height: 50%; */
-/* of the inner-1 */
-/* position: absolute;
+    right: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
     box-shadow: 0 0 0 3px white;
     border-radius: 0% 100% 0% 0%;
-    -webkit-clip-path: polygon(-10% 5%, -17% 0, -6% 47%, 25% 54%);
+    -webkit-clip-path: polygon(45% 3%, 54% 1%, 71% 36%, 71% 41%);
     transition: all .2s ease-in-out;
-} */
+}
+
+.outer-1 .outer-1-caramelized {
+    background-color: rgb(199, 115, 28);
+    opacity: 0.5;
+    top: 0%;
+    right: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 100% 0% 0%;
+    -webkit-clip-path: polygon(48% 13%, 46% 5%, 68% 38%, 66% 41%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-mapleSyrup {
+    background-color: rgb(155, 34, 25);
+    opacity: 0.5;
+    top: 0%;
+    right: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 100% 0% 0%;
+    -webkit-clip-path: polygon(45% 18%, 42% 5%, 65% 40%, 63% 44%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-molasses {
+    background-color: rgb(36, 11, 14);
+    opacity: 0.5;
+    top: 0%;
+    right: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 100% 0% 0%;
+    -webkit-clip-path: polygon(39% 18%, 38% 9%, 61% 42%, 59% 44%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-sourAromatics {
+    background-color: rgb(138, 155, 20);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(69% 24%, 69% 21%, 95% 20%, 95% 25%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-aceticAcid {
+    background-color: rgb(129, 154, 92);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(69% 29%, 69% 25%, 95% 26%, 95% 31%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-butyricAcid {
+    background-color: rgb(196, 165, 63);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(69% 33%, 69% 30%, 95% 32%, 94% 39%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-isovalericAcid {
+    background-color: rgb(123, 171, 55);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(68% 39%, 69% 34%, 94% 40%, 91% 47%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-citricAcid {
+    background-color: rgb(247, 240, 12);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(64% 43%, 67% 39%, 91% 48%, 90% 51%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-malicAcid {
+    background-color: rgb(178, 176, 11);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(64% 48%, 65% 44%, 90% 52%, 88% 57%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-winey {
+    background-color: rgb(121, 12, 67);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(60% 50%, 64% 49%, 88% 58%, 84% 65%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-whiskey {
+    background-color: rgb(161, 54, 44);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(60% 56%, 62% 52%, 84% 66%, 80% 70%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-fermented {
+    background-color: rgb(170, 129, 38);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(55% 60%, 60% 57%, 79% 70%, 75% 75%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-overripe {
+    background-color: rgb(118, 82, 45);
+    opacity: 0.5;
+    top: 40%;
+    left: 50%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(53% 65%, 55% 61%, 75% 76%, 70% 80%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-underRipe {
+    background-color: rgb(144, 177, 34);
+    opacity: 0.5;
+    top: 40%;
+    left: 40%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(60% 78%, 64% 75%, 79% 92%, 70% 97%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-peaPod {
+    background-color: rgb(82, 158, 46);
+    opacity: 0.5;
+    top: 40%;
+    left: 40%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(54% 80%, 58% 76%, 69% 97%, 65% 99%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-fresh {
+    background-color: rgb(20, 154, 67);
+    opacity: 0.5;
+    top: 40%;
+    left: 40%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(47% 80%, 51% 76%, 64% 99%, 57% 104%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-darkGreen {
+    background-color: rgb(16, 117, 57);
+    opacity: 0.5;
+    top: 40%;
+    left: 40%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(40% 80%, 44% 76%, 54% 100%, 49% 104%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-vegetative {
+    background-color: rgb(37, 170, 59);
+    opacity: 0.5;
+    top: 40%;
+    left: 40%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(35% 80%, 37% 76%, 47% 100%, 38% 100%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-hayLike {
+    background-color: rgb(145, 155, 38);
+    opacity: 0.5;
+    top: 40%;
+    left: 40%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(30% 90%, 35% 88%, 37% 100%, 31% 100%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-herbLike {
+    background-color: rgb(105, 184, 51);
+    opacity: 0.5;
+    top: 40%;
+    left: 40%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(26% 90%, 29% 89%, 30% 100%, 28% 100%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-stale {
+    background-color: rgb(119, 122, 126);
+    opacity: 0.5;
+    top: 40%;
+    left: 0%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(100% 90%, 100% 100%, 97% 100%, 98% 90%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-cardboard {
+    background-color: rgb(175, 166, 100);
+    opacity: 0.5;
+    top: 40%;
+    left: 0%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(98% 90%, 96% 100%, 95% 100%, 95% 90%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-papery {
+    background-color: rgb(206, 189, 189);
+    opacity: 0.5;
+    top: 40%;
+    left: 0%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(95% 90%, 94% 100%, 91% 100%, 93% 90%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-woody {
+    background-color: rgb(94, 62, 4);
+    opacity: 0.5;
+    top: 40%;
+    left: 0%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(92% 90%, 91% 100%, 87% 100%, 90% 90%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-moldyDamp {
+    background-color: rgb(145, 148, 92);
+    opacity: 0.5;
+    top: 40%;
+    left: 0%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(90% 88%, 87% 100%, 82% 100%, 87% 89%);
+    transition: all .2s ease-in-out;
+}
+
+.outer-1 .outer-1-mustyDusty {
+    background-color: rgb(186, 167, 113);
+    opacity: 0.5;
+    top: 40%;
+    left: 0%;
+    /* of the container */
+    width: 50%;
+    /*of the inner-1*/
+    height: 50%;
+    /*of the inner-1*/
+    position: absolute;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 0% 0% 0% 0%;
+    -webkit-clip-path: polygon(87% 88%, 81% 100%, 78% 99%, 82% 87%);
+    transition: all .2s ease-in-out;
+}
+
+
+
 
 
 /*#######    INNER 1 WHEEL    #########*/
