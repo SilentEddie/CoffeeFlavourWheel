@@ -4,13 +4,13 @@
 // basic flavours 
 
 
-function message() {
-    var typeOfFlavour = document.getElementById("orangeNectar");
-    typeOfFlavour.addEventListener("click", message);
-    alert(flavours.sweet.name + " " + flavours.sweet.color);
-}
+// function message() {
+//     var typeOfFlavour = document.getElementById("orangeNectar");
+//     typeOfFlavour.addEventListener("click", message);
+//     alert(flavours.sweet.name + " " + flavours.sweet.color);
+// }
 
-message();
+// message();
 
 
 var sweet = document.getElementById("orangeNectar");
