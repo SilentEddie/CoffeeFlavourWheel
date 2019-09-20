@@ -1,26 +1,43 @@
 body {
-    background-color: #8f8f8ff6;
+    background-color: black;
 }
 
 section {
-    margin: 0 auto;
-    background-color: rgb(198, 201, 193);
+    /* margin: 2%; */
+    background-color: black;
+    height: 100%;
     /* border-radius: 70%; */
 }
 
-
+.outer-0 {
+    top: 15px;
+    /* left: 2%; */
+    bottom: 0;
+    /* of the container */
+    width: 100%;
+    /* of the inner-1 */
+    height: 1000px;
+    /* of the inner-1 */
+    position: fixed;
+    box-shadow: rgb(rgb(255, 255, 255));
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    display: block;
+}
 
 .outer-1 {
     top: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0%;
     left: 0;
     width: 100%;
     /* You can define it by % also */
-    height: 1000px;
+    height: 1050px;
     /* You can define it by % also*/
     position: relative;
-    background-color: rgb(198, 201, 193);
+    background-color: rgb(white);
+    border-style: solid;
     /* border-radius: 50% 50% 50% 50%; */
     /*    box-shadow: 0 0 0 3px black;*/
 }
@@ -36,7 +53,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(10% 9%, 20% 10%, 13% 33%, 8% 31%);
     transition: all .2s ease-in-out;
@@ -54,7 +71,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(20% 12%, 30% 14%, 21% 33%, 13% 34%);
     transition: all .2s ease-in-out;
@@ -71,7 +88,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(31% 14%, 40% 17%, 29% 37%, 21% 35%);
     transition: all .2s ease-in-out;
@@ -88,7 +105,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(41% 17%, 49% 21%, 34% 42%, 30% 38%);
     transition: all .2s ease-in-out;
@@ -105,7 +122,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(51% 21%, 57% 25%, 40% 44%, 36% 40%);
     transition: all .2s ease-in-out;
@@ -122,7 +139,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(59% 26%, 62% 28%, 40% 51%, 37% 47%);
     transition: all .2s ease-in-out;
@@ -139,7 +156,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(64% 29%, 68% 34%, 36% 61%, 45% 47%);
     transition: all .2s ease-in-out;
@@ -156,7 +173,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(68% 35%, 73% 40%, 51% 58%, 48% 52%);
     transition: all .2s ease-in-out;
@@ -173,7 +190,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(73% 41%, 79% 49%, 58% 61%, 54% 56%);
     transition: all .2s ease-in-out;
@@ -190,7 +207,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(80% 50%, 81% 52%, 57% 66%, 59% 61%);
     transition: all .2s ease-in-out;
@@ -207,7 +224,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(82% 53%, 84% 56%, 57% 70%, 56% 67%);
     transition: all .2s ease-in-out;
@@ -224,7 +241,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(84% 57%, 86% 60%, 58% 71%, 54% 72%);
     transition: all .2s ease-in-out;
@@ -241,7 +258,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(86% 61%, 88% 65%, 60% 75%, 59% 72%);
     transition: all .2s ease-in-out;
@@ -258,7 +275,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(89% 66%, 91% 70%, 60% 80%, 60% 76%);
     transition: all .2s ease-in-out;
@@ -275,7 +292,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(91% 71%, 93% 75%, 65% 81%, 64% 79%);
     transition: all .2s ease-in-out;
@@ -292,7 +309,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(92% 76%, 93% 80%, 68% 83%, 66% 81%);
     transition: all .2s ease-in-out;
@@ -309,7 +326,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(94% 80%, 95% 84%, 68% 86%, 67% 84%);
     transition: all .2s ease-in-out;
@@ -326,7 +343,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(95% 85%, 95% 88%, 69% 90%, 69% 87%);
     transition: all .2s ease-in-out;
@@ -343,7 +360,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(95% 89%, 95% 91%, 70% 94%, 67% 91%);
     transition: all .2s ease-in-out;
@@ -360,7 +377,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(95% 92%, 95% 95%, 70% 97%, 67% 95%);
     transition: all .2s ease-in-out;
@@ -377,7 +394,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(95% 96%, 95% 99%, 70% 100%, 67% 98%);
     transition: all .2s ease-in-out;
@@ -391,12 +408,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 25%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
-    -webkit-clip-path: polygon(45% 3%, 54% 1%, 71% 36%, 71% 41%);
+    -webkit-clip-path: polygon(54% 26%, 59% 15%, 72% 75%, 69% 74%);
     transition: all .2s ease-in-out;
 }
 
@@ -408,12 +425,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 40%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
-    -webkit-clip-path: polygon(48% 13%, 46% 5%, 68% 38%, 66% 41%);
+    -webkit-clip-path: polygon(49% 19%, 53% 16%, 69% 47%, 65% 49%);
     transition: all .2s ease-in-out;
 }
 
@@ -428,9 +445,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
-    -webkit-clip-path: polygon(45% 18%, 42% 5%, 65% 40%, 63% 44%);
+    -webkit-clip-path: polygon(45% 17%, 48% 15%, 65% 40%, 63% 44%);
     transition: all .2s ease-in-out;
 }
 
@@ -445,9 +462,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
-    -webkit-clip-path: polygon(39% 18%, 38% 9%, 61% 42%, 59% 44%);
+    -webkit-clip-path: polygon(40% 20%, 44% 17%, 61% 42%, 59% 44%);
     transition: all .2s ease-in-out;
 }
 
@@ -462,7 +479,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(69% 24%, 69% 21%, 95% 20%, 95% 25%);
     transition: all .2s ease-in-out;
@@ -479,7 +496,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(69% 29%, 69% 25%, 95% 26%, 95% 31%);
     transition: all .2s ease-in-out;
@@ -496,7 +513,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(69% 33%, 69% 30%, 95% 32%, 94% 39%);
     transition: all .2s ease-in-out;
@@ -513,7 +530,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(68% 39%, 69% 34%, 94% 40%, 91% 47%);
     transition: all .2s ease-in-out;
@@ -530,7 +547,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(64% 43%, 67% 39%, 91% 48%, 90% 51%);
     transition: all .2s ease-in-out;
@@ -547,7 +564,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(64% 48%, 65% 44%, 90% 52%, 88% 57%);
     transition: all .2s ease-in-out;
@@ -564,7 +581,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(60% 50%, 64% 49%, 88% 58%, 84% 65%);
     transition: all .2s ease-in-out;
@@ -581,7 +598,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(60% 56%, 62% 52%, 84% 66%, 80% 70%);
     transition: all .2s ease-in-out;
@@ -598,7 +615,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(55% 60%, 60% 57%, 79% 70%, 75% 75%);
     transition: all .2s ease-in-out;
@@ -615,7 +632,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(53% 65%, 55% 61%, 75% 76%, 70% 80%);
     transition: all .2s ease-in-out;
@@ -629,12 +646,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 52%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(60% 77%, 63% 74%, 79% 92%, 70% 97%);
+    -webkit-clip-path: polygon(60% 74%, 63% 72%, 83% 90%, 73% 97%);
     transition: all .2s ease-in-out;
 }
 
@@ -646,12 +663,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 53%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(54% 80%, 58% 76%, 69% 97%, 65% 99%);
+    -webkit-clip-path: polygon(55% 76%, 60% 73%, 72% 95%, 66% 98%);
     transition: all .2s ease-in-out;
 }
 
@@ -663,12 +680,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 54%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(47% 80%, 51% 76%, 64% 99%, 57% 104%);
+    -webkit-clip-path: polygon(50% 77%, 55% 75%, 66% 97%, 60% 100%);
     transition: all .2s ease-in-out;
 }
 
@@ -680,12 +697,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(40% 80%, 44% 76%, 54% 100%, 49% 104%);
+    -webkit-clip-path: polygon(44% 78%, 49% 76%, 59% 98%, 51% 99%);
     transition: all .2s ease-in-out;
 }
 
@@ -697,12 +714,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(35% 80%, 37% 76%, 47% 100%, 38% 100%);
+    -webkit-clip-path: polygon(38% 79%, 43% 77%, 50% 99%, 42% 100%);
     transition: all .2s ease-in-out;
 }
 
@@ -714,12 +731,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(30% 89%, 35% 86%, 37% 100%, 31% 100%);
+    -webkit-clip-path: polygon(32% 81%, 37% 80%, 41% 100%, 34% 100%);
     transition: all .2s ease-in-out;
 }
 
@@ -731,12 +748,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(27% 89%, 29% 89%, 30% 100%, 27% 100%);
+    -webkit-clip-path: polygon(26% 81%, 31% 81%, 33% 100%, 27% 100%);
     transition: all .2s ease-in-out;
 }
 
@@ -748,12 +765,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(99% 90%, 100% 100%, 97% 100%, 98% 90%);
+    -webkit-clip-path: polygon(99% 80%, 100% 100%, 97% 100%, 98% 80%);
     transition: all .2s ease-in-out;
 }
 
@@ -765,29 +782,29 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(98% 90%, 96% 100%, 95% 100%, 95% 89%);
+    -webkit-clip-path: polygon(98% 80%, 96% 100%, 94% 100%, 96% 80%);
     transition: all .2s ease-in-out;
 }
 
 .outer-1 .outer-1-papery {
-    background-color: rgb(252, 255, 243);
+    background-color: rgb(252, 255, 242);
     opacity: 0.5;
     top: 40%;
     left: 0%;
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(95% 89%, 94% 100%, 91% 100%, 93% 89%);
+    -webkit-clip-path: polygon(95% 81%, 94% 100%, 91% 100%, 93% 81%);
     transition: all .2s ease-in-out;
 }
 
@@ -799,12 +816,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(92% 89%, 91% 100%, 87% 100%, 90% 89%);
+    -webkit-clip-path: polygon(93% 80%, 91% 100%, 87% 99%, 90% 80%);
     transition: all .2s ease-in-out;
 }
 
@@ -816,12 +833,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(90% 88%, 87% 100%, 82% 100%, 87% 89%);
+    -webkit-clip-path: polygon(90% 81%, 86% 99%, 82% 98%, 87% 80%);
     transition: all .2s ease-in-out;
 }
 
@@ -833,12 +850,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 54%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(87% 88%, 81% 100%, 78% 99%, 83% 87%);
+    -webkit-clip-path: polygon(87% 82%, 81% 100%, 78% 99%, 83% 80%);
     transition: all .2s ease-in-out;
 }
 
@@ -850,12 +867,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 56%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(82% 87%, 78% 99%, 75% 98%, 79% 85%);
+    -webkit-clip-path: polygon(82% 78%, 77% 99%, 74% 99%, 79% 77%);
     transition: all .2s ease-in-out;
 }
 
@@ -867,12 +884,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(78% 86%, 75% 98%, 72% 97%, 75% 82%);
+    -webkit-clip-path: polygon(79% 78%, 73% 100%, 71% 100%, 75% 77%);
     transition: all .2s ease-in-out;
 }
 
@@ -884,12 +901,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 55%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(74% 83%, 72% 97%, 69% 96%, 74% 84%);
+    -webkit-clip-path: polygon(75% 77%, 70% 99%, 67% 98%, 73% 77%);
     transition: all .2s ease-in-out;
 }
 
@@ -901,12 +918,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 54%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(73% 84%, 69% 96%, 66% 95%, 72% 84%);
+    -webkit-clip-path: polygon(73% 78%, 66% 100%, 64% 99%, 72% 78%);
     transition: all .2s ease-in-out;
 }
 
@@ -918,12 +935,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 54%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(68% 78%, 61% 93%, 65% 95%, 71% 82%);
+    -webkit-clip-path: polygon(68% 74%, 58% 97%, 62% 99%, 71% 77%);
     transition: all .2s ease-in-out;
 }
 
@@ -935,12 +952,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 54%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(65% 78%, 56% 91%, 60% 93%, 66% 81%);
+    -webkit-clip-path: polygon(66% 72%, 52% 94%, 58% 97%, 67% 75%);
     transition: all .2s ease-in-out;
 }
 
@@ -952,12 +969,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 54%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(63% 79%, 51% 89%, 55% 91%, 64% 79%);
+    -webkit-clip-path: polygon(63% 73%, 48% 92%, 52% 94%, 65% 73%);
     transition: all .2s ease-in-out;
 }
 
@@ -969,12 +986,12 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 54%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(62% 76%, 47% 87%, 51% 89%, 65% 77%);
+    -webkit-clip-path: polygon(60% 71%, 44% 90%, 48% 92%, 63% 72%);
     transition: all .2s ease-in-out;
 }
 
@@ -986,29 +1003,29 @@ section {
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 54%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(59% 73%, 45% 86%, 47% 87%, 61% 76%);
+    -webkit-clip-path: polygon(59% 67%, 40% 87%, 44% 90%, 59% 71%);
     transition: all .2s ease-in-out;
 }
 
 .outer-1 .outer-1-rubber {
-    background-color: rgb(14, 12, 12);
+    background-color: rgb(116, 109, 109);
     opacity: 0.5;
     top: 40%;
     left: 0%;
     /* of the container */
     width: 50%;
     /*of the inner-1*/
-    height: 50%;
+    height: 54%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(55% 72%, 43% 84%, 45% 86%, 57% 74%);
+    -webkit-clip-path: polygon(55% 66%, 37% 86%, 40% 87%, 56% 69%);
     transition: all .2s ease-in-out;
 }
 
@@ -1023,9 +1040,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(47% 55%, 18% 63%, 32% 78%, 45% 63%);
+    -webkit-clip-path: polygon(47% 55%, 14% 69%, 26% 84%, 45% 63%);
     transition: all .2s ease-in-out;
 }
 
@@ -1040,9 +1057,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(37% 48%, 11% 52%, 18% 63%, 41% 56%);
+    -webkit-clip-path: polygon(37% 48%, 6% 52%, 14% 69%, 41% 56%);
     transition: all .2s ease-in-out;
 }
 
@@ -1057,9 +1074,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(37% 40%, 9% 43%, 11% 52%, 41% 47%);
+    -webkit-clip-path: polygon(37% 40%, 3% 43%, 6% 52%, 41% 47%);
     transition: all .2s ease-in-out;
 }
 
@@ -1074,9 +1091,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(32% 33%, 8% 36%, 9% 43%, 41% 39%);
+    -webkit-clip-path: polygon(32% 33%, 1% 36%, 3% 43%, 41% 39%);
     transition: all .2s ease-in-out;
 }
 
@@ -1091,9 +1108,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(32% 26%, 7% 26%, 8% 35%, 31% 31%);
+    -webkit-clip-path: polygon(32% 26%, 0% 26%, 1% 35%, 31% 31%);
     transition: all .2s ease-in-out;
 }
 
@@ -1108,9 +1125,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(30% 20%, 7% 20%, 7% 26%, 31% 25%);
+    -webkit-clip-path: polygon(30% 20%, 0% 20%, 0% 26%, 31% 25%);
     transition: all .2s ease-in-out;
 }
 
@@ -1125,9 +1142,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(32% 88%, 6% 82%, 7% 76%, 33% 83%);
+    -webkit-clip-path: polygon(32% 88%, 1% 82%, 2% 76%, 33% 83%);
     transition: all .2s ease-in-out;
 }
 
@@ -1142,9 +1159,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(33% 83%, 7% 75%, 9% 66%, 35% 77%);
+    -webkit-clip-path: polygon(33% 83%, 2% 75%, 6% 65%, 35% 77%);
     transition: all .2s ease-in-out;
 }
 
@@ -1159,9 +1176,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(35% 77%, 9% 65%, 12% 57%, 37% 70%);
+    -webkit-clip-path: polygon(35% 77%, 6% 64%, 10% 56%, 37% 70%);
     transition: all .2s ease-in-out;
 }
 
@@ -1176,9 +1193,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(37% 70%, 12% 56%, 16% 48%, 41% 64%);
+    -webkit-clip-path: polygon(37% 70%, 10% 55%, 15% 47%, 41% 64%);
     transition: all .2s ease-in-out;
 }
 
@@ -1193,9 +1210,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(41% 63%, 17% 46%, 20% 41%, 44% 60%);
+    -webkit-clip-path: polygon(41% 63%, 16% 45%, 19% 41%, 44% 60%);
     transition: all .2s ease-in-out;
 }
 
@@ -1210,9 +1227,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(45% 61%, 21% 41%, 24% 37%, 48% 57%);
+    -webkit-clip-path: polygon(45% 61%, 20% 40%, 23% 36%, 48% 57%);
     transition: all .2s ease-in-out;
 }
 
@@ -1227,9 +1244,9 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
-    -webkit-clip-path: polygon(47% 56%, 24% 37%, 28% 30%, 49% 52%);
+    -webkit-clip-path: polygon(47% 56%, 23% 36%, 28% 30%, 49% 52%);
     transition: all .2s ease-in-out;
 }
 
@@ -1244,7 +1261,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(50% 51%, 29% 30%, 31% 27%, 53% 49%);
     transition: all .2s ease-in-out;
@@ -1261,7 +1278,7 @@ section {
     height: 50%;
     /*of the inner-1*/
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 0%;
     -webkit-clip-path: polygon(54% 49%, 31% 27%, 35% 25%, 56% 47%);
     transition: all .2s ease-in-out;
@@ -1285,6 +1302,8 @@ section {
     /* of the outer-1 */
     position: absolute;
     border-radius: 50%;
+    border-style: solid;
+    border-color: white;
 }
 
 .outer-1 .inner-1-blackTea {
@@ -1297,7 +1316,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(10% 0, 0 0, 0 43%, 5% 42%);
     transition: all .2s ease-in-out;
@@ -1317,7 +1336,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     -webkit-clip-path: polygon(11% 0, 47% 0, 22% 46%, 6% 43%);
     transition: all .2s ease-in-out;
@@ -1338,8 +1357,10 @@ section {
     height: 40%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 50%;
+    border-style: solid;
+    border-color: white;
 }
 
 .inner-2-sweet {
@@ -1352,7 +1373,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     -webkit-clip-path: polygon(23% 0%, 100% 0%, 100% 50%, 71% 62%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1372,7 +1393,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     -webkit-clip-path: polygon(30% 5%, 57% 0, 76% 47%, 65% 54%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1392,7 +1413,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(57% 0, 65% 0, 80% 46%, 77% 47%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1412,7 +1433,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(66% 0, 74% 0, 85% 44%, 81% 46%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1432,7 +1453,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(75% 0, 85% 0, 90% 43%, 86% 44%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1452,7 +1473,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(86% 0, 99% 0, 99% 42%, 91% 43%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1472,7 +1493,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(-19% 130%, 200% 75%, 100% 69%, 120% -150%);
     transition: all .2s ease-in-out;
@@ -1492,7 +1513,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(45% 5%, 73% 26%, 41% 57%, 24% 46%);
     transition: all .2s ease-in-out;
@@ -1512,7 +1533,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(100% 35%, 86% 13%, 42% 59%, 47% 64%);
     transition: all .2s ease-in-out;
@@ -1532,7 +1553,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(48% 66%, 57% 83%, 99% 80%, 100% 35%);
     transition: all .2s ease-in-out;
@@ -1552,7 +1573,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(58% 87%, 59% 100%, 100% 100%, 99% 81%);
     transition: all .2s ease-in-out;
@@ -1572,7 +1593,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 100% 0% 0%;
     clip-path: polygon(40% 0%, 1% 0%, 1% 66%, 14% 60%);
     transition: all .2s ease-in-out;
@@ -1593,7 +1614,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(20% 0%, 0% 0%, 0% 40%, 100% 100%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1613,7 +1634,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(0 37%, 13% 15%, 54% 62%, 49% 69%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1633,7 +1654,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(17% 17%, 29% 13%, 63% 54%, 56% 60%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1653,7 +1674,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(0% 100%, 0% 0%, 0% 42%, 100% 100%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1673,7 +1694,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(0 99%, 0 92%, 41% 96%, 41% 99%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1693,7 +1714,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(0 91%, 0 83%, 42% 93%, 42% 95%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1713,7 +1734,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(0% 82%, 9% 44%, 49% 71%, 42% 92%);
     border-radius: 100% 0% 0% 0%;
     transition: all .2s ease-in-out;
@@ -1734,7 +1755,7 @@ section {
     /* of the inner-1 */
     position: absolute;
     border-radius: 0% 0% 100% 0%;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(100% 100%, 0% 0%, 0% 0%, 0% 100%);
     transition: all .2s ease-in-out;
 }
@@ -1754,7 +1775,7 @@ section {
     /* of the inner-1 */
     position: absolute;
     border-radius: 0% 0% 100% 0%;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(89% 77%, 82% 83%, 39% 45%, 42% 42%);
     transition: all .2s ease-in-out;
 }
@@ -1774,7 +1795,7 @@ section {
     /* of the inner-1 */
     position: absolute;
     border-radius: 0% 0% 100% 0%;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(78% 80%, 73% 88%, 34% 49%, 38% 46%);
     transition: all .2s ease-in-out;
 }
@@ -1794,7 +1815,7 @@ section {
     /* of the inner-1 */
     position: absolute;
     border-radius: 0% 0% 100% 0%;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(6% 59%, 34% 50%, 71% 87%, 9% 100%);
     transition: all .2s ease-in-out;
 }
@@ -1814,7 +1835,7 @@ section {
     /* of the inner-1 */
     position: absolute;
     border-radius: 0% 0% 100% 0%;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(1% 59%, 5% 59%, 7% 100%, 1% 100%);
     transition: all .2s ease-in-out;
 }
@@ -1834,7 +1855,7 @@ section {
     /* of the inner-1 */
     position: absolute;
     border-radius: 0% 0% 100% 0%;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(260% 10%, 0% 0%, 0% 0%, 100% 95%);
     transition: all .2s ease-in-out;
 }
@@ -1854,7 +1875,7 @@ section {
     /* of the inner-1 */
     position: absolute;
     border-radius: 0% 0% 100% 0%;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(60% 2%, 51% 29%, 100% 50%, 100% 1%);
     transition: all .2s ease-in-out;
 }
@@ -1874,7 +1895,7 @@ section {
     /* of the inner-1 */
     position: absolute;
     border-radius: 0% 0% 100% 0;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     clip-path: polygon(100% 50%, 92% 77%, 43% 40%, 50% 30%);
     transition: all .2s ease-in-out;
 }
@@ -1893,7 +1914,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(85% -10%, 500% 120%, -40% 750%, 18% 95%);
     transition: all .2s ease-in-out;
@@ -1913,7 +1934,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(73% 53%, 99% 60%, 99% 100%, 58% 97%);
     transition: all .2s ease-in-out;
@@ -1933,7 +1954,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(72% 52%, 58% 91%, 30% 80%, 60% 44%);
     transition: all .2s ease-in-out;
@@ -1953,7 +1974,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(-30% 0%, -700% 10%, 75% 0%, 15% 100%);
     transition: all .2s ease-in-out;
@@ -1973,7 +1994,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(25% 85%, 12% 91%, 53% 36%, 59% 42%);
     transition: all .2s ease-in-out;
@@ -1993,7 +2014,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(15% 88%, 8% 79%, 49% 30%, 52% 34%);
     transition: all .2s ease-in-out;
@@ -2013,7 +2034,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    box-shadow: rgb(198, 201, 193);
+    box-shadow: rgb(white);
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(41% 11%, 0% 18%, 13% 72%, 49% 29%);
     transition: all .2s ease-in-out;
@@ -2033,7 +2054,7 @@ section {
     height: 50%;
     /* of the inner-1 */
     position: absolute;
-    rgb(198, 201, 193);
+    rgb(white);
     border-radius: 0% 0% 0% 100%;
     clip-path: polygon(41% 0, 42% 10%, 0 17%, 0 0);
     transition: all .2s ease-in-out;
@@ -2056,6 +2077,8 @@ section {
     /* of the inner-1 */
     position: absolute;
     border-radius: 50%;
-    box-shadow: rgb(198, 201, 193);
-    background-color: rgb(198, 201, 193);
+    box-shadow: rgb(white);
+    background-color: rgb(white);
+    border-style: solid;
+    border-color: white;
 }
