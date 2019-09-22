@@ -17,7 +17,7 @@ const flavours = {
                         color: "Wenge",
                     },
                     mapleSyrup: {
-                        name: "Maple syrup",
+                        name: "Maple Syrup",
                         color: "Heritage red",
                     },
                     caramelized: {
@@ -68,7 +68,7 @@ const flavours = {
                         name: "Rose",
                         color: "Cactus Flower",
                     },
-                    jasmin: {
+                    jasmine: {
                         name: "Jasmine",
                         color: "Light Yellow",
                     },
@@ -246,48 +246,52 @@ const flavours = {
     greenVegetative: {
         name: "Green Vegetative",
         color: "Amazon Moss",
-        descriptors: {
-            underRipe: {
-                name: "Under Ripe",
-                color: "Douglas Fir",
-            },
-            peaPod: {
-                name: "Pea Pod",
-                color: "Sullivan Green",
-            },
-            fresh: {
-                name: "Fresh",
-                color: "Leprechaun",
-            },
-            darkGreen: {
-                name: "Dark Green",
-                color: "Irish Clover",
-            },
-            vegetative: {
-                name: "Vegetative",
-                color: "Kelly Green",
-            },
-            hayLike: {
-                name: "Hay-Like",
-                color: "Huntington Green",
-            },
-            herbLike: {
-                name: "Herb-Like",
-                color: "Lucky Charm Green",
-            },
-        },
         subFlavours: {
-            oliveOil: {
-                name: "Olive Oil",
-                color: "Sweet Pea",
-            },
-            raw: {
-                name: "Raw",
-                color: "Avocado",
-            },
-            beany: {
-                name: "Beany",
-                color: "Alpine Trail",
+            greenVegetative_1: {
+                name: "Green Vegetative",
+                color: "Spring Grass",
+                descriptors: {
+                    underRipe: {
+                        name: "Under Ripe",
+                        color: "Douglas Fir",
+                    },
+                    peaPod: {
+                        name: "Pea Pod",
+                        color: "Sullivan Green",
+                    },
+                    fresh: {
+                        name: "Fresh",
+                        color: "Leprechaun",
+                    },
+                    darkGreen: {
+                        name: "Dark Green",
+                        color: "Irish Clover",
+                    },
+                    vegetative: {
+                        name: "Vegetative",
+                        color: "Kelly Green",
+                    },
+                    hayLike: {
+                        name: "Hay-Like",
+                        color: "Huntington Green",
+                    },
+                    herbLike: {
+                        name: "Herb-Like",
+                        color: "Lucky Charm Green",
+                    },
+                },
+                oliveOil: {
+                    name: "Olive Oil",
+                    color: "Sweet Pea",
+                },
+                raw: {
+                    name: "Raw",
+                    color: "Avocado",
+                },
+                beany: {
+                    name: "Beany",
+                    color: "Alpine Trail",
+                },
             },
         },
     },
@@ -417,6 +421,10 @@ const flavours = {
                     grain: {
                         name: "Grain",
                         color: "Tuscany",
+                    },
+                    malt: {
+                        name: "Malt",
+                        color: "Nordic Salmon"
                     },
                 },
             },
