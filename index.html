@@ -2,279 +2,330 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="styles (origineel).css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 <body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Coffee Flavour Wheel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <section>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <section>
 
 
-        <div class="outer-1">
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Honey" class="outer-1-honey"
-                id="popUp">
-                &nbsp;
-            </div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Caramelized"
-                class="outer-1-caramelized" id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Maple Syrup" class="outer-1-mapleSyrup"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Molasses" class="outer-1-molasses"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Chamomile" class="outer-1-chamomile"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Rose" class="outer-1-rose" id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Jasmine" class="outer-1-jasmine"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Blackberry" class="outer-1-blackBerry"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Raspberry" class="outer-1-raspBerry"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Blueberry" class="outer-1-blueBerry"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Strawberry" class="outer-1-strawBerry"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Raisin" class="outer-1-raisin"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Prune" class="outer-1-prune"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Coconut" class="outer-1-coconut"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Cherry" class="outer-1-cherry"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Pomegrate" class="outer-1-pomegranate"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Pineapple" class="outer-1-pineApple"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Grape" class="outer-1-grape"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Apple" class="outer-1-apple"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Peach" class="outer-1-peach"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Pear" class="outer-1-pear" id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Grapefruit" class="outer-1-grapeFruit"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Orange" class="outer-1-orange"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Lemon" class="outer-1-lemon"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Lime" class="outer-1-lime" id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Sour Aromatics"
-                class="outer-1-sourAromatics" id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Acetic Acid" class="outer-1-aceticAcid"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Butyric Acid"
-                class="outer-1-butyricAcid" id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Isovaleric Acid"
-                class="outer-1-isovalericAcid" id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Citric Acid" class="outer-1-citricAcid"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Malic Acid" class="outer-1-malicAcid"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Winey" class="outer-1-winey"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Whiskey" class="outer-1-whiskey"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Fermented" class="outer-1-fermented"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Overripe" class="outer-1-overripe"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Under-Ripe" class="outer-1-underRipe"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Peapod" class="outer-1-peaPod"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Fresh" class="outer-1-fresh"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Dark Green" class="outer-1-darkGreen"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Vegetative" class="outer-1-vegetative"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Hay-Like" class="outer-1-hayLike"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Herb-Like" class="outer-1-herbLike"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Stale" class="outer-1-stale"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Cardboard" class="outer-1-cardboard"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Papery" class="outer-1-papery"
-                id="popUp">
-                &nbsp;
-            </div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Woody" class="outer-1-woody"
-                id="popUp">&nbsp;
-            </div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Moldy / Damp" class="outer-1-moldyDamp"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Musty / Dusty"
-                class="outer-1-mustyDusty" id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Musty / Earthy"
-                class="outer-1-mustyEarthy" id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Animalic" class="outer-1-animalic"
-                id="popUp">&nbsp;
-            </div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Meaty Brothy"
-                class="outer-1-meatyBrothy" id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Phenolic" class="outer-1-phenolic"
-                id="popUp">&nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Bitter" class="outer-1-bitter"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Salty" class="outer-1-salty"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Medicinal" class="outer-1-medicinal"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Petroleum" class="outer-1-petroleum"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Skunky" class="outer-1-skunky"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Rubber" class="outer-1-rubber"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Acrid" class="outer-1-acrid"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Ashy" class="outer-1-ashy" id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Smoky" class="outer-1-smoky"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Brown, Roast"
-                class="outer-1-brownRoast" id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Grain" class="outer-1-grain"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Malt" class="outer-1-malt" id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Anise" class="outer-1-anise"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Nutmeg" class="outer-1-nutmeg"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Cinnamon" class="outer-1-cinnamon"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Clove" class="outer-1-clove"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Peanuts" class="outer-1-peanuts"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Hazelnut" class="outer-1-hazelnut"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Almond" class="outer-1-almond"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Chocolate" class="outer-1-chocolate"
-                id="popUp">
-                &nbsp;</div>
-            <div data-toggle="tooltip" data-placement="auto left" title="This is Dark Chocolate"
-                class="outer-1-darkChocolate" id="popUp">
-                &nbsp;</div>
-
-            <div class="inner-1">&nbsp;
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Black Tea" class="inner-1-blackTea"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Floral" class="inner-1-floral"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Berry" class="inner-1-berry"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Dried Fruit"
-                    class="inner-1-driedFruit" id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Other Fruit"
-                    class="inner-1-otherFruit" id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Citrus Fruit"
-                    class="inner-1-citrusFruit" id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Sour" class="inner-1-sour"
+            <div class="outer-1">
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Honey" class="outer-1-honey"
                     id="popUp">
-                    &nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Alcohol / Fermented"
-                    class="inner-1-alcoholFermented" id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Olive oil" class="inner-1-oliveOil"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Raw" class="inner-1-raw"
-                    id="popUp">
-                    &nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Green Vegetative"
-                    class="inner-1-greenVegetative" id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Beany" class="inner-1-beany"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Paper / Musty"
-                    class="inner-1-paperMusty" id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Chemical" class="inner-1-chemical"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Pipe Tobacco"
-                    class="inner-1-pipeTobacco" id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Tobacco" class="inner-1-tobacco"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Burnt" class="inner-1-burnt"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Cereal" class="inner-1-cereal"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Pungent" class="inner-1-pungent"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Pepper" class="inner-1-pepper"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Brown Spice"
-                    class="inner-1-brownSpice" id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Nutty" class="inner-1-nutty"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Cocoa" class="inner-1-cocoa"
-                    id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Brown Sugar"
-                    class="inner-1-brownSugar" id="popUp">&nbsp;
+                    &nbsp;
                 </div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Vanilla" class="inner-1-vanilla"
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Caramelized"
+                    class="outer-1-caramelized" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Maple Syrup"
+                    class="outer-1-mapleSyrup" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Molasses" class="outer-1-molasses"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Chamomile"
+                    class="outer-1-chamomile" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Rose" class="outer-1-rose"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Jasmine" class="outer-1-jasmine"
                     id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Vanillin" class="inner-1-vanillin"
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Blackberry"
+                    class="outer-1-blackBerry" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Raspberry"
+                    class="outer-1-raspBerry" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Blueberry"
+                    class="outer-1-blueBerry" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Strawberry"
+                    class="outer-1-strawBerry" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Raisin" class="outer-1-raisin"
                     id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Overall Sweet"
-                    class="inner-1-overallSweet" id="popUp">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Sweet Aromatics"
-                    class="inner-1-sweetAromatics" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Prune" class="outer-1-prune"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Coconut" class="outer-1-coconut"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Cherry" class="outer-1-cherry"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Pomegrate"
+                    class="outer-1-pomegranate" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Pineapple"
+                    class="outer-1-pineApple" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Grape" class="outer-1-grape"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Apple" class="outer-1-apple"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Peach" class="outer-1-peach"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Pear" class="outer-1-pear"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Grapefruit"
+                    class="outer-1-grapeFruit" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Orange" class="outer-1-orange"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Lemon" class="outer-1-lemon"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Lime" class="outer-1-lime"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Sour Aromatics"
+                    class="outer-1-sourAromatics" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Acetic Acid"
+                    class="outer-1-aceticAcid" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Butyric Acid"
+                    class="outer-1-butyricAcid" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Isovaleric Acid"
+                    class="outer-1-isovalericAcid" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Citric Acid"
+                    class="outer-1-citricAcid" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Malic Acid"
+                    class="outer-1-malicAcid" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Winey" class="outer-1-winey"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Whiskey" class="outer-1-whiskey"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Fermented"
+                    class="outer-1-fermented" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Overripe" class="outer-1-overripe"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Under-Ripe"
+                    class="outer-1-underRipe" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Peapod" class="outer-1-peaPod"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Fresh" class="outer-1-fresh"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Dark Green"
+                    class="outer-1-darkGreen" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Vegetative"
+                    class="outer-1-vegetative" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Hay-Like" class="outer-1-hayLike"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Herb-Like" class="outer-1-herbLike"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Stale" class="outer-1-stale"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Cardboard"
+                    class="outer-1-cardboard" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Papery" class="outer-1-papery"
+                    id="popUp">
+                    &nbsp;
+                </div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Woody" class="outer-1-woody"
+                    id="popUp">&nbsp;
+                </div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Moldy / Damp"
+                    class="outer-1-moldyDamp" id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Musty / Dusty"
+                    class="outer-1-mustyDusty" id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Musty / Earthy"
+                    class="outer-1-mustyEarthy" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Animalic" class="outer-1-animalic"
+                    id="popUp">&nbsp;
+                </div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Meaty Brothy"
+                    class="outer-1-meatyBrothy" id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Phenolic" class="outer-1-phenolic"
+                    id="popUp">&nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Bitter" class="outer-1-bitter"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Salty" class="outer-1-salty"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Medicinal"
+                    class="outer-1-medicinal" id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Petroleum"
+                    class="outer-1-petroleum" id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Skunky" class="outer-1-skunky"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Rubber" class="outer-1-rubber"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Acrid" class="outer-1-acrid"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Ashy" class="outer-1-ashy"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Smoky" class="outer-1-smoky"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Brown, Roast"
+                    class="outer-1-brownRoast" id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Grain" class="outer-1-grain"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Malt" class="outer-1-malt"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Anise" class="outer-1-anise"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Nutmeg" class="outer-1-nutmeg"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Cinnamon" class="outer-1-cinnamon"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Clove" class="outer-1-clove"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Peanuts" class="outer-1-peanuts"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Hazelnut" class="outer-1-hazelnut"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Almond" class="outer-1-almond"
+                    id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Chocolate"
+                    class="outer-1-chocolate" id="popUp">
+                    &nbsp;</div>
+                <div data-toggle="tooltip" data-placement="auto left" title="This is Dark Chocolate"
+                    class="outer-1-darkChocolate" id="popUp">
+                    &nbsp;</div>
+
+                <div class="inner-1">&nbsp;
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Black Tea"
+                        class="inner-1-blackTea" onClick="BlackTea()" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Floral" class="inner-1-floral"
+                        onClick="Floral_1()" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Berry" class="inner-1-berry"
+                        id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Dried Fruit"
+                        class="inner-1-driedFruit" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Other Fruit"
+                        class="inner-1-otherFruit" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Citrus Fruit"
+                        class="inner-1-citrusFruit" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Sour" class="inner-1-sour"
+                        id="popUp">
+                        &nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Alcohol / Fermented"
+                        class="inner-1-alcoholFermented" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Olive oil"
+                        class="inner-1-oliveOil" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Raw" class="inner-1-raw"
+                        id="popUp">
+                        &nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Green Vegetative"
+                        class="inner-1-greenVegetative" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Beany" class="inner-1-beany"
+                        id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Paper / Musty"
+                        class="inner-1-paperMusty" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Chemical"
+                        class="inner-1-chemical" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Pipe Tobacco"
+                        class="inner-1-pipeTobacco" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Tobacco"
+                        class="inner-1-tobacco" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Burnt" class="inner-1-burnt"
+                        id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Cereal" class="inner-1-cereal"
+                        id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Pungent"
+                        class="inner-1-pungent" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Pepper" class="inner-1-pepper"
+                        id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Brown Spice"
+                        class="inner-1-brownSpice" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Nutty" class="inner-1-nutty"
+                        id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Cocoa" class="inner-1-cocoa"
+                        id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Brown Sugar"
+                        onClick="BrownSugar()" class="inner-1-brownSugar" id="popUp">&nbsp;
+                    </div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Vanilla"
+                        class="inner-1-vanilla" onClick="Vanilla()" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Vanillin"
+                        class="inner-1-vanillin" onClick="Vanillin()" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Overall Sweet"
+                        class="inner-1-overallSweet" onClick="OverallSweet()" id="popUp">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Sweet Aromatics"
+                        class="inner-1-sweetAromatics" onClick="SweetAromatics()" id="popUp">&nbsp;</div>
+                </div>
+                <div class="inner-2">&nbsp;
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Sweet" onClick="Sweet()"
+                        class="inner-2-sweet" id="orangeNectar">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Fruity" onClick="Fruity()"
+                        class="inner-2-fruity" id="redstone">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Floral" onClick="Floral()"
+                        class="inner-2-floral" id="gipsyPink">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Sour/Fermented"
+                        onClick="SourFermented()" class="inner-2-sourFermented" id="yolk">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Green?vegetative"
+                        onClick="GreenVegetative()" class="inner-2-greenVegetavive" id="amazonMoss">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Other" class="inner-2-other"
+                        onClick="Other()" id="dreamICanFly">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Roasted"
+                        class="inner-2-roasted" onClick="Roasted()" id="tomatoTango">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Spices" class="inner-2-spices"
+                        onClick="Spices()" id="candyCaneRed">&nbsp;</div>
+                    <div data-toggle="tooltip" data-placement="auto left" title="This is Nutty/Cocoa"
+                        onClick="NuttyCocoa()" class="inner-2-nuttyCocoa" id="amaretto">&nbsp;</div>
+                </div>
+                <div class="inner-3">&nbsp;</div>
             </div>
-            <div class="inner-2">&nbsp;
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Sweet" class="inner-2-sweet"
-                    id="orangeNectar">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Fruity" class="inner-2-fruity"
-                    id="redstone">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Floral" class="inner-2-floral"
-                    id="gipsyPink">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Sour/Fermented"
-                    class="inner-2-sourFermented" id="yolk">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Green?vegetative"
-                    class="inner-2-greenVegetavive" id="amazonMoss">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Other" class="inner-2-other"
-                    id="dreamICanFly">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Roasted" class="inner-2-roasted"
-                    id="tomatoTango">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Spices" class="inner-2-spices"
-                    id="candyCaneRed">&nbsp;</div>
-                <div data-toggle="tooltip" data-placement="auto left" title="This is Nutty/Cocoa"
-                    class="inner-2-nuttyCocoa" id="amaretto">&nbsp;</div>
-            </div>
-            <div class="inner-3">&nbsp;</div>
-        </div>
-        <div class="outer-0"></div>
-    </section>
+
+        </section>
+        <section class="outer-outer">
+            <div class="outerLine"></div>
+        </section>
+
+        <div id="logger" class="web_console"></div>
+    </div>
+
 
 
 
@@ -282,4 +333,27 @@
     <script type="text/javascript" src="js/functions.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+        // Overriding console object
+        let console = {};
+
+        // Getting div to insert logs
+        let logger = document.getElementById("logger");
+
+        // Adding log method from our console object
+        console.log = text => {
+            let element = document.createElement("div");
+            let txt = document.createTextNode(text);
+
+            element.appendChild(txt);
+            logger.appendChild(element);
+        }
+        /**
+        console.log prints the message in the page instead browser console, useful to programming and debugging JS using a Android phone
+            
+        */
+    </script>
+
+
 </body>

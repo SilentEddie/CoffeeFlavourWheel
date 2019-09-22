@@ -1,27 +1,85 @@
 "use strict";
 
 
-// basic flavours 
+
+// FUNCTIONS INNER CIRCLE 1 //
+function Sweet() {
+    console.log("Sweet is: " + (JSON.stringify(flavours.sweet)))
+};
+
+// FUNCTIONS INNER CIRCLE 2 FOR SWEET //
+
+function BrownSugar() {
+    console.log("Brown sugar is: " + (JSON.stringify(flavours.sweet.subFlavours.brownSugar)))
+};
+
+function Vanilla() {
+    console.log("Vanilla is: " + (JSON.stringify(flavours.sweet.subFlavours.vanilla)))
+};
+
+function Vanillin() {
+    console.log("Vanillin is: " + (JSON.stringify(flavours.sweet.subFlavours.vanillin)))
+};
+
+function OverallSweet() {
+    console.log("Overall Sweet is: " + (JSON.stringify(flavours.sweet.subFlavours.overallSweet)))
+};
+
+function SweetAromatics() {
+    console.log("Sweet Aromatics is: " + (JSON.stringify(flavours.sweet.subFlavours.sweetAromatics)))
+};
+
+function Floral() {
+    console.log("Floral is: " + (JSON.stringify(flavours.floral)))
+};
+
+// FUNCTIONS INNER CIRCLE 2 FOR FLORAL //
+
+function BlackTea() {
+    console.log("Black tea is: " + (JSON.stringify(flavours.floral.subFlavours.blackTea)))
+};
+
+function Floral_1() {
+    console.log("Floral is: " + (JSON.stringify(flavours.floral.subFlavours.floral)))
+};
 
 
-// function message() {
-//     var typeOfFlavour = document.getElementById("orangeNectar");
-//     typeOfFlavour.addEventListener("click", message);
-//     alert(flavours.sweet.name + " " + flavours.sweet.color);
-// }
+function SourFermented() {
+    console.log("Sour / Fermented is: " + (JSON.stringify(flavours.sourFermented)))
+};
 
-// message();
+function GreenVegetative() {
+    console.log("Green Vegetative is: " + (JSON.stringify(flavours.greenVegetative)))
+};
+
+function Other() {
+    console.log("Other is: " + (JSON.stringify(flavours.other)))
+};
+
+function Roasted() {
+    console.log("Roasted is: " + (JSON.stringify(flavours.roasted)))
+};
+
+function Spices() {
+    console.log("Spices is: " + (JSON.stringify(flavours.spices)))
+};
+
+function NuttyCocoa() {
+    console.log("Nutty Cocoa is: " + (JSON.stringify(flavours.nuttyCocoa)))
+};
+
+function Fruity() {
+    console.log("Fruity is: " + (JSON.stringify(flavours.fruity)))
+};
 
 
-var sweet = document.getElementById("orangeNectar");
-var floral = document.getElementById("gipsyPink");
-var sourFermented = document.getElementById("yolk");
-var greenVegetative = document.getElementById("amazonMoss");
-var other = document.getElementById("dreamICanFly");
-var roasted = document.getElementById("tomatoTango");
-var spices = document.getElementById("candyCaneRed");
-var nuttyCocoa = document.getElementById("amaretto");
-var fruity = document.getElementById("redstone");
+
+
+
+
+
+
+
 
 //// subFlavours
 //

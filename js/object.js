@@ -1,5 +1,5 @@
 (function () {
-   "use strict";
+    "use strict";
 }());
 
 
@@ -61,7 +61,7 @@ const flavours = {
                 color: "Deep Carnation",
                 descriptors: {
                     chamomile: {
-                        name: "chamomile",
+                        name: "Chamomile",
                         color: "Desert Sunset",
                     },
                     rose: {
@@ -160,29 +160,29 @@ const flavours = {
                 },
             },
             citrusFruit: {
-            name: "Citrus Fruit",
-            color: "Citrus Blast",
-            descriptors: {
-                grapefruit: {
-                    name: "Grapefruit",
-                    color: "Tangerine Dream",
-                },
-                orange: {
-                    name: "Orange",
-                    color: "Electric Orange",
-                },
-                lemon: {
-                    name: "Lemon",
-                    color: "Sun Porch",
-                },
-                lime: {
-                    name: "Lime",
-                    color: "Lucky Charm Green",
+                name: "Citrus Fruit",
+                color: "Citrus Blast",
+                descriptors: {
+                    grapefruit: {
+                        name: "Grapefruit",
+                        color: "Tangerine Dream",
+                    },
+                    orange: {
+                        name: "Orange",
+                        color: "Electric Orange",
+                    },
+                    lemon: {
+                        name: "Lemon",
+                        color: "Sun Porch",
+                    },
+                    lime: {
+                        name: "Lime",
+                        color: "Lucky Charm Green",
+                    },
                 },
             },
         },
-    },
-        
+
     },
     sourFermented: {
         name: "Sour/Fermented",
@@ -191,7 +191,7 @@ const flavours = {
             sour: {
                 name: "Sour",
                 color: "Citron",
-                descriptors:{
+                descriptors: {
                     sourAromatics: {
                         name: "Sour Aromatics",
                         color: "Douglas Fir",
@@ -238,12 +238,12 @@ const flavours = {
                         name: "Overripe",
                         color: "Toasted Marshmallow",
                     },
-                    
+
                 }
             }
         },
     },
-    greenVegatative: {
+    greenVegetative: {
         name: "Green Vegetative",
         color: "Amazon Moss",
         descriptors: {
@@ -323,7 +323,7 @@ const flavours = {
                         name: "Bitter",
                         color: "Mill Spings Blue",
                     },
-                    
+
                 },
             },
             paperMusty: {
@@ -372,7 +372,7 @@ const flavours = {
                     },
                 },
             },
-            
+
         },
     },
     roasted: {
@@ -407,7 +407,7 @@ const flavours = {
                         name: "Brown Roast",
                         color: "Warmed Cognac",
                     },
-                    
+
                 },
             },
             cereal: {
@@ -446,18 +446,18 @@ const flavours = {
                         name: "Anise",
                         color: "Dash of Curry",
                     },
-                    },
-                    },
+                },
+            },
             pepper: {
                 name: "Pepper",
-                color: "Tricycle Red",  
+                color: "Tricycle Red",
             },
             pungent: {
                 name: "Pungent",
                 color: "Carter Plum",
             },
-            },
-            },
+        },
+    },
     nuttyCocoa: {
         name: "Nutty/Cocoa",
         color: "Amaretto",
