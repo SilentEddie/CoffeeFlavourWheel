@@ -1,22 +1,20 @@
 <!DOCTYPE HTML>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="styles (origineel).css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="hover-min.css">
-
 </head>
-
-
 
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Coffee Flavour Wheel</a>
+            <a class="navbar-brand mb-0 h1" href="#">Coffee Flavour Wheel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,7 +29,7 @@
                         <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="#">Disabled</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -41,13 +39,14 @@
             </div>
         </nav>
     </div>
-    <br>
+
     <section>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col"></div>
-                <div class="col-12">
+                <div class="col-sm-12">
                     <div class="outer-1">
+                        <div class="outerLine"></div>
                         <div data-toggle="tooltip" data-placement="auto left" title="This is Honey"
                             class="outer-1-honey hvr-pulse-grow" onClick="Honey()" id="popUp">
                             &nbsp;
@@ -235,6 +234,7 @@
                             class="outer-1-darkChocolate hvr-pulse-grow" onClick="DarkChocolate()" id="popUp">
                             &nbsp;</div>
 
+
                         <div class="inner-1">&nbsp;
                             <div data-toggle="tooltip" data-placement="auto left" title="This is Black Tea"
                                 class="inner-1-blackTea" onClick="BlackTea()" id="popUp">&nbsp;</div>
@@ -296,9 +296,11 @@
                             <div data-toggle="tooltip" data-placement="auto left" title="This is Sweet Aromatics"
                                 class="inner-1-sweetAromatics" onClick="SweetAromatics()" id="popUp">&nbsp;</div>
                         </div>
+
                         <div class="inner-2">&nbsp;
+                            <!-- <p>Sweet</p> -->
                             <div data-toggle="tooltip" data-placement="auto left" title="This is Sweet"
-                                onClick="Sweet()" class="inner-2-sweet" id="orangeNectar">&nbsp;<p>Sweet</p>
+                                onClick="Sweet()" class="inner-2-sweet" id="orangeNectar">&nbsp;
                             </div>
                             <div data-toggle="tooltip" data-placement="auto left" title="This is Fruity"
                                 onClick="Fruity()" class="inner-2-fruity" id="redstone">&nbsp;</div>
@@ -325,106 +327,135 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="outer-outer">
-        <div class="outerLine"></div>
+
     </section>
     <br>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleSelect1">Example select</label>
-                        <select class="form-control" id="exampleSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleSelect2">Example multiple select</label>
-                        <select multiple class="form-control" id="exampleSelect2">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleTextarea">Example textarea</label>
-                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputFile">File input</label>
-                        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                        <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help
-                            text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-                    </div>
-                    <fieldset class="form-group">
-                        <legend>Radio buttons</legend>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1"
-                                    value="option1" checked>
-                                Option one is this and that&mdash;be sure to include why it's great
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2"
-                                    value="option2">
-                                Option two can be something else and selecting it will deselect option one
-                            </label>
-                        </div>
-                        <div class="form-check disabled">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3"
-                                    value="option3" disabled>
-                                Option three is disabled
-                            </label>
-                        </div>
-                    </fieldset>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input">
-                            Check me out
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h2>Information about your coffee:</h2>
+                </div>
             </div>
-            <div class="col" id="logger" class="web_console"></div>
         </div>
-    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Coffee Name:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Roaster:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleSelect1">Roast color:</label>
+                            <select class="form-control" id="exampleSelect1"">
+                                <option>Light</option>
+                                <option>Medium</option>
+                                <option>Omni Roast</option>
+                                <option>Medium-dark</option>
+                                <option>Dark</option>
+                            </select>
+                        </div>
+                        <div class=" form-group">
+                                <label for="formGroupExampleInput2">Roast Date:</label>
+                                <input type="date" class="form-control" id="formGroupExampleInput3">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleSelect2">Bean:</label>
+                            <select class="form-control" id="exampleSelect2">
+                                <option>Single Estate</option>
+                                <option>Single Origin</option>
+                                <option>Single Variety</option>
+                                <option>Blend</option>
 
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleTextarea">Extra info:</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">File input</label>
+                            <input type="file" class="form-control-file" id="exampleInputFile"
+                                aria-describedby="fileHelp">
+                            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help
+                                text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                        </div>
+                        <!-- <fieldset class="form-group">
+                            <legend>Radio buttons</legend>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios"
+                                        id="optionsRadios1" value="option1" checked>
+                                    Option one is this and that&mdash;be sure to include why it's great
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios"
+                                        id="optionsRadios2" value="option2">
+                                    Option two can be something else and selecting it will deselect option one
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios"
+                                        id="optionsRadios3" value="option3" disabled>
+                                    Option three is disabled
+                                </label>
+                            </div>
+                        </fieldset> -->
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">
+                                Check me out
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
 
+                </div>
+                <!-- <div class="container"></div> -->
+                <div class="col" id="logger" class="web_console"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section>
+        <!-- Footer -->
+        <footer class="page-footer font-small blue">
 
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2019 Jason Bakker
+            </div>
+            <!-- Copyright -->
 
-    <script type="text/javascript" src="js/object.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/datePicker.js"></script>
-    <script>
-        $('.datepicker').pickadate();
+        </footer>
+        <!-- Footer -->
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="js/object.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <!-- <script src="js/jquery.js"></script> -->
+    <!-- <script src="js/jquery-ui.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script type="text/javascript">
         // Overriding console object
         let console = {};
@@ -441,10 +472,13 @@
             logger.appendChild(element);
         }
         /**
-        console.log prints the message in the page instead browser console, useful to programming and debugging JS using a Android phone   
+        console.log prints the message in the page instead browser console, useful to programming and debugging JS using
+        a Android phone
         */
     </script>
 
 
 
 </body>
+
+</html>

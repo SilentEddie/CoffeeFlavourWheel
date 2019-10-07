@@ -172,7 +172,7 @@ function Fresh() {
 };
 
 function DarkGreen() {
-    console.log("This is: " + (JSON.stringify(flavours.greenVegetative.subFlavours.greenVegetative_1.descriptors.darkGreen.name + " with the color " + flavours.greenVegetative.subFlavours.greenVegetative_1.descriptors.darkGreen + ".")))
+    console.log("This is: " + (JSON.stringify(flavours.greenVegetative.subFlavours.greenVegetative_1.descriptors.darkGreen.name + " with the color " + flavours.greenVegetative.subFlavours.greenVegetative_1.descriptors.darkGreen.color + ".")))
 };
 
 function Vegetative() {
@@ -236,7 +236,7 @@ function Animalic() {
 };
 
 function MeatyBrothy() {
-    console.log("This is: " + (JSON.stringify(flavours.other.subFlavours.paperMusty.descriptors.meatyBrothy + " with the color " + flavours.other.subFlavours.paperMusty.descriptors.meatyBrothy.color + ".")))
+    console.log("This is: " + (JSON.stringify(flavours.other.subFlavours.paperMusty.descriptors.meatyBrothy.name + " with the color " + flavours.other.subFlavours.paperMusty.descriptors.meatyBrothy.color + ".")))
 };
 
 function Phenolic() {
