@@ -1,5 +1,12 @@
 "use strict";
 
+// ################ OOK MOGELIJK #####################
+
+// var textString = '{ "naam":"Frits", "leeftijd":32, "woonplaats":"Enkhuizen"}';
+// var user = JSON.parse(textString);
+// console.log("Parsed data: " + user.naam + ", " + user.leeftijd + ", " + user.woonplaats  );
+
+
 
 
 // FUNCTIONS INNER CIRCLE 1 //
