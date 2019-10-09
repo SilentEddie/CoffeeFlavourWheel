@@ -9,7 +9,7 @@ section {
     /* border-radius: 70%; */
 }
 
-.col-sm-12 .outer-1 .outerLine {
+/* .col-sm-6 .outer-1 .outerLine {
     bottom: 3%;
     width: 100%;
     height: 958px;
@@ -20,7 +20,7 @@ section {
     border-width: 10px;
     display: block;
     padding: 15px;
-}
+} */
 
 .outer-1 {
     top: 0;
@@ -29,7 +29,7 @@ section {
     left: 0;
     width: 100%;
     /* You can define it by % also */
-    height: 1000px;
+    height: 500px;
     /* You can define it by % also*/
     position: relative;
     background-color: rgb(white);
