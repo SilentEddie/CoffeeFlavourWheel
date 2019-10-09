@@ -9,10 +9,10 @@ section {
     /* border-radius: 70%; */
 }
 
-.col-sm-6 .outer-1 .outerLine {
+.col-sm-12 .outer-1 .outerLine {
     bottom: 3%;
     width: 100%;
-    height: 480px;
+    height: 958px;
     position: absolute;
     border-radius: 50%;
     border-style: solid;
@@ -23,13 +23,13 @@ section {
 }
 
 .outer-1 {
-    top: 10%;
+    top: 0;
     right: 0;
     bottom: 0%;
     left: 0;
     width: 100%;
     /* You can define it by % also */
-    height: 500px;
+    height: 1000px;
     /* You can define it by % also*/
     position: relative;
     background-color: rgb(white);
@@ -1452,12 +1452,12 @@ section {
     transition: all .2s ease-in-out;
 }
 
-.inner-2 .inner-2-sweet p {
+.inner-2 p {
     display: block;
-    font-size: 65%;
-    position: inherit;
-    top: -12%;
-    left: 83%;
+    font-size: 88%;
+    position: absolute;
+    top: 3%;
+    left: 100%;
     width: 50%;
     height: 50%;
     transform: rotate(-90deg);
@@ -1593,17 +1593,6 @@ section {
     transform: scale(1.1);
 }
 
-.inner-2 .inner-2-fruity p {
-    display: block;
-    font-size: 70%;
-    position: inherit;
-    top: 0%;
-    left: 30%;
-    width: 50%;
-    height: 50%;
-    transform: rotate(-90deg);
-}
-
 .outer-1 .inner-1-berry {
     background-color: #EE4F59;
     top: 0%;
@@ -1707,13 +1696,13 @@ section {
 
 .inner-2 .inner-2-floral p {
     display: block;
-    font-size: 65%;
-    position: inherit;
-    top: 1%;
-    left: 13%;
+    font-size: 100%;
+    position: fixed;
+    top: 0%;
+    left: 20%;
     width: 50%;
     height: 50%;
-    transform: rotate(-61deg);
+    transform: rotate(-90deg);
 }
 
 .inner-2-floral:hover {
