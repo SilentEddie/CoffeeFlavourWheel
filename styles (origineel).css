@@ -23,7 +23,7 @@ section {
 }
 
 .outer-1 {
-    top: 0;
+    top: 10%;
     right: 0;
     bottom: 0%;
     left: 0;
@@ -1452,12 +1452,12 @@ section {
     transition: all .2s ease-in-out;
 }
 
-.inner-2 p {
+.inner-2 .inner-2-sweet p {
     display: block;
-    font-size: 88%;
-    position: absolute;
-    top: 3%;
-    left: 100%;
+    font-size: 65%;
+    position: inherit;
+    top: -12%;
+    left: 83%;
     width: 50%;
     height: 50%;
     transform: rotate(-90deg);
@@ -1593,6 +1593,17 @@ section {
     transform: scale(1.1);
 }
 
+.inner-2 .inner-2-fruity p {
+    display: block;
+    font-size: 70%;
+    position: inherit;
+    top: 0%;
+    left: 30%;
+    width: 50%;
+    height: 50%;
+    transform: rotate(-90deg);
+}
+
 .outer-1 .inner-1-berry {
     background-color: #EE4F59;
     top: 0%;
@@ -1696,13 +1707,13 @@ section {
 
 .inner-2 .inner-2-floral p {
     display: block;
-    font-size: 100%;
-    position: fixed;
-    top: 0%;
-    left: 20%;
+    font-size: 65%;
+    position: inherit;
+    top: 1%;
+    left: 13%;
     width: 50%;
     height: 50%;
-    transform: rotate(-90deg);
+    transform: rotate(-61deg);
 }
 
 .inner-2-floral:hover {
