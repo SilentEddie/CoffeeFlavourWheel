@@ -329,7 +329,7 @@ function Grain() {
 };
 
 function Malt() {
-    console.log("This is: " + (JSON.stringify(flavours.roasted.subFlavours.cereal.descriptors.malt + " with the color " + flavours.roasted.subFlavours.cereal.descriptors.malt.color + ".")))
+    console.log("This is: " + (JSON.stringify(flavours.roasted.subFlavours.cereal.descriptors.malt.name + " with the color " + flavours.roasted.subFlavours.cereal.descriptors.malt.color + ".")))
 };
 
 // ######### SPICES ###########
@@ -452,7 +452,7 @@ function Prune() {
 // ############ OTHER FRUIT + DESCRIPTORS ###############
 
 function OtherFruit() {
-    console.log("This is: " + (JSON.stringify(flavours.fruity.subFlavours.otherFruit + " with the color " + flavours.fruity.subFlavours.color + ".")))
+    console.log("This is: " + (JSON.stringify(flavours.fruity.subFlavours.otherFruit.name + " with the color " + flavours.fruity.subFlavours.color + ".")))
 };
 
 function Coconut() {
@@ -508,6 +508,8 @@ function Lemon() {
 function Lime() {
     console.log("This is: " + (JSON.stringify(flavours.fruity.subFlavours.citrusFruit.descriptors.lime.name + " with the color " + flavours.fruity.subFlavours.citrusFruit.descriptors.lime.color + ".")))
 };
+
+
 
 
 
