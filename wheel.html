@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang=nl>
+<head>
+	<meta charset=utf-8>
+	<title>Test coffee flavor wheel svg</title>
+</head>
+<body>
+<svg id="svgC" width="70%" height="70%" viewBox="0 0 800 600">
+
+
+<circle onmouseover="mouseoverAction(this)" id ="test" cx="300" cy="300" r="80" stroke="#ff0000" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="396.85" transform="rotate(-90 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#F6C655" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="444.16" transform="rotate(-13.76 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#197914" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="444.16" transform="rotate(28.59 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#2BABBF" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="408.67" transform="rotate(70.94 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#D55B52" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="455.98" transform="rotate(138.7 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#942D40" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="467.81" transform="rotate(172.58 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#B98773" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="473.72" transform="rotate(197.99 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#EF6756" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="455.98" transform="rotate(219.17 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#DC5B8D" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="479.64" transform="rotate(253.05 300 300)" />
+
+<circle cx="300" cy="300" r="151" stroke="#EE4F59" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="905.27" transform="rotate(-90 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#BD493F" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="927.59" transform="rotate(-73.06 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#F79381" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="860.62" transform="rotate(-64.59 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#FEB048" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="905.27" transform="rotate(-30.71 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#D55B52" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="882.94" transform="rotate(-13.77 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#F6C655" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="905.27" transform="rotate(11.64 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#9f8628" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="938.75" transform="rotate(28.58 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#678238" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="938.75" transform="rotate(32.82 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#4ABF5E" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="871.78" transform="rotate(37.06 300 300)" />
+        <animate
+		xlink:href="#test"
+		begin="click"
+          attributeName="stroke-width" 
+          from="70"
+          to="85"
+          dur="1s" 
+          fill="freeze"/>
+		  
+
+<script>
+
+	function mouseoverAction(x){
+		var mysvg = document.getElementById("svgC");
+		mysvg.insertBefore(x, null);
+	}
+	
+	function clickAction(x){
+		var mysvg = document.getElementById("svgC");
+		mysvg.insertBefore(x, null);
+	}
+
+
+</script>
+
+
+</svg> 
+</body>
+</html>
+	
