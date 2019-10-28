@@ -17,9 +17,18 @@
 
 <!--Scalable Vector Graphics hier wordt de ring later in gezet. -->
 <!--zet width hoger voor groter wiel -->
-<svg id="svgC" width="100%"  viewBox="0 0 600 600">
+<svg id="svgC" width="140%"  viewBox="0 0 600 600">
 	<defs>
-    <filter id="shade" x="0" y="0" width="200%" height="200%">
+		<pattern id="center1" patternUnits="userSpaceOnUse" x="-11" y="-11" width="95" height="95">
+			<image xlink:href="cup05.jpg" x="9" y="9" width="84" height="84" />
+		</pattern>
+		<pattern id="center2" patternUnits="userSpaceOnUse" x="-11" y="-11" width="95" height="95">
+			<image xlink:href="cup02.gif" x="-1" y="0" width="100" height="100" />
+		</pattern>
+		<pattern id="center3" patternUnits="userSpaceOnUse" x="-11" y="-11" width="95" height="95">
+			<image xlink:href="cup03.gif" x="-25" y="-5" width="140" height="140" />
+		</pattern>
+		<filter id="shade" x="0" y="0" width="200%" height="200%">
       <feOffset result="offOut" in="SourceGraphic" dx="1" dy="20" />
       <feColorMatrix result="matrixOut" in="offOut" type="matrix"
       values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
@@ -36,7 +45,7 @@
 		</filter>
   </defs>
 
-<circle onclick="resetWheel()" id ="test" cx="230" cy="230" r="38" stroke="#000000" stroke-width="2"/>
+  <circle onclick="resetWheel()" id ="test" cx="230" cy="230" r="40" stroke="#000000" stroke-width="0" fill="url(#center1)"/>
 
 </svg>
 <script>
@@ -57,7 +66,7 @@
 	var slowness = 0; //traagheid bij animatie opbouw wiel
 
 	var mysvg = document.getElementById("svgC");
-	/*hier gaat ie voor elke ring twee groepen maken
+	/*hier gaan we voor elke ring twee groepen maken
 	even getallen voor onaangeklikten en oneven voor aangeklikten (met schaduw)
 	bij klikken springt een stukje van de één naar de ander.
 	door de volgorde van de groepen, valt schaduw alleen op een grotere ring	*/
