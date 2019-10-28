@@ -4,6 +4,8 @@
 	<meta charset=utf-8>
 	<title>Test coffee flavor wheel svg</title>
 	<link href="index.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -204,23 +206,37 @@
 		var y3 = (circley - (Math.cos(toradial)*rInner));
 		var x4 = (circlex + (Math.sin(toradial)*rOuter));
 		var y4 = (circley - (Math.cos(toradial)*rOuter));
+		var xText = (circlex + rInner);
+		var yText = circley;
 		var pathString = "M " + x1 + " " +y1 + "L "+x2+" "+y2 + " A "+ rOuter +
 		" "+rOuter + " 1 0 1 "+x4 + " "+y4 + "L "+x3+" "+y3 + "A "+ rInner +" " +
 		rInner+ " 0 0 0 " + x1 + " " +y1;
 	  var newPath = document.createElementNS("http://www.w3.org/2000/svg", 'path');
 		newPath.setAttribute("d", pathString);
-    var newText = name;
 
-		var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'g');
-    newElement.setAttribute("ID", ("r:"+ring+"s:"+fromStep+"n:"+name));
-		newElement.setAttribute("class", "slice");
-		newElement.setAttribute("onclick","clickAction(this)");
-	  newElement.style.stroke = "white";
-		newElement.style.fill = color;
-		newElement.style.strokeWidth = "1px";
-		newElement.appendChild(newPath);
+
+		var newText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
+		newText.setAttribute("x", xText);
+		newText.setAttribute("y", yText);
+		var rotater = (toStep/steps)*360;
+		//newText.setAttribute("x", "50%");
+		//newText.setAttribute("y", "50%");
+		//newText.setAttribute("text-anchor", "middle");
+		newText.setAttribute('transform', "rotate("+rotater+")");
+		newText.innerHTML = "test";
+
+
+		var newGroup = document.createElementNS("http://www.w3.org/2000/svg", 'g');
+    newGroup.setAttribute("ID", ("r:"+ring+"s:"+fromStep+"n:"+name));
+		newGroup.setAttribute("class", "slice");
+		newGroup.setAttribute("onclick","clickAction(this)");
+	  newGroup.style.stroke = "white";
+		newGroup.style.fill = color;
+		newGroup.style.strokeWidth = "1px";
+		newGroup.appendChild(newPath);
+		newGroup.appendChild(newText);
 		//mysvg.removeChild(getElementById(("r:"+ring+"s:"+fromStep+"n:"+name));
-		mysvg.appendChild(newElement);
+		mysvg.appendChild(newGroup);
 
 	}
 
