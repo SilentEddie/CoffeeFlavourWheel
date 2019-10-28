@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang=nl>
+<head>
+	<meta charset=utf-8>
+	<title>Test coffee flavor wheel svg</title>
+</head>
+<body>
+<svg id="svgC" width="80%" height="70%" viewBox="0 0 800 600">
+
+
+
+<circle onmouseover="mouseoverAction(this)" id ="test" cx="300" cy="300" r="80" stroke="#ff0000" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="396.85" transform="rotate(-90 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#F6C655" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="444.16" transform="rotate(-13.76 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#197914" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="444.16" transform="rotate(28.59 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#2BABBF" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="408.67" transform="rotate(70.94 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#D55B52" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="455.98" transform="rotate(138.7 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#942D40" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="467.81" transform="rotate(172.58 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#B98773" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="473.72" transform="rotate(197.99 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#EF6756" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="455.98" transform="rotate(219.17 300 300)" />
+<circle cx="300" cy="300" r="80" stroke="#DC5B8D" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="479.64" transform="rotate(253.05 300 300)" />
+
+<circle cx="300" cy="300" r="151" stroke="#EE4F59" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="905.27" transform="rotate(-90 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#BD493F" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="927.59" transform="rotate(-73.06 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#F79381" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="860.62" transform="rotate(-64.59 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#FEB048" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="905.27" transform="rotate(-30.71 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#D55B52" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="882.94" transform="rotate(-13.77 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#F6C655" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="905.27" transform="rotate(11.64 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#9f8628" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="938.75" transform="rotate(28.58 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#678238" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="938.75" transform="rotate(32.82 300 300)" />
+<circle cx="300" cy="300" r="151" stroke="#4ABF5E" stroke-width="70" fill="none" stroke-dasharray="948.8" stroke-dashoffset="871.78" transform="rotate(37.06 300 300)" />
+        <animate
+		xlink:href="#test"
+		begin="click"
+          attributeName="stroke-width"
+          from="70"
+          to="85"
+          dur="1s"
+          fill="freeze"/>
+
+
+<script>
+  var radius =[45,115,190,280];
+	var rings = [{radius1:45, radius2:115, textpos:1}]
+	var circlex=300;
+	var circley=300;
+	var steps =85;
+	var mysvg = document.getElementById("svgC");
+	var ringlist = [{ring:1,fromStep: 0, toStep: 18, color: "#DA1D23", name: "Fruity" },
+	{ring:1,fromStep: 18, toStep: 28, color: "#EAB40C", name: "Sour/Fermented" },
+	{ring:1,fromStep: 28, toStep: 38, color: "#3AA359", name: "Green/vegetative" },
+	{ring:1,fromStep: 38, toStep: 54, color: "#0AA4B6", name: "Other" },
+	{ring:1,fromStep: 54, toStep: 62, color: "#C94930", name: "Roasted" },
+	{ring:1,fromStep: 62, toStep: 68, color: "#AE203E", name: "Spices" },
+	{ring:1,fromStep: 68, toStep: 73, color: "#A97B64", name: "Nutty/Cocoa" },
+	{ring:1,fromStep: 73, toStep: 81, color: "#E55831", name: "Sweet" },
+	{ring:1,fromStep: 81, toStep: 85, color: "#DB0D69", name: "Floral" },
+	{ring:2,fromStep: 0, toStep: 4, color: "#DD4C51", name: "Berry" },
+  {ring:2,fromStep: 4, toStep: 6, color: "#C94A44", name: "Dried fruit" },
+	{ring:2,fromStep: 6, toStep: 14, color: "#F2684C", name: "Other Fruit" },
+	{ring:2,fromStep: 14, toStep: 18, color: "#E1C315", name: "Citrus Fruit" },
+	{ring:2,fromStep: 18, toStep: 24, color: "#E1C315", name: "Sour" },
+	{ring:2,fromStep: 24, toStep: 28, color: "#B09733", name: "Alcohol/Fermented" },
+	{ring:2,fromStep: 28, toStep: 29, color: "#A2B028", name: "Olive oil" },
+	{ring:2,fromStep: 29, toStep: 30, color: "#708933", name: "raw" },
+	{ring:2,fromStep: 30, toStep: 37, color: "#3AA255", name: "Green vegetative" },
+	{ring:2,fromStep: 37, toStep: 38, color: "#5E9A80", name: "beany" },
+	{ring:2,fromStep: 38, toStep: 48, color: "#9DB2B7", name: "Papery/Musty" },
+	{ring:2,fromStep: 48, toStep: 54, color: "#76C0CB", name: "Chemical" },
+	{ring:2,fromStep: 54, toStep: 55, color: "#CAA465", name: "Pipe tobacco" },
+	{ring:2,fromStep: 55, toStep: 56, color: "#DFBD7E", name: "tobacco" },
+	{ring:2,fromStep: 56, toStep: 60, color: "#BE8663", name: "Burnt" },
+	{ring:2,fromStep: 60, toStep: 62, color: "#DDAF61", name: "Cereal" },
+	{ring:2,fromStep: 62, toStep: 63, color: "#794652", name: "Pungent" },
+	{ring:2,fromStep: 63, toStep: 64, color: "#CC3C42", name: "Pepper" },
+	{ring:2,fromStep: 64, toStep: 68, color: "#B14D57", name: "Brown Spice" },
+	{ring:2,fromStep: 68, toStep: 71, color: "#C78869", name: "Nutty" },
+	{ring:2,fromStep: 71, toStep: 73, color: "#BB764C", name: "Cocoa" },
+	{ring:2,fromStep: 73, toStep: 77, color: "#D45A59", name: "Brown Sugar" },
+	{ring:2,fromStep: 77, toStep: 78, color: "#F89A80", name: "Vanilla" },
+	{ring:2,fromStep: 78, toStep: 79, color: "#F37674", name: "Vanillin" },
+	{ring:2,fromStep: 79, toStep: 80, color: "#E75B68", name: "Overal Sweet" },
+	{ring:2,fromStep: 80, toStep: 81, color: "#D0545F", name: "Sweet Aromatics" },
+	{ring:2,fromStep: 81, toStep: 82, color: "#975E6D", name: "Black Tea" },
+	{ring:2,fromStep: 82, toStep: 85, color: "#E0719C", name: "Floral" },
+	{ring:3,fromStep: 0, toStep: 1, color: "#DD4C51", name: "Blackberry" },
+{ring:3,fromStep: 1, toStep: 2, color: "#C94A44", name: "Raspberry" },
+{ring:3,fromStep: 2, toStep: 3, color: "#DD4C51", name: "Blueberry" },
+{ring:3,fromStep: 3, toStep: 4, color: "#C94A44", name: "Strawberry" },
+{ring:3,fromStep: 4, toStep: 5, color: "#DD4C51", name: "Raisin" },
+{ring:3,fromStep: 5, toStep: 6, color: "#C94A44", name: "Prune" },
+{ring:3,fromStep: 6, toStep: 7, color: "#DD4C51", name: "Coconut" },
+{ring:3,fromStep: 7, toStep: 8, color: "#C94A44", name: "Cherry" },
+{ring:3,fromStep: 8, toStep: 9, color: "#DD4C51", name: "Pomegranate" },
+{ring:3,fromStep: 9, toStep: 10, color: "#C94A44", name: "Pineapple" },
+{ring:3,fromStep: 10, toStep: 11, color: "#DD4C51", name: "Grape" },
+{ring:3,fromStep: 11, toStep: 12, color: "#C94A44", name: "Apple" },
+{ring:3,fromStep: 12, toStep: 13, color: "#DD4C51", name: "Peach" },
+{ring:3,fromStep: 13, toStep: 14, color: "#C94A44", name: "Pear" },
+{ring:3,fromStep: 14, toStep: 15, color: "#DD4C51", name: "Grapefruit" },
+{ring:3,fromStep: 15, toStep: 16, color: "#C94A44", name: "Orange" },
+{ring:3,fromStep: 16, toStep: 17, color: "#DD4C51", name: "Lemon" },
+{ring:3,fromStep: 17, toStep: 18, color: "#C94A44", name: "Lime" },
+{ring:3,fromStep: 18, toStep: 19, color: "#DD4C51", name: "Sour Aromatics" },
+{ring:3,fromStep: 19, toStep: 20, color: "#C94A44", name: "Acetic Acid" },
+{ring:3,fromStep: 20, toStep: 21, color: "#DD4C51", name: "Butyric Acid" },
+{ring:3,fromStep: 21, toStep: 22, color: "#C94A44", name: "Isovaleric Acid" },
+{ring:3,fromStep: 22, toStep: 23, color: "#DD4C51", name: "Citric Acid" },
+{ring:3,fromStep: 23, toStep: 24, color: "#C94A44", name: "Malic Acid" },
+{ring:3,fromStep: 24, toStep: 25, color: "#DD4C51", name: "Winey" },
+{ring:3,fromStep: 25, toStep: 26, color: "#C94A44", name: "Whiskey" },
+{ring:3,fromStep: 26, toStep: 27, color: "#DD4C51", name: "Fermented" },
+{ring:3,fromStep: 27, toStep: 28, color: "#C94A44", name: "Overripe" },
+//{ring:3,fromStep: 28, toStep: 29, color: "#FFFFFF", name: "" },
+//{ring:3,fromStep: 29, toStep: 30, color: "#FFFFFF", name: "" },
+{ring:3,fromStep: 30, toStep: 31, color: "#DD4C51", name: "under-ripe" },
+{ring:3,fromStep: 31, toStep: 32, color: "#C94A44", name: "test1" },
+{ring:3,fromStep: 32, toStep: 33, color: "#DD4C51", name: "test2" },
+{ring:3,fromStep: 33, toStep: 34, color: "#C94A44", name: "test3" },
+{ring:3,fromStep: 34, toStep: 35, color: "#DD4C51", name: "test4" },
+{ring:3,fromStep: 35, toStep: 36, color: "#C94A44", name: "test5" },
+{ring:3,fromStep: 36, toStep: 37, color: "#DD4C51", name: "test6" },
+{ring:3,fromStep: 37, toStep: 38, color: "#C94A44", name: "test7" },
+{ring:3,fromStep: 38, toStep: 39, color: "#DD4C51", name: "test8" },
+{ring:3,fromStep: 39, toStep: 40, color: "#C94A44", name: "test9" },
+{ring:3,fromStep: 40, toStep: 41, color: "#DD4C51", name: "test10" },
+{ring:3,fromStep: 41, toStep: 42, color: "#C94A44", name: "test11" },
+{ring:3,fromStep: 42, toStep: 43, color: "#DD4C51", name: "test12" },
+{ring:3,fromStep: 43, toStep: 44, color: "#C94A44", name: "test13" },
+{ring:3,fromStep: 44, toStep: 45, color: "#DD4C51", name: "test14" },
+{ring:3,fromStep: 45, toStep: 46, color: "#C94A44", name: "test15" },
+{ring:3,fromStep: 46, toStep: 47, color: "#DD4C51", name: "test16" },
+{ring:3,fromStep: 47, toStep: 48, color: "#C94A44", name: "test17" },
+{ring:3,fromStep: 48, toStep: 49, color: "#DD4C51", name: "test18" },
+{ring:3,fromStep: 49, toStep: 50, color: "#C94A44", name: "test19" },
+{ring:3,fromStep: 50, toStep: 51, color: "#DD4C51", name: "test20" },
+{ring:3,fromStep: 51, toStep: 52, color: "#C94A44", name: "test21" },
+{ring:3,fromStep: 52, toStep: 53, color: "#DD4C51", name: "test22" },
+{ring:3,fromStep: 53, toStep: 54, color: "#C94A44", name: "test23" },
+{ring:3,fromStep: 54, toStep: 55, color: "#DD4C51", name: "test24" },
+{ring:3,fromStep: 55, toStep: 56, color: "#C94A44", name: "test25" },
+{ring:3,fromStep: 56, toStep: 57, color: "#DD4C51", name: "test26" },
+{ring:3,fromStep: 57, toStep: 58, color: "#C94A44", name: "test27" },
+{ring:3,fromStep: 58, toStep: 59, color: "#DD4C51", name: "test28" },
+{ring:3,fromStep: 59, toStep: 60, color: "#C94A44", name: "test29" },
+{ring:3,fromStep: 60, toStep: 61, color: "#DD4C51", name: "test30" },
+{ring:3,fromStep: 61, toStep: 62, color: "#C94A44", name: "test31" },
+{ring:3,fromStep: 62, toStep: 63, color: "#DD4C51", name: "test32" },
+{ring:3,fromStep: 63, toStep: 64, color: "#C94A44", name: "test33" },
+{ring:3,fromStep: 64, toStep: 65, color: "#DD4C51", name: "test34" },
+{ring:3,fromStep: 65, toStep: 66, color: "#C94A44", name: "test35" },
+{ring:3,fromStep: 66, toStep: 67, color: "#DD4C51", name: "test36" },
+{ring:3,fromStep: 67, toStep: 68, color: "#C94A44", name: "test37" },
+{ring:3,fromStep: 68, toStep: 69, color: "#DD4C51", name: "test38" },
+{ring:3,fromStep: 69, toStep: 70, color: "#C94A44", name: "test39" },
+{ring:3,fromStep: 70, toStep: 71, color: "#DD4C51", name: "test40" },
+{ring:3,fromStep: 71, toStep: 72, color: "#C94A44", name: "test41" },
+{ring:3,fromStep: 72, toStep: 73, color: "#DD4C51", name: "test42" },
+{ring:3,fromStep: 73, toStep: 74, color: "#C94A44", name: "test43" },
+{ring:3,fromStep: 74, toStep: 75, color: "#DD4C51", name: "test44" },
+{ring:3,fromStep: 75, toStep: 76, color: "#C94A44", name: "test45" },
+{ring:3,fromStep: 76, toStep: 77, color: "#DD4C51", name: "test46" },
+{ring:3,fromStep: 77, toStep: 78, color: "#C94A44", name: "test47" },
+{ring:3,fromStep: 78, toStep: 79, color: "#DD4C51", name: "test48" },
+{ring:3,fromStep: 79, toStep: 80, color: "#C94A44", name: "test49" },
+{ring:3,fromStep: 80, toStep: 81, color: "#DD4C51", name: "test50" },
+{ring:3,fromStep: 81, toStep: 82, color: "#C94A44", name: "test51" },
+{ring:3,fromStep: 82, toStep: 83, color: "#DD4C51", name: "test52" },
+{ring:3,fromStep: 83, toStep: 84, color: "#C94A44", name: "test53" },
+{ring:3,fromStep: 84, toStep: 85, color: "#DD4C51", name: "test54" }
+];
+
+	function mouseoverAction(x){
+		mysvg.insertBefore(x, null);
+		testCreate();
+	}
+
+	function clickAction(x){
+		mysvg.insertBefore(x, null);
+	}
+
+	function testCreate(){
+
+		var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path'); //Create a path in SVG's namespace
+		newElement.setAttribute("d","M 100 300 L 10 10"); //Set path's data
+		newElement.style.stroke = "#000"; //Set stroke colour
+		newElement.style.strokeWidth = "5px"; //Set stroke width
+		mysvg.appendChild(newElement);
+
+		drawPart(1,0,18,"#D45A59", "test");
+		for (var i = 0; i < ringlist.length;i++){
+				drawPart(ringlist[i].ring,ringlist[i].fromStep,ringlist[i].toStep,
+				ringlist[i].color, ringlist[i].name);
+			}
+	}
+  function drawPart(ring, fromStep, toStep, color, name){
+		var rInner = radius[ring-1];
+		var rOuter = radius[ring];
+		var fromradial = (fromStep/steps)*2*Math.PI;
+		var toradial = (toStep/steps)*2*Math.PI;
+		var x1 = (circlex + (Math.sin(fromradial)*rInner));
+		var y1 = (circley - (Math.cos(fromradial)*rInner));
+		var x2 = (circlex + (Math.sin(fromradial)*rOuter));
+		var y2 = (circley - (Math.cos(fromradial)*rOuter));
+		var x3 = (circlex + (Math.sin(toradial)*rInner));
+		var y3 = (circley - (Math.cos(toradial)*rInner));
+		var x4 = (circlex + (Math.sin(toradial)*rOuter));
+		var y4 = (circley - (Math.cos(toradial)*rOuter));
+		var pathString = "M " + x1 + " " +y1 + "L "+x2+" "+y2 + " A "+ rOuter +
+		" "+rOuter + " 1 0 1 "+x4 + " "+y4 + "L "+x3+" "+y3 + "A "+ rInner +" " +
+		rInner+ " 0 0 0 " + x1 + " " +y1;
+		var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+		newElement.setAttribute("d", pathString);
+		newElement.style.stroke = "black";
+		newElement.style.fill = color;
+		newElement.style.strokeWidth = "1px";
+		mysvg.appendChild(newElement);
+
+	}
+
+</script>
+
+
+</svg>
+</body>
+</html>
