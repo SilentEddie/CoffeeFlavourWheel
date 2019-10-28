@@ -4,7 +4,13 @@
 	<meta charset=utf-8>
 	<title>Test coffee flavor wheel svg</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 	<style>
 		text{
 			font-family: arial;
@@ -17,7 +23,7 @@
 
 <!--Scalable Vector Graphics hier wordt de ring later in gezet. -->
 <!--zet width hoger voor groter wiel -->
-<svg id="svgC" width="140%"  viewBox="0 0 600 600">
+<svg id="svgC" width="110%"  viewBox="0 0 600 600">
 	<defs>
 		<pattern id="center1" patternUnits="userSpaceOnUse" x="-11" y="-11" width="95" height="95">
 			<image xlink:href="cup05.jpg" x="9" y="9" width="84" height="84" />
@@ -37,7 +43,7 @@
     </filter>
 		<filter id="dropshadow" width = "160%" height="160%">
 			<feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
-			<feOffset dx="2" dy="4" result="offsetblur"/>
+			<feOffset dx="4" dy="4" result="offsetblur"/>
 			<feMerge>
 				<feMergeNode/>
 				<feMergeNode in="SourceGraphic"/>
@@ -188,7 +194,7 @@
 		{ring:2, fromStep:79, toStep:80, color:"#E75B68", name:"Overal Sweet", id:34, parentID:8},
 		{ring:2, fromStep:80, toStep:81, color:"#D0545F", name:"Sweet Aromatics", id:35, parentID:8},
 		{ring:1, fromStep:81, toStep:85, color:"#DB0D69", name:"Floral", id:9, parentID:0},
-		{ring:2, fromStep:81, toStep:82, color:"#975E6D", name:"Black Tea", id:36, parentID:9},
+		{ring:2, fromStep:81, toStep:82, color:"#975E6D", name:"Black tea", id:36, parentID:9},
 		{ring:2, fromStep:82, toStep:85, color:"#E0719C", name:"Floral", id:37, parentID:9},
 		{ring:3, fromStep:82, toStep:83, color:"#F7F1BD", name:"Chamomile", id:120, parentID:37},
 		{ring:3, fromStep:83, toStep:84, color:"#EF5A78", name:"Rose", id:121, parentID:37},
@@ -317,28 +323,45 @@
 		var newPath = document.createElementNS("http://www.w3.org/2000/svg", 'path');
 		newPath.setAttribute("d", pathString);
 
-		//TODO: tekst niet op z'n kop
 		var newText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
 		newText.setAttribute("x", circlex);
 		newText.setAttribute("y", circley);
-		var textAngle = (((fromStep+toStep+0.5)/steps)*180)-90;
-		var textX= rInner +2+ring;
+		var angle = (((fromStep+toStep)/steps)*180)-89.1;
+		var textAngle = angle;
+		if(angle>91){
+			textAngle=angle-1.7;
+		}
+
+		var textX= rInner +8+ring;
 		var transformString = "rotate("+textAngle+" "+circlex+" "+circley+"),";
 		transformString += "translate("+textX+")";
 		//nog een keer draaien voor tekst in binnenring
 		if (ring==1){
-				transformString += "translate(25)";
-				transformString += "rotate(90 "+circlex+" "+circley+")";
+				transformString += "translate(20)";
+				transformString += "rotate(-90 "+circlex+" "+circley+")";
 				newText.setAttribute("text-anchor", "middle");
-				var division;
-				//TODO opmaak tekst binnenring
-				if ((division = name.indexOf("/"))==-1){
+				var division = name.indexOf("/");
+				if (division ==-1){
+					newText.innerHTML = name;
+				}else {
+					var namepart1 = name.substring(0,division+1);
+					newText.innerHTML = namepart1;
+					console.log(namepart1);
+					var newSpan = document.createElementNS("http://www.w3.org/2000/svg", 'tspan');
+					newSpan.innerHTML = name.substring(division+2,name.length);
+					newSpan.setAttribute("dx", "0");
+					newSpan.setAttribute("dy", "10");
+					newSpan.innerHTML = 'test';
+					newText.appendChild(newSpan);
 
 				}
 
-				newText.innerHTML = name;
 		}else{
-				newText.innerHTML = name;
+			//niet op zn kop voor buitenste ringen
+			if(angle>91){
+				newText.setAttribute("text-anchor", "end");
+				transformString += "rotate(180 "+circlex+" "+circley+")";
+			}newText.innerHTML = name;
 		}
 		newText.setAttribute('transform', transformString);
 		newText.style.strokeWidth = "0px";
@@ -350,7 +373,7 @@
 		newGroup.setAttribute("onclick","clickAction(this)");
 	  newGroup.style.stroke = "white";
 		newGroup.style.fill = color;
-		newPath.style.strokeWidth = "1px";
+		newPath.style.strokeWidth = "0.5px";
 		newGroup.appendChild(newPath);
 		newGroup.appendChild(newText);
 
