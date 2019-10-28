@@ -3,23 +3,42 @@
 <head>
 	<meta charset=utf-8>
 	<title>Test coffee flavor wheel svg</title>
+	<link href="index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<svg id="svgC" width="80%" height="70%" viewBox="0 0 800 600">
 
+<svg id="svgC" width="60%"  viewBox="0 0 700 600">
+	<defs>
+    <filter id="shade" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="1" dy="20" />
+      <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+      values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+      <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+		<filter id="dropshadow" width = "160%" height="160%">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+			<feOffset dx="2" dy="4" result="offsetblur"/>
+			<feMerge>
+				<feMergeNode/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+		</filter>
+  </defs>
+<circle onclick="resetWheel()" id ="test" cx="270" cy="270" r="38" stroke="#000000" stroke-width="2"/>
 
-
-<circle onmouseover="mouseoverAction(this)" id ="test" cx="300" cy="300" r="80" stroke="#ff0000" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="396.85" transform="rotate(-90 300 300)" />
-
-
-
+</svg>
 <script>
-  var radius =[45,115,190,280];
+
+  var clickedElements = [];
+	var radius =[40,100,160,240];
 	var rings = [{radius1:45, radius2:115, textpos:1}]
-	var circlex=300;
-	var circley=300;
+	var circlex=270;
+	var circley=270;
 	var steps =85;
 	var mysvg = document.getElementById("svgC");
+	var slowness = 5;
+	var originalsvg = mysvg.innerHTML;
 	var ringlist = [{ring:1,fromStep: 0, toStep: 18, color: "#DA1D23", name: "Fruity" },
 	{ring:1,fromStep: 18, toStep: 28, color: "#EAB40C", name: "Sour/Fermented" },
 	{ring:1,fromStep: 28, toStep: 38, color: "#3AA359", name: "Green/vegetative" },
@@ -145,21 +164,31 @@
 
 ];
 
-	function mouseoverAction(x){
-		mysvg.insertBefore(x, null);
-		testCreate();
+	function resetWheel(){
+		//mysvg.insertBefore(x, null);
+		mysvg.innerHTML = originalsvg;
+		mysvg.getElementsByTagName("path");
+		drawWheel();
 	}
 
 	function clickAction(x){
+		//mysvg.insertBefore(x, null);
+		x.style.stroke = "white";
+		//x.style.strokeWidth = "3px";
+		x.setAttribute('transform', "scale(1.10), translate(-25,-25)");
+		//x.setAttribute('stroke-dasharray', "4,3");
+		x.setAttribute("fill-opacity", "0.7");
+		x.setAttribute("filter", "url(#dropshadow)");
 		mysvg.insertBefore(x, null);
+
 	}
 
-	function testCreate(){
-
-		//drawPart(1,0,18,"#D45A59", "test");
-		for (var i = 0; i < ringlist.length;i++){
-				drawPart(ringlist[i].ring,ringlist[i].fromStep,ringlist[i].toStep,
-				ringlist[i].color, ringlist[i].name);
+	function drawWheel(){
+  //mysvg.selectAll("*").remove();
+		for (let i = 0; i < ringlist.length;i++){
+				var testa = setTimeout(function() {drawPart(ringlist[i].ring,ringlist[i].fromStep,ringlist[i].toStep,
+				ringlist[i].color, ringlist[i].name)},(slowness*i));
+				console.log("test"+i);
 			}
 	}
   function drawPart(ring, fromStep, toStep, color, name){
@@ -178,18 +207,24 @@
 		var pathString = "M " + x1 + " " +y1 + "L "+x2+" "+y2 + " A "+ rOuter +
 		" "+rOuter + " 1 0 1 "+x4 + " "+y4 + "L "+x3+" "+y3 + "A "+ rInner +" " +
 		rInner+ " 0 0 0 " + x1 + " " +y1;
-		var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path');
-		newElement.setAttribute("d", pathString);
-		newElement.style.stroke = "black";
+	  var newPath = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+		newPath.setAttribute("d", pathString);
+    var newText = name;
+
+		var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'g');
+    newElement.setAttribute("ID", ("r:"+ring+"s:"+fromStep+"n:"+name));
+		newElement.setAttribute("class", "slice");
+		newElement.setAttribute("onclick","clickAction(this)");
+	  newElement.style.stroke = "white";
 		newElement.style.fill = color;
 		newElement.style.strokeWidth = "1px";
+		newElement.appendChild(newPath);
+		//mysvg.removeChild(getElementById(("r:"+ring+"s:"+fromStep+"n:"+name));
 		mysvg.appendChild(newElement);
 
 	}
 
+
 </script>
-
-
-</svg>
 </body>
 </html>
