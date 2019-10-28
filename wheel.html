@@ -17,7 +17,7 @@
 
 <!--Scalable Vector Graphics hier wordt de ring later in gezet. -->
 <!--zet width hoger voor groter wiel -->
-<svg id="svgC" width="60%"  viewBox="0 0 600 600">
+<svg id="svgC" width="100%"  viewBox="0 0 600 600">
 	<defs>
     <filter id="shade" x="0" y="0" width="200%" height="200%">
       <feOffset result="offOut" in="SourceGraphic" dx="1" dy="20" />
@@ -42,17 +42,21 @@
 <script>
 
   var clickedElements = []; //TODO <-hier moeten de geselecteerde elementen in
-	//TODO onderstaande moet ook in JSON file
+	//TODO onderstaande moet ook in JSON file of ini.file oid.
+	//uiterlijkinstellingen
 	var radius =[40,80,140,200];
 	var ringnr = 3;
 	var rings = [{radius1:45, radius2:115, textpos:1}]
 	var steps =85;
 	var circlex=230;
 	var circley=230;
-
-	var mysvg = document.getElementById("svgC");
+	//gedraginstellingen
+	var parentPartAutoSelect = true;		//hogere smaak gaat mee omhoog
+	var parentPartAutoDeselect = false; //hogere smaak gaat mee omlaag
+	var childPartAutoDeselect = true;   //subsmaak gaat mee omlaag
 	var slowness = 0; //traagheid bij animatie opbouw wiel
 
+	var mysvg = document.getElementById("svgC");
 	/*hier gaat ie voor elke ring twee groepen maken
 	even getallen voor onaangeklikten en oneven voor aangeklikten (met schaduw)
 	bij klikken springt een stukje van de één naar de ander.
@@ -203,36 +207,54 @@
 	function flipPart(part, groupNr){
 		var ringGroupID = ("g"+(groupNr));
 		document.getElementById(ringGroupID).appendChild(part);
-		//als een stukje aangeklikt is, ook stuk waar hij onder valt aanpassen
-		console.log(groupNr);
-		if (groupNr>2){
-			var flipParent = true;
-			var parentID = getParentPartID(part.id);
-			if (groupNr%2==0){
-				console.log("down");
-				console.log(groupNr);
-				var siblings = ringlist.filter(function(listpart){
-					return listpart.parentID == parentID;
-				})
+		flipParentPart(part, groupNr);
+		flipChildren(part, groupNr);
+	}
 
+	function flipParentPart(part, groupNr){
+		var flipParent = false;
+		//heb ik een parent?:
+		if (groupNr>2){
+			flipParent = true;
+			var parentPartID = getParentPartID(part.id);
+			//ga ik naar ongeselecteerd? zoek dan broertjes(parts):
+			if ((groupNr%2==0)&&parentPartAutoDeselect){
+				var siblings = ringlist.filter(function(listpart){
+					return listpart.parentID == parentPartID;
+				});
+				//is er een broerje geselecteerd? dan blijft papaPart geselecteerd:
 				siblings.forEach(function(sibling){
 					let siblingElement = 	document.getElementById(sibling.id)
 					if (getGroupNumber(siblingElement)==groupNr-1){
-					  console.log(siblingElement);
 						flipParent = false;
 					}
 				});
+			}else{
+				flipParent = ((groupNr%2>0)&&parentPartAutoSelect);
 			}
 		}
 
-			//TODO: kijken of nog andere children geselecteerd zijn.
-			if (flipParent){
-				var parent = document.getElementById(parentID);
-				flipPart(parent, groupNr-2);
-			}
+		//Papa ook aanpassen
+		if (flipParent){
+			var parentPart = document.getElementById(parentPartID);
+			flipPart(parentPart, groupNr-2);
+		}
+	}
 
+	function flipChildren(part, groupNr){
+		if (childPartAutoDeselect&&groupNr<((ringnr*2)-1)&&(groupNr%2==0)){
+			var children = ringlist.filter(function(listpart){
+				return listpart.parentID == part.id;
+			});
+			children.forEach(function(child){
 
+				let childElement = 	document.getElementById(child.id);
+				if (getGroupNumber(childElement)==groupNr+1){
+					flipPart(childElement, groupNr+2);
+				}
+			});
 
+		}
 	}
 
 	function getGroupNumber(part){
