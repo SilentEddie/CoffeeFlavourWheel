@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<!--versie 1.6
+verbetering draaiing text buitenring
+TODO: zwarte text op lichte ondergrond
+TODO: links of midden uitlijning text ring 2 en 3
+TODO: verbetering functienamen part -> slice
+TODO: variabel maken van lijndikte e.d.
+TODO: variabelen in JSONformaat (ringen, stralen van ringen)
+TODO: Splitsen HTML, JS en JSON (JSON-file van maken)
+TODO: responsive voor desktop
+TODO: responsive voor tablet?
+
+
+-->
+
 <html lang=nl>
 <head>
 	<meta charset=utf-8>
@@ -328,7 +342,7 @@
 		newText.setAttribute("y", circley);
 		var angle = (((fromStep+toStep)/steps)*180)-89.1;
 		var textAngle = angle;
-		if(angle>91){
+		if(angle>90){
 			textAngle=angle-1.7;
 		}
 
@@ -337,9 +351,16 @@
 		transformString += "translate("+textX+")";
 		//nog een keer draaien voor tekst in binnenring
 		if (ring==1){
-				transformString += "translate(20)";
-				transformString += "rotate(-90 "+circlex+" "+circley+")";
+				transformString += "translate(15)";
+				if (angle > 0 && angle < 180 ){
+					transformString += "rotate(-90 "+circlex+" "+circley+")";
+				}
+				if (angle > 180 || angle < 0 ){
+					transformString += "rotate(-270 "+circlex+" "+circley+")";
+				}
 				newText.setAttribute("text-anchor", "middle");
+				//name = "test"+angle;
+				//afbreken van namen met /
 				var division = name.indexOf("/");
 				if (division ==-1){
 					newText.innerHTML = name;
@@ -348,17 +369,17 @@
 					newText.innerHTML = namepart1;
 					console.log(namepart1);
 					var newSpan = document.createElementNS("http://www.w3.org/2000/svg", 'tspan');
-					newSpan.innerHTML = name.substring(division+2,name.length);
-					newSpan.setAttribute("dx", "0");
-					newSpan.setAttribute("dy", "10");
-					newSpan.innerHTML = 'test';
+					newSpan.innerHTML = name.substring(division+1,name.length);
+					newSpan.setAttribute("x", circlex);
+					newSpan.setAttribute("dy", "6");
+
 					newText.appendChild(newSpan);
 
 				}
 
 		}else{
 			//niet op zn kop voor buitenste ringen
-			if(angle>91){
+			if(angle>90){
 				newText.setAttribute("text-anchor", "end");
 				transformString += "rotate(180 "+circlex+" "+circley+")";
 			}newText.innerHTML = name;
