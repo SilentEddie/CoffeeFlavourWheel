@@ -5,7 +5,8 @@
 	<title>Test coffee flavor wheel svg</title>
 </head>
 <body>
-<svg id="svgC" width="70%" height="70%" viewBox="0 0 800 600">
+<svg id="svgC" width="80%" height="70%" viewBox="0 0 800 600">
+
 
 
 <circle onmouseover="mouseoverAction(this)" id ="test" cx="300" cy="300" r="80" stroke="#ff0000" stroke-width="70" fill="none" stroke-dasharray="502.7" stroke-dashoffset="396.85" transform="rotate(-90 300 300)" />
@@ -30,30 +31,82 @@
         <animate
 		xlink:href="#test"
 		begin="click"
-          attributeName="stroke-width" 
+          attributeName="stroke-width"
           from="70"
           to="85"
-          dur="1s" 
+          dur="1s"
           fill="freeze"/>
-		  
+
 
 <script>
+  var radius =[45,115,190,280];
+	var circlex=300;
+	var circley=300;
+	var steps =85;
+	var mysvg = document.getElementById("svgC");
 
 	function mouseoverAction(x){
-		var mysvg = document.getElementById("svgC");
 		mysvg.insertBefore(x, null);
+		testCreate();
 	}
-	
+
 	function clickAction(x){
-		var mysvg = document.getElementById("svgC");
 		mysvg.insertBefore(x, null);
 	}
 
+	function testCreate(){
+
+		var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+		newElement.setAttribute("d","M 100 300 L 10 10");
+		newElement.style.stroke = "#000";
+		newElement.style.strokeWidth = "5px";
+		mysvg.appendChild(newElement);
+
+	  var ringlist = [{ring:1,fromStep: 0, toStep: 18, color: "#DA1D23", name: "Fruity" },
+	  {ring:1,fromStep: 18, toStep: 28, color: "#EAB40C", name: "Sour/Fermented" },
+	  {ring:1,fromStep: 28, toStep: 38, color: "#3AA359", name: "Green/vegetative" },
+	  {ring:1,fromStep: 38, toStep: 54, color: "#F6F9FA", name: "Other" },
+	  {ring:1,fromStep: 54, toStep: 62, color: "#E2E0B2", name: "Roasted" },
+	  {ring:1,fromStep: 62, toStep: 68, color: "#C74A30", name: "Spices" },
+	  {ring:1,fromStep: 68, toStep: 73, color: "#AE203E", name: "Nutty/Cocoa" },
+	  {ring:1,fromStep: 73, toStep: 81, color: "#A6867B", name: "Sweet" },
+  	{ring:1,fromStep: 81, toStep: 85, color: "#DB0D69", name: "Floral" }];
+
+		for (var i = 0; i<ringlist.length;i++){
+			drawPart(ringlist[i].ring,ringlist[i].fromStep,ringlist[i].toStep,
+				ringlist[i].color, ringlist[i].name);
+			}
+
+	}
+
+  function drawPart(ring, fromStep, toStep, color, name){
+		var rInner = radius[ring-1];
+		var rOuter = radius[ring];
+		var fromradial = (fromStep/steps)*2*Math.PI;
+		var toradial = (toStep/steps)*2*Math.PI;
+		var x1 = (circlex + (Math.sin(fromradial)*rInner));
+		var y1 = (circley - (Math.cos(fromradial)*rInner));
+		var x2 = (circlex + (Math.sin(fromradial)*rOuter));
+		var y2 = (circley - (Math.cos(fromradial)*rOuter));
+		var x3 = (circlex + (Math.sin(toradial)*rInner));
+		var y3 = (circley - (Math.cos(toradial)*rInner));
+		var x4 = (circlex + (Math.sin(toradial)*rOuter));
+		var y4 = (circley - (Math.cos(toradial)*rOuter));
+		var pathString = "M " + x1 + " " +y1 + "L "+x2+" "+y2 + " A "+ rOuter +
+		" "+rOuter + " 1 0 1 "+x4 + " "+y4 + "L "+x3+" "+y3 + "A "+ rInner +" " +
+		rInner+ " 0 0 0 " + x1 + " " +y1;
+		var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+		newElement.setAttribute("d", pathString);
+		newElement.style.stroke = "black";
+		newElement.style.fill = color;
+		newElement.style.strokeWidth = "1px";
+		mysvg.appendChild(newElement);
+
+	}
 
 </script>
 
 
-</svg> 
+</svg>
 </body>
 </html>
-	
