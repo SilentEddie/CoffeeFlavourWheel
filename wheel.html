@@ -3,13 +3,19 @@
 <head>
 	<meta charset=utf-8>
 	<title>Test coffee flavor wheel svg</title>
-	<link href="index.css" rel="stylesheet" type="text/css" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<style>
+		text{
+			font-family: arial;
+			font-size:6px;
+		}
+
+	</style>
 </head>
 <body>
 
-<svg id="svgC" width="60%"  viewBox="0 0 700 600">
+<svg id="svgC" width="60%"  viewBox="0 0 600 600">
 	<defs>
     <filter id="shade" x="0" y="0" width="200%" height="200%">
       <feOffset result="offOut" in="SourceGraphic" dx="1" dy="20" />
@@ -27,19 +33,19 @@
 			</feMerge>
 		</filter>
   </defs>
-<circle onclick="resetWheel()" id ="test" cx="270" cy="270" r="38" stroke="#000000" stroke-width="2"/>
+<circle onclick="resetWheel()" id ="test" cx="230" cy="230" r="38" stroke="#000000" stroke-width="2"/>
 
 </svg>
 <script>
 
   var clickedElements = [];
-	var radius =[40,100,160,240];
+	var radius =[40,80,140,200];
 	var rings = [{radius1:45, radius2:115, textpos:1}]
-	var circlex=270;
-	var circley=270;
+	var circlex=230;
+	var circley=230;
 	var steps =85;
 	var mysvg = document.getElementById("svgC");
-	var slowness = 5;
+	var slowness = 0;
 	var originalsvg = mysvg.innerHTML;
 	var ringlist = [{ring:1,fromStep: 0, toStep: 18, color: "#DA1D23", name: "Fruity" },
 	{ring:1,fromStep: 18, toStep: 28, color: "#EAB40C", name: "Sour/Fermented" },
@@ -53,7 +59,7 @@
 	{ring:2,fromStep: 0, toStep: 4, color: "#DD4C51", name: "Berry" },
   {ring:2,fromStep: 4, toStep: 6, color: "#C94A44", name: "Dried fruit" },
 	{ring:2,fromStep: 6, toStep: 14, color: "#F2684C", name: "Other Fruit" },
-	{ring:2,fromStep: 14, toStep: 18, color: "#E1C315", name: "Citrus Fruit" },
+	{ring:2,fromStep: 14, toStep: 18, color: "#F7A129", name: "Citrus Fruit" },
 	{ring:2,fromStep: 18, toStep: 24, color: "#E1C315", name: "Sour" },
 	{ring:2,fromStep: 24, toStep: 28, color: "#B09733", name: "Alcohol/Fermented" },
 	{ring:2,fromStep: 28, toStep: 29, color: "#A2B028", name: "Olive oil" },
@@ -186,7 +192,6 @@
 	}
 
 	function drawWheel(){
-  //mysvg.selectAll("*").remove();
 		for (let i = 0; i < ringlist.length;i++){
 				var testa = setTimeout(function() {drawPart(ringlist[i].ring,ringlist[i].fromStep,ringlist[i].toStep,
 				ringlist[i].color, ringlist[i].name)},(slowness*i));
@@ -211,19 +216,38 @@
 		var pathString = "M " + x1 + " " +y1 + "L "+x2+" "+y2 + " A "+ rOuter +
 		" "+rOuter + " 1 0 1 "+x4 + " "+y4 + "L "+x3+" "+y3 + "A "+ rInner +" " +
 		rInner+ " 0 0 0 " + x1 + " " +y1;
-	  var newPath = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+
+		var newPath = document.createElementNS("http://www.w3.org/2000/svg", 'path');
 		newPath.setAttribute("d", pathString);
 
-
 		var newText = document.createElementNS("http://www.w3.org/2000/svg", 'text');
-		newText.setAttribute("x", xText);
-		newText.setAttribute("y", yText);
-		var rotater = (toStep/steps)*360;
+		newText.setAttribute("x", circlex);
+		newText.setAttribute("y", circley);
+		var textAngle = (((fromStep+toStep+0.5)/steps)*180)-90;
+		var textX= rInner +2+ring;
+		var transformString = "rotate("+textAngle+" "+circlex+" "+circley+"),";
+		transformString += "translate("+textX+")";
+		if (ring==1){
+				transformString += "translate(25)";
+				transformString += "rotate(90 "+circlex+" "+circley+")";
+				newText.setAttribute("text-anchor", "middle");
+				var division;
+				if ((division = name.indexOf("/"))==-1){
+
+				}
+
+				newText.innerHTML = name;
+		}else{
+				newText.innerHTML = name;
+		}
 		//newText.setAttribute("x", "50%");
 		//newText.setAttribute("y", "50%");
-		//newText.setAttribute("text-anchor", "middle");
-		newText.setAttribute('transform', "rotate("+rotater+")");
-		newText.innerHTML = "test";
+		//newText.setAttribute('transform', "rotate("+rotater+")");
+		newText.setAttribute('transform', transformString);
+		newText.style.strokeWidth = "0px";
+		newText.style.fill = "white";
+
+
 
 
 		var newGroup = document.createElementNS("http://www.w3.org/2000/svg", 'g');
@@ -232,7 +256,7 @@
 		newGroup.setAttribute("onclick","clickAction(this)");
 	  newGroup.style.stroke = "white";
 		newGroup.style.fill = color;
-		newGroup.style.strokeWidth = "1px";
+		newPath.style.strokeWidth = "1px";
 		newGroup.appendChild(newPath);
 		newGroup.appendChild(newText);
 		//mysvg.removeChild(getElementById(("r:"+ring+"s:"+fromStep+"n:"+name));
@@ -240,7 +264,7 @@
 
 	}
 
-
+	resetWheel();
 </script>
 </body>
 </html>
