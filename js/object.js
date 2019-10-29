@@ -105,19 +105,16 @@ const flavours = {
                 },
             },
             driedFruit: {
-                driedFruit: {
-                    name: "Dried Fruit",
-                    color: "Claret Rose",
-                    descriptors: {
-                        raisin: {
-                            name: "Raisin",
-                            color: "Fuchsine",
-                        },
-                        prune: {
-                            name: "Prune",
-                            color: "Pink Corsage",
-                        },
-
+                name: "Dried Fruit",
+                color: "Claret Rose",
+                descriptors: {
+                    raisin: {
+                        name: "Raisin",
+                        color: "Fuchsine",
+                    },
+                    prune: {
+                        name: "Prune",
+                        color: "Pink Corsage",
                     },
                 },
             },
