@@ -105,7 +105,7 @@ var ringlist = [{ ring: 1, fromStep: 0, toStep: 18, color: "#DA1D23", name: "Fru
 { ring: 3, fromStep: 56, toStep: 57, color: "#B9A449", name: "Acrid", id: 94, parentID: 24 },
 { ring: 3, fromStep: 57, toStep: 58, color: "#899893", name: "Ashy", id: 95, parentID: 24 },
 { ring: 3, fromStep: 58, toStep: 59, color: "#A1743B", name: "Smoky", id: 96, parentID: 24 },
-{ ring: 3, fromStep: 59, toStep: 60, color: "#894810", name: "Brown. Roast", id: 97, parentID: 24 },
+{ ring: 3, fromStep: 59, toStep: 60, color: "#894810", name: "Brown, Roast", id: 97, parentID: 24 },
 { ring: 2, fromStep: 60, toStep: 62, color: "#DDAF61", name: "Cereal", id: 25, parentID: 5 },
 { ring: 3, fromStep: 60, toStep: 61, color: "#B7906F", name: "Grain", id: 98, parentID: 25 },
 { ring: 3, fromStep: 61, toStep: 62, color: "#EB9D5E", name: "Malt", id: 99, parentID: 25 },
@@ -138,9 +138,9 @@ var ringlist = [{ ring: 1, fromStep: 0, toStep: 18, color: "#DA1D23", name: "Fru
 { ring: 1, fromStep: 81, toStep: 85, color: "#DB0D69", name: "Floral", id: 9, parentID: 0 },
 { ring: 2, fromStep: 81, toStep: 82, color: "#975E6D", name: "Black tea", id: 36, parentID: 9 },
 { ring: 2, fromStep: 82, toStep: 85, color: "#E0719C", name: "Floral", id: 37, parentID: 9 },
-{ ring: 3, fromStep: 82, toStep: 83, color: "#F7F1BD", name: "Chamomile", id: 120, parentID: 37 },
+{ ring: 3, fromStep: 82, toStep: 83, color: "#F38D17", name: "Chamomile", id: 120, parentID: 37 },
 { ring: 3, fromStep: 83, toStep: 84, color: "#EF5A78", name: "Rose", id: 121, parentID: 37 },
-{ ring: 3, fromStep: 84, toStep: 85, color: "#F99E1B", name: "Jasmine", id: 122, parentID: 37 },
+{ ring: 3, fromStep: 84, toStep: 85, color: "#F2F0B0", name: "Jasmine", id: 122, parentID: 37 },
 ];
 
 //backup HTML in SVG terugzetten = leegmaken en dan opnieuw tekenen
@@ -233,7 +233,7 @@ function drawWheel() {
             var testa = setTimeout(function () {
                 drawPart(ringlist[i].ring,
                     ringlist[i].fromStep, ringlist[i].toStep, ringlist[i].color,
-                    ringlist[i].name, ringlist[i].id)
+                    ringlist[i].name, ringlist[i].id);
             }, (slowness * i));
         } else {
             drawPart(ringlist[i].ring,
@@ -314,7 +314,7 @@ function drawPart(ring, fromStep, toStep, color, name, id) {
         } newText.innerHTML = name;
     }
     newText.setAttribute('transform', transformString);
-    newText.style.strokeWidth = "0px";
+    newText.style.strokeWidth = "0.1px";
     newText.style.fill = "white";
 
     var newGroup = document.createElementNS("http://www.w3.org/2000/svg", 'g');
@@ -323,7 +323,7 @@ function drawPart(ring, fromStep, toStep, color, name, id) {
     newGroup.setAttribute("onclick", "clickAction(this)");
     newGroup.style.stroke = "white";
     newGroup.style.fill = color;
-    newPath.style.strokeWidth = "0.5px";
+    newPath.style.strokeWidth = "1px";
     newGroup.appendChild(newPath);
     newGroup.appendChild(newText);
 
