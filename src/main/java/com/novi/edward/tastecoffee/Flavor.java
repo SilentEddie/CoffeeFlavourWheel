@@ -4,7 +4,7 @@ import java.util.ArrayList;
 /**
  * @author edward idema edwardidema@gmail.com
  */
-public class Flavor implements Comparable<Flavor> {
+public class Flavor {
     protected String name;          //De naam zoals in het wiel beschreven
     protected String color;         //kleurcode
     protected int ID;               //nummer
@@ -62,12 +62,6 @@ public class Flavor implements Comparable<Flavor> {
     }
 
 
-    @Override
-    public int compareTo(Flavor o) {
-        return (this.ID< o.getID() ? -1 : (this.ID == o.getID() ? 0 : 1)); 
-    }
-
-   
 
     public boolean matchChild(Flavor lostChild) {
         if (lostChild.getParentID()== this.ID){
@@ -85,7 +79,7 @@ public class Flavor implements Comparable<Flavor> {
     }
 
      protected String PrintFamily(){
-        String result = this.toString() + "\n";
+        String result = this.name + "\n";
             for (Flavor child: children){
                 result += child.PrintFamily("-");
             }        
@@ -93,7 +87,7 @@ public class Flavor implements Comparable<Flavor> {
     }
         
     protected String PrintFamily(String dash){
-        String result = dash + this.toString() + "\n";
+        String result = dash + this.name + "\n";
             for (Flavor child: children){
                 result += child.PrintFamily(dash+"-");
             }        
@@ -112,9 +106,18 @@ public class Flavor implements Comparable<Flavor> {
         return result;
     }
 
-    
-    
-    
+    public String getJSONFileString(int fromStep){
+        String result = "{ring:" + ring + ", fromStep:" + fromStep + ", toStep:" +
+            (fromStep+getSize()) + ", color:\"" + color +  "\", name:\"" + name +
+            "\", id:" + ID + ", parentID:" + parentID + "},\n";
+        for (Flavor child: children){
+            result += child.getJSON(fromStep);
+            fromStep+=child.getSize();
+        }
+        
+        return result;
+    }
+
     
     
     

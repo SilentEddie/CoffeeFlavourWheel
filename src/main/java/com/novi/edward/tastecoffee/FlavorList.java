@@ -24,7 +24,6 @@ public class FlavorList {
         for (Flavor mainFlavor: mainList){
             result += mainFlavor.getName()+"\n";
         }
-        
         return result;
     }
     

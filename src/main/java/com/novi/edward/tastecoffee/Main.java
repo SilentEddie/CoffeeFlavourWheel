@@ -117,8 +117,8 @@ public class Main {
         coffeeList.addFlavor("Jasmine","#F99E1B",122,37);
         
         String test = "";
-        test = coffeeList.getWheelJSON();
-        //test = coffeeList.printMainFlavors();
+        test = coffeeList.getFamilies();
+                //test = coffeeList.printMainFlavors();
         //test
         
         System.out.println(test);
