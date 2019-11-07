@@ -1,16 +1,17 @@
 package com.novi.edward.tastecoffee;
+
 import java.util.ArrayList;
 
 /**
  * @author edward idema edwardidema@gmail.com
  */
-public class Flavor implements Comparable<Flavor> {
-    protected String name;          //De naam zoals in het wiel beschreven
-    protected String color;         //kleurcode
-    protected int ID;               //nummer
-    protected int parentID;         //nummer van de flavor waar hij onder valt
-    protected int ring;             //nummer van de ring, beginnend bij 1
-    ArrayList<Flavor> children;     //lijst met alle flavors die onder hem vallen.
+public class Flavor {
+    protected String name; // De naam zoals in het wiel beschreven
+    protected String color; // kleurcode
+    protected int ID; // nummer
+    protected int parentID; // nummer van de flavor waar hij onder valt
+    protected int ring; // nummer van de ring, beginnend bij 1
+    ArrayList<Flavor> children; // lijst met alle flavors die onder hem vallen.
 
     public Flavor(String name, String color, int ID, int parentID) {
         this.name = name;
@@ -18,35 +19,57 @@ public class Flavor implements Comparable<Flavor> {
         this.ID = ID;
         this.parentID = parentID;
         this.children = new ArrayList<>();
-        
+
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
-    public void setName(String name) { this.name = name; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public String getColor() { return color; }
+    public String getColor() {
+        return color;
+    }
 
-    public void setColor(String color) { this.color = color; }
+    public void setColor(String color) {
+        this.color = color;
+    }
 
-    public int getID() { return ID; }
+    public int getID() {
+        return ID;
+    }
 
-    public void setID(int ID) { this.ID = ID; }
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
-    public int getParentID() { return parentID; }
+    public int getParentID() {
+        return parentID;
+    }
 
-    public void setParentID(int parent) { this.parentID = parent; }
+    public void setParentID(int parent) {
+        this.parentID = parent;
+    }
 
-    public int getRing() { return ring; }
+    public int getRing() {
+        return ring;
+    }
 
-    public void setRing(int ring) { this.ring = ring; }
-        
+    public void setRing(int ring) {
+        this.ring = ring;
+    }
+
     public int getSize() {
         int result = 0;
-        for (Flavor child: children){
+        for (Flavor child : children) {
             result += child.getSize();
         }
-        if (result == 0){return 1;}
+        if (result == 0) {
+            return 1;
+        }
         return result;
     }
 
@@ -55,28 +78,20 @@ public class Flavor implements Comparable<Flavor> {
     }
 
     public void setChildren(ArrayList<Flavor> children) {
-        for (Flavor child: children){
-            child.setRing(this.ring+1);
+        for (Flavor child : children) {
+            child.setRing(this.ring + 1);
         }
         this.children = children;
     }
 
-
-    @Override
-    public int compareTo(Flavor o) {
-        return (this.ID< o.getID() ? -1 : (this.ID == o.getID() ? 0 : 1)); 
-    }
-
-   
-
     public boolean matchChild(Flavor lostChild) {
-        if (lostChild.getParentID()== this.ID){
-            lostChild.setRing(this.ring+1);
+        if (lostChild.getParentID() == this.ID) {
+            lostChild.setRing(this.ring + 1);
             this.children.add(lostChild);
             return true;
-        }else {
-            for (Flavor child: children){
-                if (child.matchChild(lostChild)){
+        } else {
+            for (Flavor child : children) {
+                if (child.matchChild(lostChild)) {
                     return true;
                 }
             }
@@ -84,40 +99,31 @@ public class Flavor implements Comparable<Flavor> {
         return false;
     }
 
-     protected String PrintFamily(){
+    protected String PrintFamily() {
         String result = this.toString() + "\n";
-            for (Flavor child: children){
-                result += child.PrintFamily("-");
-            }        
-        return result;
-    }
-        
-    protected String PrintFamily(String dash){
-        String result = dash + this.toString() + "\n";
-            for (Flavor child: children){
-                result += child.PrintFamily(dash+"-");
-            }        
-        return result;
-    } 
-    
-    public String getJSON(int fromStep){
-        String result = "{ring:" + ring + ", fromStep:" + fromStep + ", toStep:" +
-            (fromStep+getSize()) + ", color:\"" + color +  "\", name:\"" + name +
-            "\", id:" + ID + ", parentID:" + parentID + "},\n";
-        for (Flavor child: children){
-            result += child.getJSON(fromStep);
-            fromStep+=child.getSize();
+        for (Flavor child : children) {
+            result += child.PrintFamily("-");
         }
-        
         return result;
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
+    protected String PrintFamily(String dash) {
+        String result = dash + this.toString() + "\n";
+        for (Flavor child : children) {
+            result += child.PrintFamily(dash + "-");
+        }
+        return result;
+    }
+
+    public String getJSON(int fromStep) {
+        String result = "{ring:" + ring + ", fromStep:" + fromStep + ", toStep:" + (fromStep + getSize()) + ", color:\""
+                + color + "\", name:\"" + name + "\", id:" + ID + ", parentID:" + parentID + "},\n";
+        for (Flavor child : children) {
+            result += child.getJSON(fromStep);
+            fromStep += child.getSize();
+        }
+
+        return result;
+    }
+
 }
