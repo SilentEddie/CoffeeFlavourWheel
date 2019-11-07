@@ -3,10 +3,12 @@ body {
 }
 
 section {
-    /* margin: 2%; */
     background-color: white;
     height: 100%;
-    /* border-radius: 70%; */
+    background-image: url(/images/berry_lemon.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .outer-1 {
@@ -8118,11 +8120,25 @@ section {
     }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .outer-1 .inner-1-brownSpice .full-text {
+        display: block;
+    }
+
+    .outer-1 .inner-1-brownSpice .short-text {
+        display: none;
+    }
+}
+
 @media (min-width: 1200px) {
-    .outer-1 .inner-1-brownSpice p {
+    .outer-1 .inner-1-brownSpice .full-text {
         top: 74%;
         left: 6%;
         transform: rotate(22deg);
+    }
+
+    .outer-1 .inner-1-brownSpice .short-text {
+        display: none;
     }
 }
 
