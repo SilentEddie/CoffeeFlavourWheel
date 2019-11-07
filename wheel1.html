@@ -1,0 +1,881 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/CSS/styles (origineel).css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="hover-min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+    <title>Coffee Flavour Wheel</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand mb-0 h1" href="/index.html"><img src="/favicon_io/android-chrome-192x192.png"
+                    width="30" height="30" class="d-inline-block align-top" alt="">Coffee Flavour Wheel
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/wheel1.html">Flavour Wheel v1.0</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/coffee.html">Flavour Wheel v2.0</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/coffeeLib.html">Coffee library</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h2>Information about your coffee:</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <form action="/js/coffeeInput.php" method="POST">
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput">Coffee Name:</label>
+                                        <input type="text" name="NameCoffee" class="form-control" id="formGroupExampleInput">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="formGroupExampleInput2">Roaster:</label>
+                                        <input type="text" name="NameRoaster" class="form-control" id="formGroupExampleInput2">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label for="exampleSelect1">Roast color:</label>
+                                            <select class="form-control" id="exampleSelect1" name="RoastColor">
+                                            <option>Light</option>
+                                            <option>Medium</option>
+                                            <option>Omni Roast</option>
+                                            <option>Medium-dark</option>
+                                            <option>Dark</option>
+                                        </select>
+                                    </div>                                    
+                                    <div class=" col-6 form-group">
+                                                <label for="formGroupExampleInput2">Roast Date:</label>
+                                                <input type="date" name="RoastDate" class="form-control" id="formGroupExampleInput3">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="exampleSelect2">A/R:</label>
+                                            <select class="form-control" name="BeanType1" id="exampleSelect2">
+                                                <option>Arabica</option>
+                                                <option>Robusta</option>
+                                                <option>Arabica & Robusta</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="exampleSelect2">Bean:</label>
+                                            <select class="form-control" name="BeanType2" id="exampleSelect2">
+                                                <option>Single Estate</option>
+                                                <option>Single Origin</option>
+                                                <option>Single Variety</option>
+                                                <option>Blend</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label for="exampleSelect2">Processing method:</label>
+                                            <select class="form-control" name="ProcessingMethod" id="exampleSelect2">
+                                                <option>Natural</option>
+                                                <option>Pulp Natural</option>
+                                                <option>Washed</option>
+                                                <option>Semi-washed</option>
+                                                <option>Honey</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleTextarea">Extra info:</label>
+                                        <textarea class="form-control" name="ExtraInfo" id="exampleTextarea" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">File input</label>
+                                        <input type="file" class="form-control-file" id="exampleInputFile"
+                                            aria-describedby="fileHelp">
+                                        <small id="fileHelp" class="form-text text-muted">This is some placeholder
+                                            block-level help
+                                            text for the above input. It's a bit lighter and easily wraps to a new
+                                            line.</small>
+                                    </div>                                                                   
+                                    <button type="submit" value="Submit"  class="btn btn-primary">Save Coffee</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <div class="col-sm-7">
+                            <br>
+                            <br>
+                            <br>
+                            <div class="descripters">
+                                <div class="chamomile">
+                                    <p>Chamomile</p>
+                                </div>
+                                <div class="rose">
+                                    <p>Rose</p>
+                                </div>
+                                <div class="jasmine">
+                                    <p>Jasmine</p>
+                                </div>
+                                <div class="blackberry">
+                                    <p>Blackberry</p>
+                                </div>
+                                <div class="raspberry">
+                                    <p>Raspberry</p>
+                                </div>
+                                <div class="blueberry">
+                                    <p>Blueberry</p>
+                                </div>
+                                <div class="strawberry">
+                                    <p>Strawberry</p>
+                                </div>
+                                <div class="raisin">
+                                    <p>Raisin</p>
+                                </div>
+                                <div class="prune">
+                                    <p>Prune</p>
+                                </div>
+                                <div class="coconut">
+                                    <p>Coconut</p>
+                                </div>
+                                <div class="cherry">
+                                    <p>Cherry</p>
+                                </div>
+                                <div class="pomegranate">
+                                    <p>Pomegrate</p>
+                                </div>
+                                <div class="pineapple">
+                                    <p>Pineapple</p>
+                                </div>
+                                <div class="grape">
+                                    <p>Grape</p>
+                                </div>
+                                <div class="apple">
+                                    <p>Apple</p>
+                                </div>
+                                <div class="peach">
+                                    <p>Peach</p>
+                                </div>
+                                <div class="pear">
+                                    <p>Pear</p>
+                                </div>
+                                <div class="grapefruit">
+                                    <p>Grapefruit</p>
+                                </div>
+                                <div class="orange">
+                                    <p>Orange</p>
+                                </div>
+                                <div class="lemon">
+                                    <p>Lemon</p>
+                                </div>
+                                <div class="lime">
+                                    <p>Lime</p>
+                                </div>
+                                <div class="sourAromatics">
+                                    <p>Sour Aromatics</p>
+                                </div>
+                                <div class="aceticAcid">
+                                    <p>Acetic Acid</p>
+                                </div>
+                                <div class="butyricAcid">
+                                    <p>Butyric Acid</p>
+                                </div>
+                                <div class="isovalericAcid">
+                                    <p>Isovaleric Acid</p>
+                                </div>
+                                <div class="citricAcid">
+                                    <p>Citric Acid</p>
+                                </div>
+                                <div class="malicAcid">
+                                    <p>Malic Acid</p>
+                                </div>
+                                <div class="winey">
+                                    <p>Winey</p>
+                                </div>
+                                <div class="whiskey">
+                                    <p>Whiskey</p>
+                                </div>
+                                <div class="fermented">
+                                    <p>Fermented</p>
+                                </div>
+                                <div class="overripe">
+                                    <p>Overripe</p>
+                                </div>
+                                <div class="underripe">
+                                    <p>Under-Ripe</p>
+                                </div>
+                                <div class="peapod">
+                                    <p>Peapod</p>
+                                </div>
+                                <div class="fresh">
+                                    <p>Fresh</p>
+                                </div>
+                                <div class="darkGreen">
+                                    <p>Dark Green</p>
+                                </div>
+                                <div class="vegetative">
+                                    <p>Vegetative</p>
+                                </div>
+                                <div class="hayLike">
+                                    <p>Hay-Like</p>
+                                </div>
+                                <div class="herbLike">
+                                    <p>Herb-Like</p>
+                                </div>
+                                <div class="stale">
+                                    <p>Stale</p>
+                                </div>
+                                <div class="cardboard">
+                                    <p>Cardboard</p>
+                                </div>
+                                <div class="papery">
+                                    <p>Papery</p>
+                                </div>
+                                <div class="woody">
+                                    <p>Woody</p>
+                                </div>
+                                <div class="moldyDamp">
+                                    <p>Moldy/Damp</p>
+                                </div>
+                                <div class="mustyDusty">
+                                    <p>Musty/Dusty</p>
+                                </div>
+                                <div class="mustyEarthy">
+                                    <p>Musty/Earthy</p>
+                                </div>
+                                <div class="animalic">
+                                    <p>Animalic</p>
+                                </div>
+                                <div class="meatyBrothy">
+                                    <p>Meaty Brothy</p>
+                                </div>
+                                <div class="phenolic">
+                                    <p>Phenolic</p>
+                                </div>
+                                <div class="bitter">
+                                    <p>Bitter</p>
+                                </div>
+                                <div class="salty">
+                                    <p>Salty</p>
+                                </div>
+                                <div class="medicinal">
+                                    <p>Medicinal</p>
+                                </div>
+                                <div class="petroleum">
+                                    <p>Petroleum</p>
+                                </div>
+                                <div class="skunky">
+                                    <p>Skunky</p>
+                                </div>
+                                <div class="rubber">
+                                    <p>Rubber</p>
+                                </div>
+                                <div class="acrid">
+                                    <p>Acrid</p>
+                                </div>
+                                <div class="ashy">
+                                    <p>Ashy</p>
+                                </div>
+                                <div class="smoky">
+                                    <p>Smoky</p>
+                                </div>
+                                <div class="brownRoast">
+                                    <p>Brown, Roast</p>
+                                </div>
+                                <div class="grain">
+                                    <p>Grain</p>
+                                </div>
+                                <div class="malt">
+                                    <p>Malt</p>
+                                </div>
+                                <div class="anise">
+                                    <p>Anise</p>
+                                </div>
+                                <div class="nutmeg">
+                                    <p>Nutmeg</p>
+                                </div>
+                                <div class="cinnamon">
+                                    <p>Cinnamon</p>
+                                </div>
+                                <div class="clove">
+                                    <p>Clove</p>
+                                </div>
+                                <div class="peanuts">
+                                    <p>Peanuts</p>
+                                </div>
+                                <div class="hazelnut">
+                                    <p>Hazelnut</p>
+                                </div>
+                                <div class="almond">
+                                    <p>Almond</p>
+                                </div>
+                                <div class="chocolate">
+                                    <p>Chocolate</p>
+                                </div>
+                                <div class="darkChocolate">
+                                    <p>Dark Chocolate</p>
+                                </div>
+                                <div class="molasses">
+                                    <p>Molasses</p>
+                                </div>
+                                <div class="mapleSyrup">
+                                    <p>Maple Syrup</p>
+                                </div>
+                                <div class="caramelized">
+                                    <p>Caramelized</p>
+                                </div>
+                                <div class="honey">
+                                    <p>Honey</p>
+                                </div>
+                                <div class="outer-1">
+                                    <div class="outerLine" id="flavourWheel">
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Honey"
+                                            class="outer-1-honey hvr-pulse-grow" onClick="Honey()" value="Honey" id="flavourWheel">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Caramelized" class="outer-1-caramelized hvr-pulse-grow"
+                                            onClick="Caramelized()" value="Caramelized" id="flavourWheel">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Maple Syrup" class="outer-1-mapleSyrup hvr-pulse-grow"
+                                            onClick="MapleSyrup()" value="Maple Syrup" id="flavourWheel">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Molasses"
+                                            class="outer-1-molasses hvr-pulse-grow" onClick="Molasses()" value="Molasses" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Chamomile"
+                                            class="outer-1-chamomile hvr-pulse-grow" onClick="Chamomile()" value=" Chamomile" id="flavourWheel">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Rose"
+                                            class="outer-1-rose hvr-pulse-grow" onClick="Rose()" value="Rose" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Jasmine"
+                                            class="outer-1-jasmine hvr-pulse-grow" onClick="Jasmine()" value="Jasmine" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Blackberry"
+                                            class="outer-1-blackBerry hvr-pulse-grow" onClick="BlackBerry()" value="Blackberry" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Raspberry"
+                                            class="outer-1-raspBerry hvr-pulse-grow" onClick="RaspBerry()" value=" Raspberry" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Blueberry"
+                                            class="outer-1-blueBerry hvr-pulse-grow" onClick="BlueBerry()" value="Blueberry" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Strawberry"
+                                            class="outer-1-strawBerry hvr-pulse-grow" onClick="StrawBerry()" value="Strawberry" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Raisin"
+                                            class="outer-1-raisin hvr-pulse-grow" onClick="Raisin()" value="Raisin" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Prune"
+                                            class="outer-1-prune hvr-pulse-grow" onClick=" Prune()" value="Prune" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Coconut"
+                                            class="outer-1-coconut hvr-pulse-grow" onClick="Coconut()" value="Coconut" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Cherry"
+                                            class="outer-1-cherry hvr-pulse-grow" onClick="Cherry()" value="Cherry" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Pomegrate"
+                                            class="outer-1-pomegranate hvr-pulse-grow" onClick="Pomegrate()" value="Pomegrate" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Pineapple"
+                                            class="outer-1-pineApple hvr-pulse-grow" onClick="Pineapple()" value="Pineapple" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Grape"
+                                            class="outer-1-grape hvr-pulse-grow" onClick="Grape()" value="Grape" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Apple"
+                                            class="outer-1-apple hvr-pulse-grow" onClick="Apple()" value="Apple" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Peach"
+                                            class="outer-1-peach hvr-pulse-grow" onClick="Peach()" value="Peach" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Pear"
+                                            class="outer-1-pear hvr-pulse-grow" onClick="Pear()" value="Pear" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Grapefruit"
+                                            class="outer-1-grapeFruit hvr-pulse-grow" onClick="GrapeFruit()" value="Grapefruit" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Orange"
+                                            class="outer-1-orange hvr-pulse-grow" onClick="Orange()" value="Orange" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Lemon"
+                                            class="outer-1-lemon hvr-pulse-grow" onClick="Lemon()" value="Lemon" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Lime"
+                                            class="outer-1-lime hvr-pulse-grow" onClick="Lime()" value="Lime" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Sour Aromatics" class="outer-1-sourAromatics hvr-pulse-grow"
+                                            onClick="SourAromatics()" value="Sour Aromatics" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Acetic Acid" class="outer-1-aceticAcid hvr-pulse-grow"
+                                            onClick="AceticAcid()" value="Acetic Acid" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Butyric Acid" class="outer-1-butyricAcid hvr-pulse-grow"
+                                            onClick="ButyricAcid()" value="Butyric Acid" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Isovaleric Acid"
+                                            class="outer-1-isovalericAcid hvr-pulse-grow" onClick="IsovalericAcid()" value="Isovaleric Acid"
+                                            id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Citric Acid" class="outer-1-citricAcid hvr-pulse-grow"
+                                            onClick="CitricAcid()" value="Citric Acid" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Malic Acid"
+                                            class="outer-1-malicAcid hvr-pulse-grow" onClick="MalicAcid()" value="Malic Acid" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Winey"
+                                            class="outer-1-winey hvr-pulse-grow" onClick="Winey()" value="Winey" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Whiskey"
+                                            class="outer-1-whiskey hvr-pulse-grow" onClick="Whiskey()" value="Whiskey" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Fermented"
+                                            class="outer-1-fermented hvr-pulse-grow" onClick="Fermented()" value="Fermented" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Overripe"
+                                            class="outer-1-overRipe hvr-pulse-grow" onClick="OverRipe()" value="Overripe" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Under-Ripe"
+                                            class="outer-1-underRipe hvr-pulse-grow" onClick="UnderRipe()" value="Underripe" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Peapod"
+                                            class="outer-1-peaPod hvr-pulse-grow" onClick="PeaPod()" value="Peapod" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Fresh"
+                                            class="outer-1-fresh hvr-pulse-grow" onClick="Fresh()" value="Fresh" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Dark Green"
+                                            class="outer-1-darkGreen hvr-pulse-grow" onClick="DarkGreen()" value="Dark Green" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Vegetative"
+                                            class="outer-1-vegetative hvr-pulse-grow" onClick="Vegetative()" value="Vegetative" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Hay-Like"
+                                            class="outer-1-hayLike hvr-pulse-grow" onClick="HayLike()" value="Haylike" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Herb-Like"
+                                            class="outer-1-herbLike hvr-pulse-grow" onClick="HerbLike()" value="Herblike" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Stale"
+                                            class="outer-1-stale hvr-pulse-grow" onClick="Stale()" value="Stale" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Cardboard"
+                                            class="outer-1-cardboard hvr-pulse-grow" onClick="CardBoard()" value="Cardboard" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Papery"
+                                            class="outer-1-papery hvr-pulse-grow" onClick="Papery()" value="Papery" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Woody"
+                                            class="outer-1-woody hvr-pulse-grow" onClick="Woody()" value="Woody" id="popUp">&nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Moldy / Damp" class="outer-1-moldyDamp hvr-pulse-grow"
+                                            onClick="MoldyDamp()" value="Moldy/Damp" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Musty / Dusty" class="outer-1-mustyDusty hvr-pulse-grow"
+                                            onClick="MustyDusty()" value="Musty/Dusty" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Musty / Earthy" class="outer-1-mustyEarthy hvr-pulse-grow"
+                                            onClick="MustyEarthy()" value="Musty/Earthy" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Animalic"
+                                            class="outer-1-animalic hvr-pulse-grow" onClick="Animalic()" value="Animalic" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Meaty Brothy" class="outer-1-meatyBrothy hvr-pulse-grow"
+                                            onClick="MeatyBrothy()" value="MeatyBrothy" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Phenolic"
+                                            class="outer-1-phenolic hvr-pulse-grow" onClick="Phenolic()" value="Phenolic" id="popUp">
+                                            &nbsp;
+                                        </div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Bitter"
+                                            class="outer-1-bitter hvr-pulse-grow" onClick="Bitter()" value="Bitter" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Salty"
+                                            class="outer-1-salty hvr-pulse-grow" onClick="Salty()" value="Salty" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Medicinal"
+                                            class="outer-1-medicinal hvr-pulse-grow" onClick="Medicinal()" value="Medicinal" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Petroleum"
+                                            class="outer-1-petroleum hvr-pulse-grow" onClick="Petroleum()" value="Petroleum" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Skunky"
+                                            class="outer-1-skunky hvr-pulse-grow" onClick="Skunky()" value="Skunky" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Rubber"
+                                            class="outer-1-rubber hvr-pulse-grow" onClick="Rubber()" value="Rubber" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Acrid"
+                                            class="outer-1-acrid hvr-pulse-grow" onClick="Acrid()" value="Acrid" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Ashy"
+                                            class="outer-1-ashy hvr-pulse-grow" onClick="Ashy()" value="Ashy" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Smoky"
+                                            class="outer-1-smoky hvr-pulse-grow" onClick="Smoky()" value="Smoky" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Brown, Roast" class="outer-1-brownRoast hvr-pulse-grow"
+                                            onClick="BrownRoast()" value="BrownRoast" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Grain"
+                                            class="outer-1-grain hvr-pulse-grow" onClick="Grain()" value="Grain" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Malt"
+                                            class="outer-1-malt hvr-pulse-grow" onClick="Malt()" value="Malt" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Anise"
+                                            class="outer-1-anise hvr-pulse-grow" onClick="Anise()" value="Anise" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Nutmeg"
+                                            class="outer-1-nutmeg hvr-pulse-grow" onClick="Nutmeg()" value="Nutmeg" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Cinnamon"
+                                            class="outer-1-cinnamon hvr-pulse-grow" onClick="Cinnamon()" value="Cinnamon" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Clove"
+                                            class="outer-1-clove hvr-pulse-grow" onClick="Clove()" value="Clove" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Peanuts"
+                                            class="outer-1-peanuts hvr-pulse-grow" onClick="Peanuts()" value="Peanuts" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Hazelnut"
+                                            class="outer-1-hazelnut hvr-pulse-grow" onClick="Hazelnut()" value="Hazelnut" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Almond"
+                                            class="outer-1-almond hvr-pulse-grow" onClick="Almond()" value="Almond" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left" title="This is Chocolate"
+                                            class="outer-1-chocolate hvr-pulse-grow" onClick="Chocolate()" value="Chocolate" id="popUp">
+                                            &nbsp;</div>
+                                        <div data-toggle="tooltip" data-placement="auto left"
+                                            title="This is Dark Chocolate" class="outer-1-darkChocolate hvr-pulse-grow"
+                                            onClick="DarkChocolate()" value="DarkChocolate" id="popUp">
+                                            &nbsp;</div>
+
+
+                                        <div class="inner-1">&nbsp;
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Berry"
+                                                class="inner-1-berry" onClick="Berry()" value="Berry" id="popUp">&nbsp;<p>Berry</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Dried Fruit" class="inner-1-driedFruit"
+                                                onClick="DriedFruit()" value="Dried Fruit" id="popUp">&nbsp;<p>Dried
+                                                    Fruit
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Other Fruit" class="inner-1-otherFruit"
+                                                onClick="OtherFruit()" value="Other Fruit" id="popUp">&nbsp;<p>Other
+                                                    Fruit
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Citrus Fruit" class="inner-1-citrusFruit"
+                                                onClick="CitrusFruit()" value="Citrus Fruit" id="popUp">&nbsp;<p>Citrus
+                                                    Fruit
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Sour"
+                                                class="inner-1-sour" onClick="Sour()" value="Sour" id="popUp">
+                                                &nbsp;<p>Sour</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Alcohol / Fermented" class="inner-1-alcoholFermented"
+                                                onClick="AlcoholFermented()" value="Alcohol Fermented" id="popUp">&nbsp;<p>Alcohol/<br>Fermented
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Olive oil" class="inner-1-oliveOil" onClick="OliveOil()" value="Olive Oil"
+                                                id="popUp">&nbsp;<p>Olive Oil
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Raw"
+                                                class="inner-1-raw" onClick="Raw()" value="Raw" id="popUp">
+                                                &nbsp;<p>Raw</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Green Vegetative" class="inner-1-greenVegetative"
+                                                onClick="GreenVegetative()" value="Green Vegetative" id="popUp">&nbsp;<p>
+                                                    Green/<br>Vegetative</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Paper / Musty" class="inner-1-paperMusty"
+                                                onClick="PaperMusty()" value="Paper/Musty" id="popUp">&nbsp;<p>
+                                                    Paper/<br>Musty</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Chemical" class="inner-1-chemical" onClick="Chemical()" value="Chemical"
+                                                id="popUp">&nbsp;<p>Chemical
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Pipe Tobacco" class="inner-1-pipeTobacco"
+                                                onClick="PipeTobacco()" value="Pipe Tobacco" id="popUp">&nbsp;<p>Pipe /
+                                                    Tobacco</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Tobacco" class="inner-1-tobacco" onClick="Tobacco()" value="Tobacco"
+                                                id="popUp">&nbsp;<p>Tobacco</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Burnt"
+                                                class="inner-1-burnt" onClick="Burnt()" value="Burnt" id="popUp">&nbsp;<p>Burnt</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Cereal"
+                                                class="inner-1-cereal" onClick="Cereal()" value="Cereal" id="popUp">&nbsp;<p>Cereal</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Pungent" class="inner-1-pungent" onClick="Pungent()" value="Pungent"
+                                                id="popUp">&nbsp;<p>Pungent</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Pepper"
+                                                class="inner-1-pepper" onClick="Pepper()" value="Pepper" id="popUp">&nbsp;<p>Pepper</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Brown Spice" class="inner-1-brownSpice"
+                                                onClick="BrownSpice()" value="Brown Sice" id="popUp">&nbsp;<p class="full-text">Brown
+                                                    Spice
+                                                </p><p class="short-text">Brown<br>Spice</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Nutty"
+                                                class="inner-1-nutty" onClick="Nutty()" value="Nutty" id="popUp">&nbsp;<p>Nutty</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Cocoa"
+                                                class="inner-1-cocoa" onClick="Cocoa()" value="Cocoa" id="popUp">&nbsp;<p>Cocoa</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Brown Sugar" onClick="BrownSugar()" value="Brown Sugar"
+                                                class="inner-1-brownSugar" id="popUp">&nbsp;<p>Brown
+                                                    Sugar
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Vanilla" class="inner-1-vanilla" onClick="Vanilla()" value="Vanilla"
+                                                id="popUp">&nbsp;<p>Vanilla</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Vanillin" class="inner-1-vanillin" onClick="Vanillin()" value="Vanillin"
+                                                id="popUp">&nbsp;<p>Vanillin
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Overall Sweet" class="inner-1-overallSweet"
+                                                onClick="OverallSweet()" value="Overall Sweet" id="popUp">&nbsp;<p>
+                                                    Overall
+                                                    Sweet</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Sweet Aromatics" class="inner-1-sweetAromatics"
+                                                onClick="SweetAromatics()" value="Sweet Aromatics" id="popUp">&nbsp;<p>Sweet
+                                                    Aromatics</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Black Tea" class="inner-1-blackTea" onClick="BlackTea()" value="Black Tea"
+                                                id="popUp">&nbsp;<p>Black Tea
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Floral"
+                                                class="inner-1-floral" onClick="Floral_1()" vlaue="Floral" id="popUp">&nbsp;<p>Floral
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Beany"
+                                                class="inner-1-beany" onClick="Beany()" value="Beany" id="popUp">&nbsp;<p>Beany</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="inner-2">&nbsp;
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Fruity"
+                                                onClick="Fruity()" value="Fruity" class="inner-2-fruity">&nbsp;<p id="timer0">
+                                                    Fruity</p>
+                                            </div>
+
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Sweet"
+                                                onClick="Sweet()" value="Sweet" class="inner-2-sweet">&nbsp;<p id="timer2">
+                                                    Sweet</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Floral"
+                                                onClick="Floral()" value="Floral" class="inner-2-floral">&nbsp;<p id="timer1">
+                                                    Floral</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Sour/Fermented" onClick="SourFermented()" value="Sour Fermented"
+                                                class="inner-2-sourFermented">&nbsp;<p class="full-text" id="timer3">
+                                                    Sour/<br>Fermented</p><p class="short-text" id="timer3">
+                                                        Sour/<br>Fer.</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Green/vegetative" onClick="GreenVegetative()" value="Green Vegetative"
+                                                class="inner-2-greenVegetavive">&nbsp;<p class="full-text" id="timer5">
+                                                    Green/<br>Vegetative</p>
+                                                    <p class="short-text" id="timer5">
+                                                        Green/<br>Veg.</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Other"
+                                                class="inner-2-other" onClick="Other()" value="Other">&nbsp;<p id="timer4">
+                                                    Other</p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Roasted" class="inner-2-roasted" onClick="Roasted()" value="Roasted">
+                                                &nbsp;<p id="timer7">Roasted
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left"
+                                                title="This is Nutty/Cocoa" onClick="NuttyCocoa()" value="Nutty Cocoa"
+                                                class="inner-2-nuttyCocoa">&nbsp;<p id="timer8">
+                                                    Nutty/<br>Cocoa
+                                                </p>
+                                                </p>
+                                            </div>
+                                            <div data-toggle="tooltip" data-placement="auto left" title="This is Spices"
+                                                class="inner-2-spices" onClick="Spices()" value="Spices">&nbsp;<p id="timer6">Spices
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="inner-3">&nbsp;
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+            <div class="container output">
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col" id="logger" class="web_console">
+                        <div class="row">
+                            <p class="col-sm-6">Flavour notes:</p>
+                            <button id="clearPage" type="button" class="col-sm-6 btn btn-primary btn-sm">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+    </section>
+    <br>
+    <section>
+        <!-- Footer -->
+        <footer class="page-footer font-small blue">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2019 Team Coffee
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/object.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>   
+    <script>
+        $('#clearPage').click(function () {
+            location.reload();
+            alert("Page has been refreshed!")
+        });
+    </script>
+    <script type="text/javascript">
+        // Overriding console object
+        let console = {};
+
+        // Getting div to insert logs
+        let logger = document.getElementById("logger");
+
+        // Adding log method from our console object
+        console.log = text => {
+            let element = document.createElement("div");
+            let txt = document.createTextNode(text);
+
+            element.appendChild(txt);
+            logger.appendChild(element);
+
+        }
+    </script>
+
+
+</body>
+
+</html>
