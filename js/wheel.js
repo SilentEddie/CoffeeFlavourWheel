@@ -11,7 +11,7 @@ var circley = 230;
 var parentPartAutoSelect = true;		//hogere smaak gaat mee omhoog
 var parentPartAutoDeselect = false; //hogere smaak gaat mee omlaag
 var childPartAutoDeselect = true;   //subsmaak gaat mee omlaag
-var slowness = 0; //traagheid bij animatie opbouw wiel
+var slowness = 8; //traagheid bij animatie opbouw wiel
 
 var mysvg = document.getElementById("svgC");
 /*hier gaan we voor elke ring twee groepen maken
