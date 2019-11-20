@@ -26,11 +26,19 @@ public class FlavorList {
         for (Flavor mainFlavor: mainList){
             result += mainFlavor.getName()+"\n";
         }
-
         return result;
     }
-
-
+    
+    public Flavor getFlavorByID(int ID){
+        Flavor result = null;
+        for(Flavor f: mainList){
+            if (f.getID() == ID){
+                return f;
+            }
+        }
+        return result;
+    }
+    
     public void addFlavor(String name, String color, int ID, int parentID){
         Flavor newFlavor = new Flavor(name, color, ID, parentID);
         newFlavor.setChildren(findChildren(ID));
