@@ -117,14 +117,15 @@ public class Main {
         coffeeList.addFlavor("Jasmine","#F99E1B",122,37);
         
         String test = "";
-        test = coffeeList.getFamilies();
+        Flavor f = coffeeList.getFlavorByID(1);
+        //test = coffeeList.getWheelJSON();
                 //test = coffeeList.printMainFlavors();
         //test
-        
+        test = f.PrintFamily();
         System.out.println(test);
     }
     
-
+    
     
     
 }

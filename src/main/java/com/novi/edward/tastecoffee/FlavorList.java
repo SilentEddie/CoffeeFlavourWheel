@@ -27,6 +27,15 @@ public class FlavorList {
         return result;
     }
     
+    public Flavor getFlavorByID(int ID){
+        Flavor result = null;
+        for(Flavor f: mainList){
+            if (f.getID() == ID){
+                return f;
+            }
+        }
+        return result;
+    }
     
     public void addFlavor(String name, String color, int ID, int parentID){
         Flavor newFlavor = new Flavor(name, color, ID, parentID);
