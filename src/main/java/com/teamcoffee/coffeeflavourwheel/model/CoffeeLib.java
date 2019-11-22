@@ -14,21 +14,41 @@ public class CoffeeLib {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    private String idF;
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "date")
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate date;
+    @Column(name = "coffeeName")
     private String coffeeName;
+    @Column(name = "roaster")
     private String roaster;
+    @Column(name = "roastColor")
     private String roastColor;
+    @Column(name = "processingMethod")
     private String processingMethod;
+    @Column(name = "tastingMethod")
     private String tastingMethod;
+    @Column(name = "beanType")
     private String beanType;
+    @Column(name = "userNotes")
     private String userNotes;
+    private boolean flag;
+
+    private String fileName;
+
+    private String fileType;
+
+    @Lob
+    private byte[] data;
 //    private ArrayList<Flavor> flavors;
 
     public CoffeeLib() {}
 
-    public CoffeeLib(LocalDate date, String coffeeName, String roaster, String roastColor, String processingMethod, String tastingMethod, String beanType, String userNotes) {
+    public CoffeeLib(LocalDate date, String coffeeName, String roaster, String roastColor, String processingMethod, String tastingMethod, String beanType, String userNotes, boolean flag
+//            ,String fileName, String fileType, byte[] data
+    ) {
         this.date = date;
         this.coffeeName = coffeeName;
         this.roaster = roaster;
@@ -37,6 +57,10 @@ public class CoffeeLib {
         this.tastingMethod = tastingMethod;
         this.beanType = beanType;
         this.userNotes = userNotes;
+        this.flag = flag;
+//        this.fileName = fileName;
+//        this.fileType = fileType;
+//        this.data = data;
     }
 
     public Long getId() {
@@ -103,7 +127,48 @@ public class CoffeeLib {
 
     public void setUserNotes(String userNotes) { this.userNotes = userNotes; }
 
-//    public ArrayList<Flavor> getFlavors() { return flavors; }
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
+
+
+//    public String getFileName() {
+//        return fileName;
+//    }
+//
+//    public void setFileName(String fileName) {
+//        this.fileName = fileName;
+//    }
+//
+//    public String getFileType() {
+//        return fileType;
+//    }
+//
+//    public void setFileType(String fileType) {
+//        this.fileType = fileType;
+//    }
+//
+//    public byte[] getData() {
+//        return data;
+//    }
+//
+//    public void setData(byte[] data) {
+//        this.data = data;
+//    }
+//
+//    public String getIdF() {
+//        return idF;
+//    }
+//
+//    public void setIdF(String idF) {
+//        this.idF = idF;
+//    }
+
+    //    public ArrayList<Flavor> getFlavors() { return flavors; }
 //
 //    public void setFlavors(ArrayList<Flavor> flavors) { this.flavors = flavors; }
 
@@ -121,13 +186,20 @@ public class CoffeeLib {
                 Objects.equals(tastingMethod, coffeeLib.tastingMethod) &&
                 Objects.equals(date, coffeeLib.date) &&
                 Objects.equals(beanType, coffeeLib.beanType) &&
-                Objects.equals(userNotes, coffeeLib.userNotes);
+                Objects.equals(userNotes, coffeeLib.userNotes) &&
+                Objects.equals(flag, coffeeLib.flag)
+//                Objects.equals(fileName, coffeeLib.fileName) &&
+//                Objects.equals(fileType, coffeeLib.fileType) &&
+//                Objects.equals(data, coffeeLib.data)
+                ;
 //                Objects.equals(flavors, coffeeLib.flavors);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, date, coffeeName, roaster, roastColor, processingMethod, tastingMethod, beanType, userNotes);
+        return Objects.hash(id, date, coffeeName, roaster, roastColor, processingMethod, tastingMethod, beanType, userNotes, flag
+//
+        );
     }
 
     @Override
@@ -142,7 +214,6 @@ public class CoffeeLib {
         sb.append(", tastingMethod='").append(tastingMethod).append('\'');
         sb.append(", beanType='").append(beanType).append('\'');
         sb.append(", userNotes='").append(userNotes).append('\'');
-//        sb.append(", flavorList='").append(flavors).append('\'');
         sb.append('}');
         return sb.toString();
     }

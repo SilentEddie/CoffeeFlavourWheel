@@ -1,5 +1,4 @@
 package com.teamcoffee.coffeeflavourwheel.UserService;
-
 import com.teamcoffee.coffeeflavourwheel.exception.FileStorageException;
 import com.teamcoffee.coffeeflavourwheel.exception.MyFileNotFoundException;
 import com.teamcoffee.coffeeflavourwheel.model.DBFile;
@@ -8,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 
 @Service
@@ -26,9 +24,7 @@ public class DBFileStorageService {
             if(fileName.contains("..")) {
                 throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
             }
-
             DBFile dbFile = new DBFile(fileName, file.getContentType(), file.getBytes());
-
             return dbFileRepository.save(dbFile);
         } catch (IOException ex) {
             throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);

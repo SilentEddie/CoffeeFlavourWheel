@@ -1,5 +1,7 @@
 package com.teamcoffee.coffeeflavourwheel.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -7,6 +9,9 @@ import java.util.Objects;
 @Table(name = "user")
 public class User {
 
+
+//    @GeneratedValue(generator = "uuid")
+//    @GenericGenerator(name = "uuid", strategy = "uuid2")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
