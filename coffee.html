@@ -74,22 +74,20 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form action="/js/coffeeInput.php" method="POST">
+                                <form action="/coffeelib/posts" method="POST" onSubmit={handleSubmit} ref={formData}>
                                     <div class="form-group">
                                         <label for="formGroupExampleInput">Coffee Name:</label>
-                                        <input type="text" name="NameCoffee" class="form-control"
-                                            id="formGroupExampleInput">
+                                        <input type="text" name="coffeeName" class="form-control" id="coffeeName">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="formGroupExampleInput2">Roaster:</label>
-                                        <input type="text" name="NameRoaster" class="form-control"
-                                            id="formGroupExampleInput2">
+                                        <input type="text" name="roaster" class="form-control" id="roaster">
                                     </div>
                                     <div class="row">
                                         <div class="col-6 form-group">
                                             <label for="exampleSelect1">Roast color:</label>
-                                            <select class="form-control" id="exampleSelect1" name="RoastColor">
+                                            <select class="form-control" id="roastColor" name="roastColor">
                                                 <option>Light</option>
                                                 <option>Medium</option>
                                                 <option>Omni Roast</option>
@@ -97,16 +95,16 @@
                                                 <option>Dark</option>
                                             </select>
                                         </div>
-                                        <div class=" col-6 form-group">
+                                        <!-- <div class=" col-6 form-group">
                                             <label for="formGroupExampleInput2">Roast Date:</label>
-                                            <input type="date" name="RoastDate" class="form-control"
+                                            <input type="date" name="roastDate" class="form-control"
                                                 id="formGroupExampleInput3">
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 form-group">
                                             <label for="exampleSelect2">A/R:</label>
-                                            <select class="form-control" name="BeanType1" id="exampleSelect2">
+                                            <select class="form-control" name="beanType" id="exampleSelect2">
                                                 <option>Arabica</option>
                                                 <option>Robusta</option>
                                                 <option>Arabica & Robusta</option>
@@ -125,7 +123,7 @@
                                     <div class="row">
                                         <div class="col-md-6 form-group">
                                             <label for="exampleSelect2">Processing method:</label>
-                                            <select class="form-control" name="ProcessingMethod" id="exampleSelect2">
+                                            <select class="form-control" name="processingMethod" id="processingMethod">
                                                 <option>Natural</option>
                                                 <option>Pulp Natural</option>
                                                 <option>Washed</option>
@@ -133,10 +131,18 @@
                                                 <option>Honey</option>
                                             </select>
                                         </div>
+                                        <div class="col-md-6 form-group">
+                                            <label for="exampleSelect2">Tasting method:</label>
+                                            <select class="form-control" name="tastingMethod" id="tastingMethod">
+                                                <option>Espresso</option>
+                                                <option>Filter</option>
+                                                <option>Cupping</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleTextarea">Extra info:</label>
-                                        <textarea class="form-control" name="ExtraInfo" id="exampleTextarea"
+                                        <textarea class="form-control" name="userNotes" id="userNotes"
                                             rows="3"></textarea>
                                     </div>
                                     <div class="form-group">
@@ -159,7 +165,7 @@
                     <svg id="svgC" width="100%" viewBox="0 0 460 460">
                         <defs>
                             <pattern id="center1" patternUnits="userSpaceOnUse" x="-11" y="-11" width="95" height="95">
-                                <image xlink:href="/images/cup05.jpg" x="9" y="9" width="84" height="84" />
+                                <image xlink:href="/images/coffeebeans.png" x="9" y="9" width="84" height="84" />
                             </pattern>
                             <!-- <pattern id="center2" patternUnits="userSpaceOnUse" x="-11" y="-11" width="95" height="95">
                                 <image xlink:href="/images/cup02.gif" x="-1" y="0" width="100" height="100" />
@@ -213,13 +219,13 @@
     <script src="/js/wheel.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/object.js"></script>
     <script src="js/jQuery.js"></script>
