@@ -1,38 +1,12 @@
 package com.teamcoffee.coffeeflavourwheel.UserService;
 
 import com.teamcoffee.coffeeflavourwheel.model.User;
-import com.teamcoffee.coffeeflavourwheel.repository.UserRepository;
+import com.teamcoffee.coffeeflavourwheel.model.UserRegistrationDto;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import java.util.ArrayList;
-import java.util.List;
+public interface UserService extends UserDetailsService {
 
-@Service
-public class UserService {
+    User findByEmail(String email);
 
-    @Autowired
-    private UserRepository userRepository;
-
-    public List<User> findAll() {
-
-        var it = userRepository.findAll();
-
-        var users = new ArrayList<User>();
-        it.forEach(e -> users.add(e));
-
-        return users;
-
-    }
-
-
-    public Long count() {
-
-        return userRepository.count();
-    }
-
-    public void deleteById(Long userId) {
-
-        userRepository.deleteById(userId);
-    }
+    User save(UserRegistrationDto registration);
 }

@@ -1,12 +1,11 @@
 package com.teamcoffee.coffeeflavourwheel.model;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "user")
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
 
@@ -14,23 +13,50 @@ public class User {
 //    @GenericGenerator(name = "uuid", strategy = "uuid2")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
+    @Column(name = "firstName")
     private String firstName;
+    @Column(name = "lastName")
     private String lastName;
+    @Column(name = "email")
     private String email;
+    @Column(name = "password")
+    private String password;
+    @Column(name = "city")
     private String city;
+    @Column(name = "country")
     private String country;
+    @Column(name = "userType")
     private String userType;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(
+                    name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"))
+    private Collection< Role > roles;
 
     public User() {}
 
-    public User(String firstName, String lastName, String email, String city, String country, String userType) {
+    public User(String firstName, String lastName, String email, String city, String country, String userType, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.city = city;
         this.country = country;
         this.userType = userType;
+        this.password = password;
+    }
+
+    public User(String firstName, String lastName, String email, String password, Collection < Role > roles) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.roles = roles;
     }
 
     public Long getId() {
@@ -67,6 +93,14 @@ public class User {
 
     public void setCountry(String country) { this.country = country; }
 
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
+
+    public Collection<Role> getRoles() { return roles; }
+
+    public void setRoles(Collection<Role> roles) { this.roles = roles; }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -96,6 +130,8 @@ public class User {
         sb.append(", city='").append(city).append('\'');
         sb.append(", country='").append(country).append('\'');
         sb.append(", userType='").append(userType).append('\'');
+        sb.append(", password='*********").append(password).append('\'');
+        sb.append(", roles='").append(roles).append('\'');
         sb.append('}');
         return sb.toString();
     }
