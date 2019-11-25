@@ -1,12 +1,18 @@
 package com.teamcoffee.coffeeflavourwheel.model;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class User {
+public class User implements UserDetails {
 
 
 //    @GeneratedValue(generator = "uuid")
@@ -93,7 +99,25 @@ public class User {
 
     public void setCountry(String country) { this.country = country; }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() { return null; }
+
     public String getPassword() { return password; }
+
+    @Override
+    public String getUsername() { return null; }
+
+    @Override
+    public boolean isAccountNonExpired() { return false; }
+
+    @Override
+    public boolean isAccountNonLocked() { return false; }
+
+    @Override
+    public boolean isCredentialsNonExpired() { return false; }
+
+    @Override
+    public boolean isEnabled() { return false; }
 
     public void setPassword(String password) { this.password = password; }
 
@@ -134,5 +158,11 @@ public class User {
         sb.append(", roles='").append(roles).append('\'');
         sb.append('}');
         return sb.toString();
+    }
+
+    private Collection<? extends GrantedAuthority> getAuthorities(User user) {
+        List<GrantedAuthority> authorities = new ArrayList<>();
+        roles.stream().forEach((role) -> authorities.add(new SimpleGrantedAuthority(role.getName())));
+        return authorities;
     }
 }
