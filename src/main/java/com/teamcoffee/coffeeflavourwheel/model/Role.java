@@ -2,8 +2,10 @@ package com.teamcoffee.coffeeflavourwheel.model;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Table(name="Role")
 public class Role {
 
     @Id
@@ -30,6 +32,7 @@ public class Role {
     public void setName(String name) {
         this.name = name;
     }
+
 
     @Override
     public String toString() {

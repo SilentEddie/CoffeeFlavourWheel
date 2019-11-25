@@ -63,7 +63,7 @@ public class CoffeeLibController {
 //    @PostMapping(value = "/coffeelib/posts" )
 //    public CoffeeLib create(@RequestBody CoffeeLib coffeeLib) { return repository.save(coffeeLib); }
 
-    @PostMapping(path = "/coffeelib/posts" )
+    @PostMapping(path = "home/coffeelib/posts" )
     public String addNewCoffee (@RequestParam("coffeeName") String coffeeName,
                                 @RequestParam("roaster") String roaster,
                                 @RequestParam("roastColor") String roastColor,
