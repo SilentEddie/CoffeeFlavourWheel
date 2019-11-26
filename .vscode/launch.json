@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CoffeeflavourwheelApplication",
+            "request": "launch",
+            "mainClass": "com.teamcoffee.coffeeflavourwheel.CoffeeflavourwheelApplication",
+            "projectName": "coffeeflavourwheel"
+        }
+    ]
+}
