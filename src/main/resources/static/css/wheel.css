@@ -4,7 +4,7 @@ svg {
 }
 
 body {
-    background-image: url(/images/berry_lemon.png);
+    background-image: url(/static/images/berry_lemon.png);
     background-size: 60%;
     background-repeat: no-repeat;
     background-attachment: fixed;

@@ -5,19 +5,18 @@
 	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
 	  layout:decorator="layout" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:schemaLocation="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5 ">
-
 <head>
-	<title>User Home</title>
+	<title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE">Coffee Flavour Wheel App</title>
 </head>
 <body>
 <div layout:fragment="content">
+
 	<p>
 		Welcome <span sec:authentication="principal.username">User</span>
 	</p>
 	<p>
 		<a th:href="@{/logout}">Logout</a>
 	</p>
-
 	<div sec:authorize="hasRole('ROLE_ADMIN')">
 		<h3>You will see this only if you are ADMIN</h3>
 		<p>

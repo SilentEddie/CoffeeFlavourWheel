@@ -61,8 +61,8 @@ public class CoffeeLibController {
 //                .body(new ByteArrayResource(dbFile.getData()));
 //    }
 
-//    @PostMapping(value = "/coffeelib/posts" )
-//    public CoffeeLib create(@RequestBody CoffeeLib coffeeLib) { return repository.save(coffeeLib); }
+    @PostMapping(value = "/coffeelib/posts" )
+    public CoffeeLib create(@RequestBody CoffeeLib coffeeLib) { return repository.save(coffeeLib); }
 
     @PostMapping(path = "home/coffeelib/posts" )
     @ResponseStatus(HttpStatus.CREATED)
@@ -88,28 +88,6 @@ public class CoffeeLibController {
         repository.save(c);
         return "Saved";
     }
-
-//    @PostMapping("/coffeelib/posts/upload")
-//    public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) {
-//        DBFile dbFile = DBFileStorageService.storeFile(file);
-//
-//        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-//                .path("/downloadFile/")
-//                .path(dbFile.getId())
-//                .toUriString();
-//
-//        return new UploadFileResponse(dbFile.getFileName(), fileDownloadUri,
-//                file.getContentType(), file.getSize());
-//    }
-////
-//    @PostMapping("/uploadMultipleFiles")
-//    public List<UploadFileResponse> uploadMultipleFiles(@RequestParam("files") MultipartFile[] files) {
-//        return Arrays.asList(files)
-//                .stream()
-//                .map(file -> uploadFile(file))
-//                .collect(Collectors.toList());
-//    }
-
 
     @PostMapping(path = "/coffeelib/posts/flag" )
     public boolean addFlag(@RequestParam("flag") boolean flag) {

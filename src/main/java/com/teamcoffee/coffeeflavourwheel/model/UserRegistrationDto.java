@@ -20,6 +20,9 @@ public class UserRegistrationDto {
     private String lastName;
 
     @NotEmpty
+    private String userType;
+
+    @NotEmpty
     private String password;
 
     @NotEmpty
@@ -91,4 +94,8 @@ public class UserRegistrationDto {
     public void setTerms(Boolean terms) {
         this.terms = terms;
     }
+
+    public String getUserType() { return userType; }
+
+    public void setUserType(String userType) { this.userType = userType; }
 }

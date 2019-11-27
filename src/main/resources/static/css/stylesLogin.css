@@ -1,5 +1,5 @@
 body {
-    background-image: url(/images/backgroundAll.png);
+    background-image: url(/static/images/backgroundAll.png);
     background-size: 100%;
     background-repeat: no-repeat;
 }
