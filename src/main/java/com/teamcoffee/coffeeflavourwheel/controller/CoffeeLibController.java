@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -64,6 +65,7 @@ public class CoffeeLibController {
 //    public CoffeeLib create(@RequestBody CoffeeLib coffeeLib) { return repository.save(coffeeLib); }
 
     @PostMapping(path = "home/coffeelib/posts" )
+    @ResponseStatus(HttpStatus.CREATED)
     public String addNewCoffee (@RequestParam("coffeeName") String coffeeName,
                                 @RequestParam("roaster") String roaster,
                                 @RequestParam("roastColor") String roastColor,
