@@ -39,58 +39,57 @@ public class FlavorList {
         return result;
     }
     
-    public void addFlavor(String name, String color, int ID, int parentID){
-        Flavor newFlavor = new Flavor(name, color, ID, parentID);
-        newFlavor.setChildren(findChildren(ID));
-        findParent(newFlavor);
-    }
+//    public void addFlavor(String name, String color, int ID, int parentID){
+//        Flavor newFlavor = new Flavor(name, color, ID, parentID);
+//        newFlavor.setChildren(findChildren(ID));
+//        findParent(newFlavor);
+//    }
+//
+//    public String getFamilies(){
+//        String result = "Families:\n";
+//        for(Flavor f: mainList){
+//            result += f.PrintFamily();
+//        }
+//        return result;
+//    }
+//
+//    public String getWheelJSON(){
+//        String result = "ringlist = [";
+//        int fromStep = 0;
+//        for (Flavor f: mainList){
+//            result+= f.getJSON(fromStep);
+//            fromStep += f.getSize();
+//        }
+//        result += "]";
+//        return result;
+//   }
 
-    public String getFamilies(){
-        String result = "Families:\n";
-        for(Flavor f: mainList){
-            result += f.PrintFamily();
-        }
-        return result;
-    }
-
-    public String getWheelJSON(){
-        String result = "ringlist = [";
-        int fromStep = 0;
-        for (Flavor f: mainList){
-            result+= f.getJSON(fromStep);
-            fromStep += f.getSize();
-        }
-        result += "]";
-        return result;
-
-    }
-
-    private ArrayList findChildren(int ID) {
-        ArrayList<Flavor> result = new ArrayList<>();
-        for(int i = 0; i < mainList.size();i++){
-            if (mainList.get(i).getParentID()==ID){
-                result.add(mainList.get(i));
-                mainList.remove(i);
-            }
-        }
-        return result;
-    }
-
-    private void findParent(Flavor lostChild){
-        if (lostChild.getParentID()==0){
-            lostChild.setRing(1);
-            mainList.add(lostChild);
-        }else{
-            boolean found = false;
-            for (Flavor f: mainList){
-                if (f.matchChild(lostChild)){
-                    found = true;
-                    break;
-                }
-            }
-            if (!found){
-                mainList.add(lostChild);
-            }
-        }
-    }
+//    private ArrayList findChildren(int ID) {
+//        ArrayList<Flavor> result = new ArrayList<>();
+//        for(int i = 0; i < mainList.size();i++){
+//            if (mainList.get(i).getParentID()==ID){
+//                result.add(mainList.get(i));
+//                mainList.remove(i);
+//            }
+//        }
+//        return result;
+//    }
+//
+//    private void findParent(Flavor lostChild){
+//        if (lostChild.getParentID()==0){
+//            lostChild.setRing(1);
+//            mainList.add(lostChild);
+//        }else{
+//            boolean found = false;
+//            for (Flavor f: mainList){
+//                if (f.matchChild(lostChild)){
+//                    found = true;
+//                    break;
+//                }
+//            }
+//            if (!found){
+//                mainList.add(lostChild);
+//            }
+//        }
+//    }
 }

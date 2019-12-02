@@ -1,27 +1,42 @@
 package com.teamcoffee.coffeeflavourwheel.model;
 
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.ArrayList;
 
-/**
- * @author edward idema edwardidema@gmail.com
- */
+@Entity
+@Table(name = "flavors")
 public class Flavor {
-    protected String name; // De naam zoals in het wiel beschreven
-    protected String color; // kleurcode
-    protected int ID; // nummer
-    protected int parentID; // nummer van de flavor waar hij onder valt
-    protected int ring; // nummer van de ring, beginnend bij 1
-    ArrayList<Flavor> children; // lijst met alle flavors die onder hem vallen.
 
-    public Flavor(String name, String color, int ID, int parentID) {
+    @Id
+    private int ID;           // nummer
+    @Column(name = "parentID")
+    private int parentID;     // nummer van de flavor waar hij onder valt
+    @Column(name = "flavorname")
+    protected String name;      // De naam zoals in het wiel beschreven
+    @Column(name = "color")
+    protected String color;     // kleurcode
+
+    //@Column(name = "ring")
+    protected int ring;         // nummer van de ring, beginnend bij 1
+
+
+    //ArrayList<Flavor> children; // lijst met alle flavors die onder hem vallen.
+
+    Flavor(String name, String color, int ID, int parentID) {
         this.name = name;
         this.color = color;
         this.ID = ID;
         this.parentID = parentID;
-        this.children = new ArrayList<>();
+        //this.children = new ArrayList<>();
+        this.ring = 0;
 
     }
+
+    public Flavor() {}
 
     public String getName() {
         return name;
@@ -39,7 +54,7 @@ public class Flavor {
         this.color = color;
     }
 
-    public int getID() {
+    int getID() {
         return ID;
     }
 
@@ -47,11 +62,11 @@ public class Flavor {
         this.ID = ID;
     }
 
-    public int getParentID() {
+    int getParentID() {
         return parentID;
     }
 
-    public void setParentID(int parent) {
+    public void setParentID(Integer parent) {
         this.parentID = parent;
     }
 
@@ -63,68 +78,68 @@ public class Flavor {
         this.ring = ring;
     }
 
-    public int getSize() {
-        int result = 0;
-        for (Flavor child : children) {
-            result += child.getSize();
-        }
-        if (result == 0) {
-            return 1;
-        }
-        return result;
-    }
+//    public int getSize() {
+//        int result = 0;
+//        for (Flavor child : children) {
+//            result += child.getSize();
+//        }
+//        if (result == 0) {
+//            return 1;
+//        }
+//        return result;
+//    }
 
-    public ArrayList<Flavor> getChildren() {
-        return children;
-    }
+//    public ArrayList<Flavor> getChildren() {
+//        return children;
+//    }
+//
+//    public void setChildren(ArrayList<Flavor> children) {
+//        for (Flavor child : children) {
+//            child.setRing(this.ring + 1);
+//        }
+//        this.children = children;
+//    }
 
-    public void setChildren(ArrayList<Flavor> children) {
-        for (Flavor child : children) {
-            child.setRing(this.ring + 1);
-        }
-        this.children = children;
-    }
-
-    public boolean matchChild(Flavor lostChild) {
-        if (lostChild.getParentID() == this.ID) {
-            lostChild.setRing(this.ring + 1);
-            this.children.add(lostChild);
-            return true;
-        } else {
-            for (Flavor child : children) {
-                if (child.matchChild(lostChild)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    protected String PrintFamily() {
-        String result = this.toString() + "\n";
-        for (Flavor child : children) {
-            result += child.PrintFamily("-");
-        }
-        return result;
-    }
-
-    protected String PrintFamily(String dash) {
-        String result = dash + this.toString() + "\n";
-        for (Flavor child : children) {
-            result += child.PrintFamily(dash + "-");
-        }
-        return result;
-    }
-
-    public String getJSON(int fromStep) {
-        String result = "{ring:" + ring + ", fromStep:" + fromStep + ", toStep:" + (fromStep + getSize()) + ", color:\""
-                + color + "\", name:\"" + name + "\", id:" + ID + ", parentID:" + parentID + "},\n";
-        for (Flavor child : children) {
-            result += child.getJSON(fromStep);
-            fromStep += child.getSize();
-        }
-
-        return result;
-    }
-
+//    boolean matchChild(Flavor lostChild) {
+//        if (lostChild.getParentID() == this.ID) {
+//            lostChild.setRing(this.ring + 1);
+//            this.children.add(lostChild);
+//            return true;
+//        } else {
+//            for (Flavor child : children) {
+//                if (child.matchChild(lostChild)) {
+//                    return true;
+//                }
+//            }
+//        }
+//        return false;
+//    }
+//
+//    String PrintFamily() {
+//        String result = this.toString() + "\n";
+//        for (Flavor child : children) {
+//            result += child.PrintFamily("-");
+//        }
+//        return result;
+//    }
+//
+//    private String PrintFamily(String dash) {
+//        String result = dash + this.toString() + "\n";
+//        for (Flavor child : children) {
+//            result += child.PrintFamily(dash + "-");
+//        }
+//        return result;
+//    }
+//
+//    String getJSON(int fromStep) {
+//        String result = "{ring:" + ring + ", fromStep:" + fromStep + ", toStep:" + (fromStep + getSize()) + ", color:\""
+//                + color + "\", name:\"" + name + "\", id:" + ID + ", parentID:" + parentID + "},\n";
+//        for (Flavor child : children) {
+//            result += child.getJSON(fromStep);
+//            fromStep += child.getSize();
+//        }
+//
+//        return result;
+//    }
+//
 }
