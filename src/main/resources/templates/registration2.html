@@ -54,29 +54,23 @@
 <div class="container">
     <div layout:fragment="content">
         <!-- Your Page Content Here -->
-        <h1>Spring Boot - Success</h1>
+        <h1>Spring Boot Multiple File Upload Example</h1>
 
 
 
-        <div th:if="${message}">
 
-            <h2 th:text="${message}"/>
-        </div>
-
-
-        <div th:if="${name}">
-            Name : <b th:text="${name}"/>
-        </div>
+        <form method="POST" th:action="@{/register}" enctype="multipart/form-data">
+            Name <input type="name" name="name"/>
 
 
-        <div th:if="${email}">
-            Email : <b th:text="${email}"/>
-        </div>
+            Email <input type="email" name="email"/>
 
 
-        <div th:each="file : ${files}" style="float:left;">
-            <img th:attr="src=@{'/image/' + ${file}},title=${file},alt=${file}" />
-        </div>
+            <input type="file" name="albums" multiple="multiple"/>
+
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
 </div>
 
 <script th:src="@{'/assets/js/jquery-2.1.4.min.js'}"></script>

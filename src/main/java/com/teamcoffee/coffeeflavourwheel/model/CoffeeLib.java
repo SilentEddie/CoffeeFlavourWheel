@@ -1,10 +1,10 @@
 package com.teamcoffee.coffeeflavourwheel.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -19,7 +19,7 @@ public class CoffeeLib {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "date")
     @JsonFormat(pattern="yyyy-MM-dd")
-    private LocalDate date;
+    private Date date;
     @Column(name = "coffeeName")
     private String coffeeName;
     @Column(name = "roaster")
@@ -35,20 +35,15 @@ public class CoffeeLib {
     @Column(name = "userNotes")
     private String userNotes;
     private boolean flag;
-
-    private String fileName;
-
-    private String fileType;
-
+    @Column(name = "file")
     @Lob
-    private byte[] data;
-//    private ArrayList<Flavor> flavors;
+    private MultipartFile[] file;
 
     public CoffeeLib() {}
 
-    public CoffeeLib(LocalDate date, String coffeeName, String roaster, String roastColor, String processingMethod, String tastingMethod, String beanType, String userNotes, boolean flag
-//            ,String fileName, String fileType, byte[] data
-    ) {
+    public CoffeeLib(Date date, String coffeeName, String roaster, String roastColor, String processingMethod, String tastingMethod, String beanType, String userNotes, boolean flag,
+                     MultipartFile[] file)
+    {
         this.date = date;
         this.coffeeName = coffeeName;
         this.roaster = roaster;
@@ -58,9 +53,7 @@ public class CoffeeLib {
         this.beanType = beanType;
         this.userNotes = userNotes;
         this.flag = flag;
-//        this.fileName = fileName;
-//        this.fileType = fileType;
-//        this.data = data;
+        this.file = file;
     }
 
     public Long getId() {
@@ -119,9 +112,9 @@ public class CoffeeLib {
         this.beanType = beanType;
     }
 
-    public LocalDate getDate() { return date; }
+    public Date getDate() { return date; }
 
-    public void setDate(LocalDate date) { this.date = date; }
+    public void setDate(Date date) { this.date = date; }
 
     public String getUserNotes() { return userNotes; }
 
@@ -135,37 +128,20 @@ public class CoffeeLib {
         this.flag = flag;
     }
 
+    public MultipartFile[] getFile() {
+        return file;
+    }
 
-//    public String getFileName() {
+    public void setFile(MultipartFile[] file) {
+        this.file = file;
+    }
+
+    //    public String getFileName() {
 //        return fileName;
 //    }
 //
 //    public void setFileName(String fileName) {
 //        this.fileName = fileName;
-//    }
-//
-//    public String getFileType() {
-//        return fileType;
-//    }
-//
-//    public void setFileType(String fileType) {
-//        this.fileType = fileType;
-//    }
-//
-//    public byte[] getData() {
-//        return data;
-//    }
-//
-//    public void setData(byte[] data) {
-//        this.data = data;
-//    }
-//
-//    public String getIdF() {
-//        return idF;
-//    }
-//
-//    public void setIdF(String idF) {
-//        this.idF = idF;
 //    }
 
     //    public ArrayList<Flavor> getFlavors() { return flavors; }
@@ -187,19 +163,12 @@ public class CoffeeLib {
                 Objects.equals(date, coffeeLib.date) &&
                 Objects.equals(beanType, coffeeLib.beanType) &&
                 Objects.equals(userNotes, coffeeLib.userNotes) &&
-                Objects.equals(flag, coffeeLib.flag)
-//                Objects.equals(fileName, coffeeLib.fileName) &&
-//                Objects.equals(fileType, coffeeLib.fileType) &&
-//                Objects.equals(data, coffeeLib.data)
-                ;
-//                Objects.equals(flavors, coffeeLib.flavors);
+                Objects.equals(flag, coffeeLib.flag);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, date, coffeeName, roaster, roastColor, processingMethod, tastingMethod, beanType, userNotes, flag
-//
-        );
+        return Objects.hash(id, date, coffeeName, roaster, roastColor, processingMethod, tastingMethod, beanType, userNotes, flag);
     }
 
     @Override

@@ -12,10 +12,10 @@
             content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
             name="viewport" />
     <link rel="stylesheet"
-          th:href="@{/assets/bootstrap/css/bootstrap.min.css}" />
+          th:href="@{/static/assets/bootstrap/css/bootstrap.min.css}" />
     <link rel="stylesheet"
-          th:href="@{/assets/font-awesome-4.5.0/css/font-awesome.min.css}" />
-    <link rel="stylesheet" th:href="@{/assets/css/styles.css}" />
+          th:href="@{/static/assets/font-awesome-4.5.0/css/font-awesome.min.css}" />
+    <link rel="stylesheet" th:href="@{/static/assets/css/styles.css}" />
     <style>
         .footer {
             position: fixed;
@@ -54,33 +54,30 @@
 <div class="container">
     <div layout:fragment="content">
         <!-- Your Page Content Here -->
-        <h1>Spring Boot - Success</h1>
-
-
-
-        <div th:if="${message}">
-
-            <h2 th:text="${message}"/>
-        </div>
-
-
-        <div th:if="${name}">
-            Name : <b th:text="${name}"/>
-        </div>
-
-
-        <div th:if="${email}">
-            Email : <b th:text="${email}"/>
-        </div>
-
-
-        <div th:each="file : ${files}" style="float:left;">
-            <img th:attr="src=@{'/image/' + ${file}},title=${file},alt=${file}" />
-        </div>
+        <form id="formElem" enctype="multipart/form-data" ref={formData}>
+            <input type="text" name="file" value="John">
+            Picture: <input type="file" name="picture">
+            <input type="submit">
+        </form>
+    </div>
 </div>
+<script>
+    formElem.onsubmit = async (e) => {
+        e.preventDefault();
 
-<script th:src="@{'/assets/js/jquery-2.1.4.min.js'}"></script>
-<script th:src="@{'/assets/bootstrap/js/bootstrap.min.js'}"></script>
+        let response = await fetch('http://localhost:8080/upload3', {
+            method: 'POST',
+            body: new FormData(formElem)
+        });
+
+        let result = await response.json();
+
+        alert(result.message);
+    };
+</script>
+<script th:src="@{/assets/js/jquery-2.1.4.min.js}"></script>
+<script th:src="@{/assets/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/static/js/main.js}" ></script>
 
 <div class="footer">
     <h1>

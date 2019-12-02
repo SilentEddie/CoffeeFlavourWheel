@@ -16,6 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.sql.DataSource;
 
@@ -100,4 +101,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         tokenRepositoryImpl.setDataSource(dataSource);
         return tokenRepositoryImpl;
     }
+
+//    @Bean(name = "multipartResolver")
+//    public CommonsMultipartResolver getCommonsMultipartResolver() {
+//        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+//        multipartResolver.setMaxUploadSize(20971520);
+//        multipartResolver.setMaxInMemorySize(1048576);
+//        return multipartResolver;
+//    }
 }

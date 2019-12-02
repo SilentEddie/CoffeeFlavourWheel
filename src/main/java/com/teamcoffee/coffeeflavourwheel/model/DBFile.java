@@ -24,7 +24,7 @@ public class DBFile {
 
     }
 
-    public DBFile(String fileName, String fileType, byte[] data) {
+    public DBFile(String fileName, String fileType, byte[] data, String notes) {
         this.fileName = fileName;
         this.fileType = fileType;
         this.data = data;
@@ -61,6 +61,7 @@ public class DBFile {
     public void setData(byte[] data) {
         this.data = data;
     }
+
 
     // Getters and Setters (Omitted for brevity)
 }

@@ -27,7 +27,12 @@ public class WebConfig implements WebMvcConfigurer
         registry.addViewController("/admin/home").setViewName("adminhome");
         registry.addViewController("/403").setViewName("403");
         registry.addViewController("/upload2").setViewName("upload2");
-
+        registry.addViewController("/upload3").setViewName("upload3");
+        registry.addViewController("/upload").setViewName("upload");
+        registry.addViewController("/upload4").setViewName("upload4");
+        registry.addViewController("/success").setViewName("success");
+        registry.addViewController("/registration2").setViewName("registration2");
+        registry.addViewController("/coffeelib").setViewName("coffeelib");
     }
 
     @Override
@@ -55,4 +60,5 @@ public class WebConfig implements WebMvcConfigurer
     public SpringSecurityDialect securityDialect() {
         return new SpringSecurityDialect();
     }
+
 }

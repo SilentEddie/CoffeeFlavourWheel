@@ -6,6 +6,7 @@ import com.teamcoffee.coffeeflavourwheel.constraint.FieldMatch;
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import java.util.Collection;
 
 @FieldMatch.List({
         @FieldMatch(first = "password", second = "confirmPassword", message = "The password fields must match"),
@@ -38,6 +39,7 @@ public class UserRegistrationDto {
 
     @AssertTrue
     private Boolean terms;
+
 
     public String getFirstName() {
         return firstName;
@@ -95,7 +97,11 @@ public class UserRegistrationDto {
         this.terms = terms;
     }
 
-    public String getUserType() { return userType; }
+    public String getUserType() {
+        return userType;
+    }
 
-    public void setUserType(String userType) { this.userType = userType; }
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
 }

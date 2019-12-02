@@ -1,33 +1,23 @@
 package com.teamcoffee.coffeeflavourwheel.controller;
 
-import com.teamcoffee.coffeeflavourwheel.UserService.DBFileStorageService;
 import com.teamcoffee.coffeeflavourwheel.model.CoffeeLib;
-import com.teamcoffee.coffeeflavourwheel.model.DBFile;
-import com.teamcoffee.coffeeflavourwheel.payload.UploadFileResponse;
 import com.teamcoffee.coffeeflavourwheel.repository.CoffeeLibRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ByteArrayResource;
-import org.springframework.core.io.Resource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.validation.Valid;
-import java.time.LocalDate;
-import java.util.Arrays;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/")
 public class CoffeeLibController {
+    private static String upload_dir = "/Users/jasonbakker/uploads/";
 
     private static final Logger logger = LoggerFactory.getLogger(CoffeeLibController.class);
 
@@ -36,7 +26,7 @@ public class CoffeeLibController {
 
     @GetMapping("/coffeelib")
     public List<CoffeeLib> allTastedCoffee() {
-        return (List<CoffeeLib>) repository.findAll();
+        return repository.findAll();
     }
 
     @GetMapping(path = {"/coffeelib/{id}"})
@@ -45,28 +35,104 @@ public class CoffeeLibController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("coffeelib/count")
+    @GetMapping("/coffeelib/count")
     public Long count() {
         return repository.count();
     }
 
-//    @GetMapping("/downloadFile/{fileId}")
-//    public ResponseEntity<Resource> downloadFile(@PathVariable String fileId) {
-//        // Load file from database
-//        DBFile dbFile = DBFileStorageService.getFile(fileId);
-//
-//        return ResponseEntity.ok()
-//                .contentType(MediaType.parseMediaType(dbFile.getFileType()))
-//                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + dbFile.getFileName() + "\"")
-//                .body(new ByteArrayResource(dbFile.getData()));
+    @PostMapping(value = "/coffeelib/posts")
+    public CoffeeLib create(@RequestBody CoffeeLib coffeeLib) {
+        return repository.save(coffeeLib);
+    }
+
+//    @PostMapping("/register")
+//    public CoffeeLib doRegister(@ModelAttribute CoffeeLib form, ModelMap model, HttpSession session
+//    ) {
+//        ArrayList<String> fileNames = null;
+//        if(form.getFile().length>0) {
+//            fileNames = new ArrayList<String>();
+//            for(MultipartFile file:form.getFile()) {
+//                if (file.isEmpty()) {
+//                    model.put("message", "Please select a file to upload");
+//                }
+//                try {
+//                    file.transferTo(new File(upload_dir + file.getOriginalFilename()));
+//                    fileNames.add(file.getOriginalFilename());
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//        model.put("message", "Please select a file to upload");
+//        model.put("coffeeName", form.getCoffeeName());
+//        model.put("roaster", form.getRoaster());
+//        model.put("roasterColor", form.getRoastColor());
+//        model.put("processingMethod", form.getProcessingMethod());
+//        model.put("tastingMethod", form.getTastingMethod());
+//        model.put("beanType", form.getBeanType());
+//        model.put("userNotes", form.getUserNotes());
+//        model.put("files",fileNames);
+////        System.out.println("Email : "+form.getEmail());
+//        return repository.save(form);
 //    }
 
-    @PostMapping(value = "/coffeelib/posts" )
-    public CoffeeLib create(@RequestBody CoffeeLib coffeeLib) { return repository.save(coffeeLib); }
+//    @RequestMapping(value = "/image/{imageName}")
+//    @ResponseBody
+//    public byte[] getImage(@PathVariable("imageName") String fileName) throws IOException{
+//        File file = new File(upload_dir+fileName);
+//        System.out.println(file.getAbsolutePath());
+//        return Files.readAllBytes(file.toPath());
+//    }
 
-    @PostMapping(path = "home/coffeelib/posts" )
-    @ResponseStatus(HttpStatus.CREATED)
-    public String addNewCoffee (@RequestParam("coffeeName") String coffeeName,
+    @RequestMapping(value = "/uploadFile2", method = RequestMethod.POST)
+    public @ResponseBody
+    CoffeeLib uploadFileHandler(
+            @RequestParam("coffeeName") String coffeeName,
+            @RequestParam("roaster") String roaster,
+            @RequestParam("roastColor") String roastColor,
+            @RequestParam("processingMethod") String processingMethod,
+            @RequestParam("tastingMethod") String tastingMethod,
+            @RequestParam("beanType") String beanType,
+            @RequestParam("userNotes") String userNotes,
+            @RequestParam("file") MultipartFile file) {
+
+        if (!file.isEmpty()) {
+            try {
+                byte[] bytes = file.getBytes();
+
+                // Creating the directory to store file
+                String rootPath = System.getProperty("catalina.home");
+                File dir = new File(rootPath + File.separator + "tmpFiles");
+                if (!dir.exists())
+                    dir.mkdirs();
+
+                // Create the file on server
+                File serverFile = new File(dir.getAbsolutePath()
+                        + File.separator + coffeeName + roaster + roastColor + processingMethod + tastingMethod + beanType + userNotes);
+                BufferedOutputStream stream = new BufferedOutputStream(
+                        new FileOutputStream(serverFile));
+                stream.write(bytes);
+                stream.close();
+
+                logger.info("Server File Location="
+                        + serverFile.getAbsolutePath());
+
+                return new CoffeeLib();
+            } catch (Exception e) {
+                return new CoffeeLib();
+            }
+        } else {
+            return new CoffeeLib();
+        }
+    }
+
+
+    @PostMapping(path = "/home/coffeelib/posts", consumes = { "multipart/form-data" } )
+    @ResponseBody
+    public CoffeeLib addNewCoffee (
+//                                @RequestParam("date") Date date,
+                                @RequestParam("file") MultipartFile[] file,
+                                @RequestParam("coffeeName") String coffeeName,
                                 @RequestParam("roaster") String roaster,
                                 @RequestParam("roastColor") String roastColor,
                                 @RequestParam("processingMethod") String processingMethod,
@@ -76,8 +142,9 @@ public class CoffeeLibController {
 //                                @RequestParam("fileName") String fileName,
 //                                @RequestParam("fileType") String fileType)
     {
-
         CoffeeLib c = new CoffeeLib();
+//        c.setDate(date);
+//        c.setFile(file);
         c.setCoffeeName(coffeeName);
         c.setRoaster(roaster);
         c.setRoastColor(roastColor);
@@ -85,8 +152,8 @@ public class CoffeeLibController {
         c.setTastingMethod(tastingMethod);
         c.setBeanType(beanType);
         c.setUserNotes(userNotes);
-        repository.save(c);
-        return "Saved";
+        return repository.save(c);
+//            return new CoffeeLib();
     }
 
     @PostMapping(path = "/coffeelib/posts/flag" )

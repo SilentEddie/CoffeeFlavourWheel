@@ -43,6 +43,9 @@ public class User implements UserDetails {
                     name = "user_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(
                     name = "role_id", referencedColumnName = "id"))
+
+//    private Collection<CoffeeLib> coffeeLibs;
+
     private Collection< Role > roles;
 
     public User() {}

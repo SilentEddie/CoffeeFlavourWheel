@@ -46,7 +46,7 @@
                 <li class="nav-item active">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/coffeeLib.html">Coffee library</a>
+                    <a class="nav-link" th:href="@{/coffeelib.html}">Coffee library</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
@@ -73,7 +73,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
-                            <form th:action="@{/home/coffeelib/posts}" method="POST" onSubmit={handleSubmit} ref={formData} id="" name="">
+                            <form th:action="@{/home/coffeelib/posts}" method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="formGroupExampleInput">Coffee Name:</label>
                                     <input type="text" name="coffeeName" class="form-control" id="coffeeName">
@@ -102,11 +102,11 @@
                                             <option>Cupping</option>
                                         </select>
                                     </div>
-                                    <!--                                     <div class=" col-6 form-group">-->
-                                    <!--                                        <label for="formGroupExampleInput2">Roast Date:</label>-->
-                                    <!--                                        <input type="date" name="roastDate" class="form-control"-->
-                                    <!--                                            id="formGroupExampleInput3">-->
-                                    <!--                                    </div>-->
+                                                                         <div class=" col-6 form-group">
+                                                                            <label for="formGroupExampleInput2">Roast Date:</label>
+                                                                            <input type="date" name="roastDate" class="form-control"
+                                                                                id="formGroupExampleInput3">
+                                                                        </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 form-group">
@@ -145,8 +145,8 @@
 
                                 <div class="form-group">
                                     <label for="exampleInputFile">File input</label>
-                                    <input type="file" class="form-control-file" id="singleFileUploadInput"
-                                           aria-describedby="fileHelp" name="singleUploadForm">
+                                    <input type="file" class="form-control-file" id=""
+                                           aria-describedby="fileHelp" name="file">
                                     <small id="fileHelp" class="form-text text-muted">This is some placeholder
                                         block-level help
                                         text for the above input. It's a bit lighter and easily wraps to a new

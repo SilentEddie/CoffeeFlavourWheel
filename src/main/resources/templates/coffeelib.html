@@ -30,55 +30,35 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                    aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span> <span
-                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                    class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#" th:href="@{/}">SpringBoot
-                Thymeleaf</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
 
 <div class="container">
     <div layout:fragment="content">
         <!-- Your Page Content Here -->
-        <h1>Spring Boot - Success</h1>
-
-
-
-        <div th:if="${message}">
-
-            <h2 th:text="${message}"/>
-        </div>
-
-
-        <div th:if="${name}">
-            Name : <b th:text="${name}"/>
-        </div>
-
-
-        <div th:if="${email}">
-            Email : <b th:text="${email}"/>
-        </div>
-
-
-        <div th:each="file : ${files}" style="float:left;">
-            <img th:attr="src=@{'/image/' + ${file}},title=${file},alt=${file}" />
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand mb-0 h1"><img th:src="@{/favicon_io/transp_android-chrome-192x192.png}" width="30" height="30" class="d-inline-block align-top" alt="">Coffee Flavour Wheel
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/coffeeLib.html">Coffee library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+                    </li>
+                </ul>
+                <form class="nav-item">
+                    <a class="nav-link">Welcome <span sec:authentication="principal.username">User</span></a>
+                </form>
+            </div>
+        </nav>
+    </div>
 </div>
-
 <script th:src="@{'/assets/js/jquery-2.1.4.min.js'}"></script>
 <script th:src="@{'/assets/bootstrap/js/bootstrap.min.js'}"></script>
 
