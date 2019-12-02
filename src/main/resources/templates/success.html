@@ -77,17 +77,17 @@
         <div th:each="file : ${files}" style="float:left;">
             <img th:attr="src=@{'/image/' + ${file}},title=${file},alt=${file}" />
         </div>
-</div>
+    </div>
 
-<script th:src="@{'/assets/js/jquery-2.1.4.min.js'}"></script>
-<script th:src="@{'/assets/bootstrap/js/bootstrap.min.js'}"></script>
+    <script th:src="@{'/assets/js/jquery-2.1.4.min.js'}"></script>
+    <script th:src="@{'/assets/bootstrap/js/bootstrap.min.js'}"></script>
 
-<div class="footer">
-    <h1>
-        <a href="http://www.javaguides.net/p/spring-boot-tutorial.html">
-            Spring Boot Tutorial</a>
-    </h1>
-</div>
+    <div class="footer">
+        <h1>
+            <a href="http://www.javaguides.net/p/spring-boot-tutorial.html">
+                Spring Boot Tutorial</a>
+        </h1>
+    </div>
 
 </body>
 </html>

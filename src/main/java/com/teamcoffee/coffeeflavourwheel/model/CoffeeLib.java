@@ -163,7 +163,8 @@ public class CoffeeLib {
                 Objects.equals(date, coffeeLib.date) &&
                 Objects.equals(beanType, coffeeLib.beanType) &&
                 Objects.equals(userNotes, coffeeLib.userNotes) &&
-                Objects.equals(flag, coffeeLib.flag);
+                Objects.equals(flag, coffeeLib.flag) &&
+                Objects.equals(file, coffeeLib.file);
     }
 
     @Override

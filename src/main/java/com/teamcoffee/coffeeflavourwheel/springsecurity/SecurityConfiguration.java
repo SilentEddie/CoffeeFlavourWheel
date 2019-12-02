@@ -37,6 +37,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+
                 .headers()
                 .frameOptions().sameOrigin()
                 .and()
@@ -73,6 +74,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .tokenValiditySeconds(24 * 60 * 60)
                 .and()
                 .exceptionHandling()
+                .and()
+                .cors()
+                .and().csrf().disable()
 
         ;
 
@@ -95,6 +99,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authenticationProvider());
     }
+
+
 
     PersistentTokenRepository persistentTokenRepository(){
         JdbcTokenRepositoryImpl tokenRepositoryImpl = new JdbcTokenRepositoryImpl();

@@ -5,6 +5,7 @@ import com.teamcoffee.coffeeflavourwheel.repository.CoffeeLibRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,7 +18,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class CoffeeLibController {
-    private static String upload_dir = "/Users/jasonbakker/uploads/";
 
     private static final Logger logger = LoggerFactory.getLogger(CoffeeLibController.class);
 
@@ -45,44 +45,6 @@ public class CoffeeLibController {
         return repository.save(coffeeLib);
     }
 
-//    @PostMapping("/register")
-//    public CoffeeLib doRegister(@ModelAttribute CoffeeLib form, ModelMap model, HttpSession session
-//    ) {
-//        ArrayList<String> fileNames = null;
-//        if(form.getFile().length>0) {
-//            fileNames = new ArrayList<String>();
-//            for(MultipartFile file:form.getFile()) {
-//                if (file.isEmpty()) {
-//                    model.put("message", "Please select a file to upload");
-//                }
-//                try {
-//                    file.transferTo(new File(upload_dir + file.getOriginalFilename()));
-//                    fileNames.add(file.getOriginalFilename());
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-//        model.put("message", "Please select a file to upload");
-//        model.put("coffeeName", form.getCoffeeName());
-//        model.put("roaster", form.getRoaster());
-//        model.put("roasterColor", form.getRoastColor());
-//        model.put("processingMethod", form.getProcessingMethod());
-//        model.put("tastingMethod", form.getTastingMethod());
-//        model.put("beanType", form.getBeanType());
-//        model.put("userNotes", form.getUserNotes());
-//        model.put("files",fileNames);
-////        System.out.println("Email : "+form.getEmail());
-//        return repository.save(form);
-//    }
-
-//    @RequestMapping(value = "/image/{imageName}")
-//    @ResponseBody
-//    public byte[] getImage(@PathVariable("imageName") String fileName) throws IOException{
-//        File file = new File(upload_dir+fileName);
-//        System.out.println(file.getAbsolutePath());
-//        return Files.readAllBytes(file.toPath());
-//    }
 
     @RequestMapping(value = "/uploadFile2", method = RequestMethod.POST)
     public @ResponseBody
@@ -129,7 +91,8 @@ public class CoffeeLibController {
 
     @PostMapping(path = "/home/coffeelib/posts", consumes = { "multipart/form-data" } )
     @ResponseBody
-    public CoffeeLib addNewCoffee (
+    @ResponseStatus(HttpStatus.CREATED)
+    public String addNewCoffee (
 //                                @RequestParam("date") Date date,
                                 @RequestParam("file") MultipartFile[] file,
                                 @RequestParam("coffeeName") String coffeeName,
@@ -152,8 +115,8 @@ public class CoffeeLibController {
         c.setTastingMethod(tastingMethod);
         c.setBeanType(beanType);
         c.setUserNotes(userNotes);
-        return repository.save(c);
-//            return new CoffeeLib();
+        repository.save(c);
+        return "saved";
     }
 
     @PostMapping(path = "/coffeelib/posts/flag" )

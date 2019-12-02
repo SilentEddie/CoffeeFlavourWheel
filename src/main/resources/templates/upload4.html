@@ -56,7 +56,13 @@
         <!-- Your Page Content Here -->
         <form method="POST" th:action="@{uploadFile2}" enctype="multipart/form-data">
             File to upload: <input type="file" name="file"><br />
-            Name: <input type="text" name="name"><br /> <br />
+            Coffee Name: <input type="text" name="coffeeName"><br /> <br />
+            Roaster: <input type="text" name="roaster"><br /> <br />
+            Roast Color: <input type="text" name="roastColor"><br /> <br />
+            Processing Method: <input type="text" name="processingMethod"><br /> <br />
+            Tasting Method: <input type="text" name="tastingMethod"><br /> <br />
+            Bean Type: <input type="text" name="beanType"><br /> <br />
+            User Notes: <input type="text" name="userNotes"><br /> <br />
             <input type="submit" value="Upload"> Press here to upload the file!
         </form>
     </div>

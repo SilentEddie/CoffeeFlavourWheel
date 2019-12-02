@@ -24,7 +24,7 @@ public class DBFileStorageService {
             if(fileName.contains("..")) {
                 throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
             }
-            DBFile dbFile = new DBFile(fileName, file.getContentType(), file.getBytes(), "");
+            DBFile dbFile = new DBFile(fileName, file.getContentType(), file.getBytes());
             return dbFileRepository.save(dbFile);
         } catch (IOException ex) {
             throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);

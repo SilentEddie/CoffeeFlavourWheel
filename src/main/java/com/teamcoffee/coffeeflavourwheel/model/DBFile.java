@@ -24,7 +24,7 @@ public class DBFile {
 
     }
 
-    public DBFile(String fileName, String fileType, byte[] data, String notes) {
+    public DBFile(String fileName, String fileType, byte[] data) {
         this.fileName = fileName;
         this.fileType = fileType;
         this.data = data;
